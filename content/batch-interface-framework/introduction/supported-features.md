@@ -4,12 +4,14 @@ uid: BIF_SupportedFeatures
 
 # Supported features
 
-<!-- Customize this topic for the interace you're writing for -->
+<!-- Add custom intro for interface -->
 
+
+<!-- Content below applies to all batch interfaces -->
 
 | Feature | Support |
 | ------- | ------- |
-| Part Number | *See interface-specific chapter* |
+| Part Number | <UPDATE_FOR_INTERFACE> |
 | Auto-creates PI Points and equipment assets? | Yes |
 | Point Builder Utility | No |
 | Stores batch data in PIBatch Database and PI Module Database | No |
