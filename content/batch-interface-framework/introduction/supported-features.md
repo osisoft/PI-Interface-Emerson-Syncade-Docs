@@ -4,6 +4,9 @@ uid: BIF_SupportedFeatures
 
 # Supported features
 
+<!-- Customize this topic for the interace you're writing for -->
+
+
 | Feature | Support |
 | ------- | ------- |
 | Part Number | *See interface-specific chapter* |
