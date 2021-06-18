@@ -70,8 +70,8 @@ The following table lists standard status strings.
 
 | Message | Description |
 |--|--|
-| 1 Starting | The interface is starting. |
-| 2 Connected / No Data | The interface is connected to the data source but is not capable or reading or writing data to the foreign device. |
-| 3 n device(s) in error | The interface is not able to communicate with the specified number of devices. Usually includes additional interface-specific details. |
-| 4 Intf Shutdown | The interface is shutting down. |
-| 5 interface_specific_message | Message specific to the interface. |
+| `1 Starting` | The interface is starting. |
+| `2 Connected / No Data` | The interface is connected to the data source but is not capable or reading or writing data to the foreign device. |
+| `3 n device(s) in error` | The interface is not able to communicate with the specified number of devices. Usually includes additional interface-specific details. |
+| `4 Intf Shutdown` | The interface is shutting down. |
+| `5 interface_specific_message` | Message specific to the interface. |
