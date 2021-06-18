@@ -4,7 +4,7 @@ uid: BIF_FiltersTab
 
 # Filters tab
 
-<!-- Topic requires customization for specific interface -->
+<!-- Unmodified -->
 
 You use the **Filters** tab to configure the recipes, units, phases, or phase states to be excluded from processing by the interface.
 

@@ -2,7 +2,9 @@
 uid: BIF_BatchSettings
 ---
 
-# Batch settings
+# Batch Setup tab
+
+<!-- Mark Bishop 6/18/21: Customized for Emerson Syncade -->
 
 The settings on this tab configure batch generation as described in the following table. For detailed information, refer to the [PI Batch Interfaces Users Guide](https://livelibrary.osisoft.com/LiveLibrary/web/ui.xql?action=html&resource=publist_home.html&pub_category=PI-Batch-Interfaces).
 
@@ -24,25 +26,17 @@ Create unit batches based solely on source batch recipe data. For use when the s
 
 Directs the interface to release a unit on the first resource release event even if the number of acquire events is higher than number of release events.
 
+<!-- Setting below heavily edited-->
+
 ### Use batch recipe (/UBR)  
 
-Default settings for batch interfaces:
+Default setting: `/UBR = false`
 
-* Emerson batch interfaces: `/UBR = false`
-* GE, Honeywell, ad Rockwell batch interfaces: `/UBR = true`
+`/UBR` can be set in the .ini file, from the command line, or by using the PI Event Frames Interface Manager / batch Setup tab.
 
-UBR works with following batch interfaces:
+If `/UBR = true` the interface will use **SYSTEM MESSAGE** to control the start and end of event frames. Example System Messages are **BEGIN OF BATCH**, **END OF BATCH**, **UNIT PROCEDURE STARTED**, and **UNIT PROCEDURE ENDED**. 
 
-* Emerson DeltaV Batch, Emerson Syncade Batch, and Emerson DeltaV Syncade Batch
-* General Electric iBatch Batch
-* Honeywell TotalPlant Batch
-* Rockwell FactoryTalk Batch and Rockwell FactoryTalk OEM Batch 
-
-`/UBR` C can be set in the INI file, on the command line or by using the PI Event Frames Interface Manager / batch Setup tab.
-
-If `/UBR = true` the interface will use SYSTEM MESSAGE to control the start and end of event frames. Example System Messages are BEGIN OF BATCH, END OF BATCH, UNIT PROCEDURE STARTED, and UNIT PROCEDURE ENDED.
-
-If `/UBR = false` the interface will use STATE CHANGE to control the start and end of event frames. Example State Change messages are RUNNING, REMOVED, ABORTED, COMPLETE, STOPPED, and ABANDON. The interface will combine the state change with the recipe (`Batch`, `UnitProcedure`, `Operation`, `Phase`) to determine which recipe step has changed state.
+If `/UBR = false` the interface will use **STATE CHANGE** to control the start and end of event frames. Example State Change messages are **RUNNING**, **REMOVED**, **ABORTED**, **COMPLETE**, **STOPPED**, and **ABANDON**. The interface will combine the state change with the recipe (`Batch`, `UnitProcedure`, `Operation`, `Phase`) to determine which recipe step has changed state. 
 
 ### Use original batch event view (/UOBEV)
 
@@ -56,9 +50,15 @@ Allow deferred units (/ADU)
 
 Enable the creation of unit batches for recipes in units that are allocated at the phase level rather than the unit batch level.
 
+<!--
+
+MB 6/18/21: Does not apply to Syncade
+
 ### Disable auto module creation for A&E data source (/DAMCAE)
 
-Ignore events from a DeltaV Event Chronicle (alarms & events) data source when creating or checking PI Module Database objects.
+Ignore events from a DeltaV Event Chronicle (alarms & events) data source when creating or checking PI Module Database objects. 
+
+-->
 
 ### Remove trailing index from recipe fields (/RTI)
 

@@ -39,25 +39,21 @@
   items:
   - topicUid: BIF_InterfaceSelectionTab # Unmodified
   - topicUid: BIF_ServerInformationTab # Unmodified
-  - topicUid: BIF_SourceTab # Modify for interface
+  - topicUid: BIF_SourceTab # Customized for Emerson Syncade
     items:
     - topicUid: BIF_WindowsCredentialManagerAuthentication # Unmodified
-  - topicUid: BIF_TemplatesTab # Modify for interface
+  - topicUid: BIF_TemplatesTab # Customized for Emerson Syncade
     items: 
-    - topicUid: BIF_TagTemplates # Modify for interface
-    - topicUid: BIF_PropertyTemplates # Modify for interface
-    - topicUid: BIF_EventFramesLinkTemplates # Modify for interface
-    - topicUid: BIF_RecipeTemplatesEFIM # Modify for interface
-      items: 
-      - topicUid: BIF_DefineRecipeTemplates # Modify for interface
-    - topicUid: BIF_Triggers # Modify for interface
-  - topicUid: BIF_FiltersTab # Modify for interface
-  - topicUid: BIF_TimeSettingsTab # Modify for interface
-  - topicUid: BIF_BatchSetupTab # Modify for interface
-  - topicUid: BIF_MergeSetupTab # Modify for interface
-  - topicUid: BIF_OperationalSettingsTab # Modify for interface
-  - topicUid: BIF_TestConfigurationTab # Modify for interface
-  - topicUid: BIF_ServiceConfigurationTab # Modify for interface
+    - topicUid: BIF_PropertyTemplates # Unmodified
+    - topicUid: BIF_RecipeTemplatesEFIM # Unmodified
+    - topicUid: BIF_TagTemplates # Customized for Emerson Syncade
+  - topicUid: BIF_FiltersTab # Unmodified
+  - topicUid: BIF_TimeSettingsTab # Unmodified
+  - topicUid: BIF_BatchSettings # Customized for Emerson Syncade
+  - topicUid: BIF_MergeSetupTab # Unmodified
+  - topicUid: BIF_OperationalSettingsTab # Unmodified
+  - topicUid: BIF_TestConfigurationTab # Unmodified
+  - topicUid: BIF_ServiceConfigurationTab # Unmodified
 # Command Line Parameters
 - topicUid: BIF_CommandLineParameterReference # Modify for interface
 # Initialization File
