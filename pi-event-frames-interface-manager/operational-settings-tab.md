@@ -4,6 +4,8 @@ uid: BIF_OperationalSettingsTab
 
 # Operational Settings tab
 
+<!-- Topic requires customization for specific interface -->
+
 Modify the settings on the Operational Settings tab to configure the interface mode and other related settings.
 
 ## Operational Settings
