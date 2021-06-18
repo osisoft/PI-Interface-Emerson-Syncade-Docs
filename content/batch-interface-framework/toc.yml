@@ -26,7 +26,11 @@
   - topicUid: BIF_HowToMergeMultipleSourceBatches # No modifications required
   - topicUid: BIF_LinkingBESToMESBatchesUsingEventFrames # No modifications required
 # Specific Considerations
-# TODO
+- topicUid: BIF_WorkflowSupport # Modify for interface
+  items:
+  - topicUid: BIF_DataSources # Modify for interface
+  - topicUid: BIF_StartAndStopEvents # Modify for interface
+  - topicUid: BIF_TemplatePlaceholders # Modify for itnerface
 # PI Event Frames Interface Manager
 - topicUid: BIF_PIEventFramesInterfaceManager # No modifications required
   items:
@@ -51,3 +55,13 @@
   - topicUid: BIF_OperationalSettingsTab # Modify for interface
   - topicUid: BIF_TestConfigurationTab # Modify for interface
   - topicUid: BIF_ServiceConfigurationTab # Modify for interface
+# Command Line Parameters
+- topicUid: BIF_CommandLineParameterReference # Modify for interface
+# Initialization File
+- topicUid: BIF_InitializationFileReference # Modify for interface
+  items: 
+  - topicUid: BIF_InitializationFileExamples # Modify for interface
+# Diagnostic Point Reference
+- topicUid: BIF_DiagnosticPointReference # No modifications required
+# Event file monitor utility
+- topicUid: BIF_EventFileMonitorUtility # No modifications required
