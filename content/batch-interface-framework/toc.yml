@@ -19,4 +19,9 @@
 - topicUid: BIF_HowBatchInterfacesWork # No modifications required
   items:
   - topicUid: BIF_InterfaceModes # No modifications required
-  - topicUid: 
+  - topicUid: BIF_HowBatchDataIsStored # Modify for interface
+    items:
+    - topicUid: BIF_EventFrames # No modifications required
+  - topicUid: BIF_EquipmentHierarchy # No modifications required
+  - topicUid: BIF_HowToMergeMultipleSourceBatches # No modifications required
+  - topicUid: BIF_LinkingBESToMESBatchesUsingEventFrames # No modifications required
