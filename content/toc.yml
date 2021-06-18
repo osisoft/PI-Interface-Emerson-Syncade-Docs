@@ -5,3 +5,23 @@
   - topicUid: BIF_ReferenceManuals # Modify for interface
 # Installation Prerequisites
 - topicUid: BIF_InterfaceConfiguration # Modify for interface
+  items: 
+  - topicUid: BIF_InstallationPrerequisites # No modifications required
+  - topicUid: BIF_SecurityOverview # No modifications required
+    items:
+      - topicUid: BIF_AssignPermissions # No modifications required
+      - topicUid: BIF_ConfigureSecurityForPIAF # No modifications required
+      - topicUid: BIF_ConfigureSecurityForPIDataArchive # No modifications required
+  - topicUid: BIF_CreateAndConfigureInterfaceInstance # No modifications required
+  - topicUid: BIF_PIServerConnectivity # No modifications required
+  - topicUid: BIF_LoggingAndErrorMessages # No modifications required
+# How Batch Interfaces Work
+- topicUid: BIF_HowBatchInterfacesWork # No modifications required
+  items:
+  - topicUid: BIF_InterfaceModes # No modifications required
+  - topicUid: BIF_HowBatchDataIsStored # Modify for interface
+    items:
+    - topicUid: BIF_EventFrames # No modifications required
+  - topicUid: BIF_EquipmentHierarchy # No modifications required
+  - topicUid: BIF_HowToMergeMultipleSourceBatches # No modifications required
+  - topicUid: BIF_LinkingBESToMESBatchesUsingEventFrames # No modifications required
