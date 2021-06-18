@@ -15,3 +15,8 @@
   - topicUid: BIF_CreateAndConfigureInterfaceInstance # No modifications required
   - topicUid: BIF_PIServerConnectivity # No modifications required
   - topicUid: BIF_LoggingAndErrorMessages # No modifications required
+# How Batch Interfaces Work
+- topicUid: BIF_HowBatchInterfacesWork # No modifications required
+  items:
+  - topicUid: BIF_InterfaceModes # No modifications required
+  - topicUid: 
