@@ -4,7 +4,7 @@ uid: BIF_Introduction
 
 # Introduction to [!include[interface](../includes/interface-name.md)]
 
-<!-- Add customized content between comments for the interace you're writing for -->
+<!-- Mark Bishop 6/18: Modified for Emerson Syncade -->
 
 The Syncade Manufacturing Execution System (MES) produces work procedures using production events and batch records, executing recipes and workflows and integrating equipment maintenance operations with process controls to optimize manufacturing environments.
 
@@ -20,9 +20,7 @@ Batch data is persistent in the data source and not in danger of being lost, as 
 
 [!include[interface](../includes/interface-name.md)] is designed for recipes that constrain a unit to run only one unit procedure at a time. 
 
-<!-- end comment-->
-
-<!-- Content below applies to all interfaces. -->
+<!-- Framework content -->
 
 Two different models are used to describe batch processes: 
 
