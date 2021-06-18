@@ -4,7 +4,7 @@ uid: BIF_InterfaceConfiguration
 
 # Batch interface configuration
 
-<!-- Interface-specific framework topic. Customize this topic for your interface. Remove the diagrams that don't apply -->
+<!-- Mark Bishop 6/18/21: Customized for Emerson Syncade -->
 
 The following diagrams illustrate various options for configuring batch interfaces, depending on the data source and the desired PI System output. 
 

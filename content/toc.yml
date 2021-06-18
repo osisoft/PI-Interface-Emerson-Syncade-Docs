@@ -1,22 +1,22 @@
 # Introduction
-- topicUid: BIF_Introduction # Modify for interface
+- topicUid: BIF_Introduction # Customized for Emerson Syncade
   items:
-  - topicUid: BIF_SupportedFeatures # Modify for interface
-  - topicUid: BIF_ReferenceManuals # Modify for interface
+  - topicUid: BIF_SupportedFeatures # Customized for Emerson Syncade
+  - topicUid: BIF_ReferenceManuals # Customized for Emerson Syncade
 # Installation Prerequisites
-- topicUid: BIF_InterfaceConfiguration # Modify for interface
+- topicUid: BIF_InterfaceConfiguration # Customized for Emerson Syncade
   items: 
-  - topicUid: BIF_InstallationPrerequisites # No modifications required
-  - topicUid: BIF_SecurityOverview # No modifications required
+  - topicUid: BIF_InstallationPrerequisites # Unmodified
+  - topicUid: BIF_SecurityOverview # Unmodified
     items:
-      - topicUid: BIF_AssignPermissions # No modifications required
-      - topicUid: BIF_ConfigureSecurityForPIAF # No modifications required
-      - topicUid: BIF_ConfigureSecurityForPIDataArchive # No modifications required
-  - topicUid: BIF_CreateAndConfigureInterfaceInstance # No modifications required
-  - topicUid: BIF_PIServerConnectivity # No modifications required
-  - topicUid: BIF_LoggingAndErrorMessages # No modifications required
+      - topicUid: BIF_AssignPermissions # Unmodified
+      - topicUid: BIF_ConfigureSecurityForPIAF # Unmodified
+      - topicUid: BIF_ConfigureSecurityForPIDataArchive # Unmodified
+  - topicUid: BIF_CreateAndConfigureInterfaceInstance # Unmodified
+  - topicUid: BIF_PIServerConnectivity # Unmodified
+  - topicUid: BIF_LoggingAndErrorMessages # Unmodified 
 # How Batch Interfaces Work
-- topicUid: BIF_HowBatchInterfacesWork # No modifications required
+- topicUid: BIF_HowBatchInterfacesWork # Unmodified
   items:
   - topicUid: BIF_InterfaceModes # No modifications required
   - topicUid: BIF_HowBatchDataIsStored # Modify for interface
