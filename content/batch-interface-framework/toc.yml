@@ -1,3 +1,4 @@
 - topicUid: BIF_Introduction # Modify for interface
   items:
   - topicUid: BIF_SupportedFeatures # Modify for interface
+  - topicUid: BIF_ReferenceManuals # Modify for interface
