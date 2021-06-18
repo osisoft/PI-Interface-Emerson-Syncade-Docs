@@ -6,12 +6,15 @@ uid: BIF_SupportedFeatures
 
 <!-- Add custom intro for interface -->
 
+[!include[interface](../includes/interface-name.md)] runs in 32-bit or 64-bit in emulation mode. No native 64-bit builds of the interfaces are available.
+
+The following table provides a summary of the features supported by this interface. 
 
 <!-- Content below applies to all batch interfaces -->
 
 | Feature | Support |
 | ------- | ------- |
-| Part Number | <UPDATE_FOR_INTERFACE> |
+| Part Number |  PI-IN-EM-DVBCS-NTI  |
 | Auto-creates PI Points and equipment assets? | Yes |
 | Point Builder Utility | No |
 | Stores batch data in PIBatch Database and PI Module Database | No |
