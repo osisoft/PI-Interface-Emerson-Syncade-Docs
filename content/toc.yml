@@ -35,13 +35,13 @@
   - topicUid: BIF_StartAndStopEvents # Customized for Emerson Syncade
   - topicUid: BIF_TemplatePlaceholders # Customized for Emerson Syncade
 # PI Event Frames Interface Manager
-- topicUid: BIF_PIEventFramesInterfaceManager # No modifications required
+- topicUid: BIF_PIEventFramesInterfaceManager # Unmodified
   items:
-  - topicUid: BIF_InterfaceSelectionTab # No modifications required
-  - topicUid: BIF_ServerInformationTab # No modifications required
-    items:
-    - topicUid: BIF_WindowsCredentialManagerAuthentication # Modify for interface
+  - topicUid: BIF_InterfaceSelectionTab # Unmodified
+  - topicUid: BIF_ServerInformationTab # Unmodified
   - topicUid: BIF_SourceTab # Modify for interface
+    items:
+    - topicUid: BIF_WindowsCredentialManagerAuthentication # Unmodified
   - topicUid: BIF_TemplatesTab # Modify for interface
     items: 
     - topicUid: BIF_TagTemplates # Modify for interface
