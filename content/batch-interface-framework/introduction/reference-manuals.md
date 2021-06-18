@@ -4,7 +4,7 @@ uid: BIF_ReferenceManuals
 
 # Reference manuals
 
-<!-- Update for your interface -->
+<!-- Mark Bishop 6/18/21: Customized for Emerson Syncade -->
 
 See the following user guides for additional information on the operation of [!include[interface](../includes/interface-name.md)]:
 
