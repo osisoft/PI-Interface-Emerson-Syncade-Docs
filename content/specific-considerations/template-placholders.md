@@ -14,7 +14,7 @@ The data source provides XML formatted messages that the interface reads. The pl
 
 In this release the supported batch hierarchical levels are:
 
-![supported batch hierarchical levels](../../images/supported-batch-hierarchical-levels.png)
+![supported batch hierarchical levels](../images/supported-batch-hierarchical-levels.png)
 
 The following tables illustrate Placeholders for "Master Recipe", "Process Segment", "Procedure", and "Unit Procedure" recipe styles:
 

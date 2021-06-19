@@ -11,10 +11,10 @@ The following diagrams illustrate various options for configuring batch interfac
 The first illustrates configuration for the Data Source MSMQ. 
 
 **Data source: MSMG Target—PI AF (event frames and assets)**
-![Interfacemodes](../../images/msmq-to-pi-af.png)
+![Interfacemodes](../images/msmq-to-pi-af.png)
 
 This diagram illustrates configuration for recovery. 
 
 **Data source: Workflow restful web service Target—PI AF (event frames and assets)**
-![Interfacemodes](../../images/workflow-restful-web-service.png)
+![Interfacemodes](../images/workflow-restful-web-service.png)
 
