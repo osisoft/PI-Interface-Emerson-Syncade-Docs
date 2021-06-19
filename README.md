@@ -1,6 +1,6 @@
-# PI Interface for Emerson Syncade Documentation
+# PI Interface for Emerson Syncade Batch Documentation
 
-User documentation for PI Interface for ABB 800xA Documentation.
+User documentation for PI Interface for Emerson Syncade Batch Documentation.
 
 >**Note:** This repository consumes another repo as a subtree: https://github.com/osisoft/PI-Batch-Interface-Doc-Framework
 
