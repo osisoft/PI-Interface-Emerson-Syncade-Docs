@@ -55,7 +55,7 @@
   - topicUid: BIF_TestConfigurationTab # Unmodified
   - topicUid: BIF_ServiceConfigurationTab # Unmodified
 # Command Line Parameters
-- topicUid: BIF_CommandLineParameterReference # Modify for interface
+- topicUid: BIF_CommandLineParameterReference # Customized for Emerson Syncade
 # Initialization File
 - topicUid: BIF_InitializationFileReference # Modify for interface
   items: 
