@@ -4,12 +4,20 @@ uid: BIF_SupportedFeatures
 
 # Supported features
 
+<!-- Mark Bishop 6/18: Customized for Emerson Syncade -->
+
+[!include[interface](../includes/interface-name.md)] runs in 32-bit or 64-bit in emulation mode. No native 64-bit builds of the interfaces are available.
+
+The following table provides a summary of the features supported by this interface. 
+
+<!-- framework content -->
+
 | Feature | Support |
 | ------- | ------- |
-| Part Number | *See interface-specific chapter* |
+| Part Number |  PI-IN-EM-DVBCS-NTI  |
 | Auto-creates PI Points and equipment assets? | Yes |
 | Point Builder Utility | No |
-| Stores batch data in PIBatch Database and PI Module Database | No |
+| Stores batch data in PI Batch Database and PI Module Database | No |
 | Stores batch data in PI AF | Yes |
 | Supports equipment arbitration events | No |
 | ICU Control | No (use PI Event Frame Interface Manager configuration tool) |
@@ -62,8 +70,8 @@ The following table lists standard status strings.
 
 | Message | Description |
 |--|--|
-| 1 Starting | The interface is starting. |
-| 2 Connected / No Data | The interface is connected to the data source but is not capable or reading or writing data to the foreign device. |
-| 3 n device(s) in error | The interface is not able to communicate with the specified number of devices. Usually includes additional interface-specific details. |
-| 4 Intf Shutdown | The interface is shutting down. |
-| 5 interface_specific_message | Message specific to the interface. |
+| `1 Starting` | The interface is starting. |
+| `2 Connected / No Data` | The interface is connected to the data source but is not capable or reading or writing data to the foreign device. |
+| `3 n device(s) in error` | The interface is not able to communicate with the specified number of devices. Usually includes additional interface-specific details. |
+| `4 Intf Shutdown` | The interface is shutting down. |
+| `5 interface_specific_message` | Message specific to the interface. |

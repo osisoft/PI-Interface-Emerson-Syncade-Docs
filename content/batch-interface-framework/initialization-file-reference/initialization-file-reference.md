@@ -4,7 +4,9 @@ uid: BIF_InitializationFileReference
 
 # Initialization file reference
 
-The initialization (.ini) file stores configuration information for an interface instance. This file is generated and updated by the PI Event Frame Interface Manager configuration tool. To enable you to control access to these files, initialization files are stored under the ProgramData folder. (Note that, prior to release 4.x, initialization files were stored in the interface installation directory.)
+<!-- Customized for Emerson Syncade -->
+
+The initialization (.ini) file stores configuration information for an interface instance. This file is generated and updated by the PI Event Frame Interface Manager configuration tool. To enable you to control access to these files, initialization files are stored under the ProgramData folder. (Prior to release 4.x, initialization files were stored in the interface installation directory.)
 
 **Note:** To ensure a correctly configured .ini file, use the PI Event Frame Interface Manager configuration tool. Do not edit the .ini file manually.
 
@@ -41,23 +43,22 @@ Source[<index>].<setting> = <value>
 
 Following are some simple examples of data source templates.
 
-Single DeltaV Batch Historian:
+<!-- Code sample below is custom for Emerson Syncade -->
+
+Single Batch Historian: 
 
 ```text
-Source[1].sqlserver = deltav10 Source[1].database = DVHisDB
-```
-
-DeltaV Batch Historian plus Alarms and Events:
-
-```text
-Source[1].sqlserver = deltav10 Source[1].database = DVHisDB Source[2].sqlserver = deltav10\DELTAV_CHRONICLE Source[2].database = Ejournal Source[2].isAE = true
+SOURCE[1].msmqpath=localhost\private$\QueueForOSIjshearouse
+Source[1].websrvpath=https://localhost:8081/emrWF/WebService/OrdersInterface.asmx
 ```
 
 ### Data source template parameters
 
+<!-- Commented out headings don't apply to Emerson Syncade -->
+
 The following headings describe the parameters for data source templates.
 
-#### `cursor= client | server` 
+<!-- #### `cursor= client | server` 
 
 Optional for SQL data source. Available in DeltaV 9.3+.
 
@@ -72,7 +73,7 @@ Example:
 
 ```text
 Source[1].evtdir = D:\TEST\RELEASE\test_1
-``` 
+```  -->
 
 #### `excludestates=<list>`
 
@@ -84,7 +85,11 @@ Examples:
 excludestates=COMPLETED,AB*ING,IDLING, COMPLE*
 ```
 
-#### `isAE=true`
+#### `MSMQPATH=<PATH to the MSMQ queue> `
+
+Required for MSMQ data source. Specifies the total path to the MSMQ queue. 
+
+<!-- #### `isAE=true`
 
 Indicates that the data source is a DeltaV Alarms and Events server.
 
@@ -103,7 +108,7 @@ Source[1].opcserver = DeltaV.OPCEventServer.1
 
 #### `opcserver=<server name>`
 
-Optional for OPC alarms and events data source. Specifies the name of the alarms and events server, if you are not using the default server.
+Optional for OPC alarms and events data source. Specifies the name of the alarms and events server, if you are not using the default server. -->
 
 #### `skipphases=<list>`
 
@@ -133,6 +138,15 @@ Example:
 skipunits = unit_1, u*2
 ```
 
+#### `websrvpath=<URL to OrdersInterface web service>`
+
+Required for Work Flow history recovery. Specifies the URL that points to the Orders Interface web service. The complete web service must me configured. 
+
+Example: 
+
+`https://localhost:8081/emrWF/WebService/OrdersInterface.asmx `
+
+<!-- 
 #### `sqlserver=<node name or IP address>`
 
 Required for SQL Server data source. Specifies the host where SQL Server is running. Available in DeltaV 9.3+.
@@ -147,7 +161,7 @@ For explicit login to SQL Server, password for user specified in sqluser setting
 
 #### `sqluser=<user name>` 
 
-User name for explicit login to SQL Server. By default the interface uses Windows authentication to connect to SQL Server.
+User name for explicit login to SQL Server. By default the interface uses Windows authentication to connect to SQL Server. -->
 
 ## Property template settings
 
