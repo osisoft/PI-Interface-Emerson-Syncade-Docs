@@ -62,3 +62,5 @@
   - topicUid: BIF_InitializationFileExamples # Customized for Emerson Syncade
 # Diagnostic Point Reference
 - topicUid: BIF_DiagnosticPointReference # Unmodified
+# Glossary
+- topicUid: SK_Glossary
