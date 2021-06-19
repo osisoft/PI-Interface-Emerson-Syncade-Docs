@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Property templates </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Property templates ">
+    <meta name="generator" content="docfx 2.58.0.0">
+    
+    <link rel="shortcut icon" href="../../../../favicon.ico">
+    <link rel="stylesheet" href="../../../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../../../styles/docfx.css">
+    <link rel="stylesheet" href="../../../../styles/main.css">
+    <meta property="docfx:navrel" content="../../../../toc.html">
+    <meta property="docfx:tocrel" content="../../../toc.html">
+    
+    <meta property="docfx:rel" content="../../../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../../../index.html">
+                <img id="logo" class="svg" src="../../../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="BIF_PropertyTemplatesEFIM">
+<h1 id="property-templates" sourcefile="content/batch-interface-framework/pi-event-frames-interface-manager/templates-tab/property-templates-efim.md" sourcestartlinenumber="5" sourceendlinenumber="5">Property templates</h1>
+
+<p sourcefile="content/batch-interface-framework/pi-event-frames-interface-manager/templates-tab/property-templates-efim.md" sourcestartlinenumber="7" sourceendlinenumber="7">Property templates enable you to configure how data from the data source is written to event frame attributes or batch database properties. Each interface provides a set of default properties, which contain commonly-desired data. To add these properties, right-click the <strong>Property Templates</strong> node and choose <strong>Add Default Templates</strong>.</p>
+<h2 id="configuration" sourcefile="content/batch-interface-framework/pi-event-frames-interface-manager/templates-tab/property-templates-efim.md" sourcestartlinenumber="9" sourceendlinenumber="9">Configuration</h2>
+<h3 id="index" sourcefile="content/batch-interface-framework/pi-event-frames-interface-manager/templates-tab/property-templates-efim.md" sourcestartlinenumber="11" sourceendlinenumber="11">Index</h3>
+<p sourcefile="content/batch-interface-framework/pi-event-frames-interface-manager/templates-tab/property-templates-efim.md" sourcestartlinenumber="13" sourceendlinenumber="13">Assigns a unique numeric identifier for the template. </p>
+<h3 id="name" sourcefile="content/batch-interface-framework/pi-event-frames-interface-manager/templates-tab/property-templates-efim.md" sourcestartlinenumber="15" sourceendlinenumber="15">Name</h3>
+<p sourcefile="content/batch-interface-framework/pi-event-frames-interface-manager/templates-tab/property-templates-efim.md" sourcestartlinenumber="17" sourceendlinenumber="17">Specifies how the property is named. You can use placeholders to include values emitted by the data source. By default, properties reside under a parent recipe property. To specify a location in the hierarchy where you want the property to reside, define the name as a path, delimited using backslashes. For example, to specify that all properties generated using this template are located under a parent property named &quot;Materials&quot; plus the contents of the <strong>Event</strong> field, specify the name as follows: <code>Materials\[Event]</code>. To create the property at the root level, precede the name with a dollar sign: <code>$\[Event]</code>. </p>
+<h3 id="value" sourcefile="content/batch-interface-framework/pi-event-frames-interface-manager/templates-tab/property-templates-efim.md" sourcestartlinenumber="19" sourceendlinenumber="19">Value</h3>
+<p sourcefile="content/batch-interface-framework/pi-event-frames-interface-manager/templates-tab/property-templates-efim.md" sourcestartlinenumber="21" sourceendlinenumber="21">Specifies the value to be recorded. Use placeholders to include values from the data emitted by the data source. </p>
+<h3 id="create-property" sourcefile="content/batch-interface-framework/pi-event-frames-interface-manager/templates-tab/property-templates-efim.md" sourcestartlinenumber="23" sourceendlinenumber="23">Create property</h3>
+<p sourcefile="content/batch-interface-framework/pi-event-frames-interface-manager/templates-tab/property-templates-efim.md" sourcestartlinenumber="25" sourceendlinenumber="25">Specifies the level at which the property is to be created. Options are as follows:</p>
+<ul sourcefile="content/batch-interface-framework/pi-event-frames-interface-manager/templates-tab/property-templates-efim.md" sourcestartlinenumber="27" sourceendlinenumber="31">
+<li sourcefile="content/batch-interface-framework/pi-event-frames-interface-manager/templates-tab/property-templates-efim.md" sourcestartlinenumber="27" sourceendlinenumber="27"><p sourcefile="content/batch-interface-framework/pi-event-frames-interface-manager/templates-tab/property-templates-efim.md" sourcestartlinenumber="27" sourceendlinenumber="27"><strong>At recipe level</strong>: By default, properties are created at the recipe level corresponding to the level in the data source from which the data was read.</p>
+</li>
+<li sourcefile="content/batch-interface-framework/pi-event-frames-interface-manager/templates-tab/property-templates-efim.md" sourcestartlinenumber="29" sourceendlinenumber="29"><p sourcefile="content/batch-interface-framework/pi-event-frames-interface-manager/templates-tab/property-templates-efim.md" sourcestartlinenumber="29" sourceendlinenumber="29"><strong>Under root node</strong>: Create properties at the top level of the batch or event frame hierarchy, regardless of the level at which they originated.</p>
+</li>
+<li sourcefile="content/batch-interface-framework/pi-event-frames-interface-manager/templates-tab/property-templates-efim.md" sourcestartlinenumber="31" sourceendlinenumber="31"><p sourcefile="content/batch-interface-framework/pi-event-frames-interface-manager/templates-tab/property-templates-efim.md" sourcestartlinenumber="31" sourceendlinenumber="31"><strong>Under UniqueID node</strong>: (Batch database only, not event frames) Create properties under the batch&#39;s UniqueID node.</p>
+</li>
+</ul>
+<h3 id="data-type" sourcefile="content/batch-interface-framework/pi-event-frames-interface-manager/templates-tab/property-templates-efim.md" sourcestartlinenumber="33" sourceendlinenumber="33">Data type</h3>
+<p sourcefile="content/batch-interface-framework/pi-event-frames-interface-manager/templates-tab/property-templates-efim.md" sourcestartlinenumber="35" sourceendlinenumber="35">PI data type of the value. Note that if the incoming value is incompatible with the specified type, the event is not processed, and an error is logged. </p>
+<h3 id="translate" sourcefile="content/batch-interface-framework/pi-event-frames-interface-manager/templates-tab/property-templates-efim.md" sourcestartlinenumber="37" sourceendlinenumber="37">Translate</h3>
+<p sourcefile="content/batch-interface-framework/pi-event-frames-interface-manager/templates-tab/property-templates-efim.md" sourcestartlinenumber="39" sourceendlinenumber="39">Maps text from the data source to the text that you want to record in the PI System. </p>
+<h3 id="uom" sourcefile="content/batch-interface-framework/pi-event-frames-interface-manager/templates-tab/property-templates-efim.md" sourcestartlinenumber="41" sourceendlinenumber="41">UOM</h3>
+<p sourcefile="content/batch-interface-framework/pi-event-frames-interface-manager/templates-tab/property-templates-efim.md" sourcestartlinenumber="43" sourceendlinenumber="43">Unit of measure to be used to store value, if different from unit provided by data source. </p>
+<h2 id="advanced-features" sourcefile="content/batch-interface-framework/pi-event-frames-interface-manager/templates-tab/property-templates-efim.md" sourcestartlinenumber="45" sourceendlinenumber="45">Advanced features</h2>
+<h3 id="descriptor" sourcefile="content/batch-interface-framework/pi-event-frames-interface-manager/templates-tab/property-templates-efim.md" sourcestartlinenumber="47" sourceendlinenumber="47">Descriptor</h3>
+<p sourcefile="content/batch-interface-framework/pi-event-frames-interface-manager/templates-tab/property-templates-efim.md" sourcestartlinenumber="49" sourceendlinenumber="49">Populates the tag&#39;s Descriptor field. </p>
+<h3 id="engineering-units" sourcefile="content/batch-interface-framework/pi-event-frames-interface-manager/templates-tab/property-templates-efim.md" sourcestartlinenumber="51" sourceendlinenumber="51">Engineering units</h3>
+<p sourcefile="content/batch-interface-framework/pi-event-frames-interface-manager/templates-tab/property-templates-efim.md" sourcestartlinenumber="53" sourceendlinenumber="53">Unit of measurement. </p>
+<h3 id="category" sourcefile="content/batch-interface-framework/pi-event-frames-interface-manager/templates-tab/property-templates-efim.md" sourcestartlinenumber="55" sourceendlinenumber="55">Category</h3>
+<p sourcefile="content/batch-interface-framework/pi-event-frames-interface-manager/templates-tab/property-templates-efim.md" sourcestartlinenumber="57" sourceendlinenumber="57">Specifies the PI AF category to be associated with the value. </p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/osisoft/PI-Interface-Emerson-Syncade-Docs/blob/main/content/batch-interface-framework/pi-event-frames-interface-manager/templates-tab/property-templates-efim.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../../styles/main.js"></script>
+  </body>
+</html>

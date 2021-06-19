@@ -1,0 +1,146 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Linking BES to MES batches using event frames </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Linking BES to MES batches using event frames ">
+    <meta name="generator" content="docfx 2.58.0.0">
+    
+    <link rel="shortcut icon" href="../../../../favicon.ico">
+    <link rel="stylesheet" href="../../../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../../../styles/docfx.css">
+    <link rel="stylesheet" href="../../../../styles/main.css">
+    <meta property="docfx:navrel" content="../../../../toc.html">
+    <meta property="docfx:tocrel" content="../../../toc.html">
+    
+    <meta property="docfx:rel" content="../../../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../../../index.html">
+                <img id="logo" class="svg" src="../../../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="BIF_LinkingBESToMESBatchesUsingEventFrames">
+<h1 id="linking-bes-to-mes-batches-using-event-frames">Linking BES to MES batches using event frames</h1>
+
+<!-- Static topic. No modifications usually required -->
+<p>To consolidate the output of a manufacturing execution system (MES) and a batch execution system (BES), specify the linking element as follows:</p>
+<ol>
+<li><p>Open PI Event Frames Interface Manager.</p>
+</li>
+<li><p>Click the <strong>Batch Setup</strong> tab.</p>
+</li>
+<li><p>For MES interfaces, enable the <strong>Link to child event frames</strong> option, and specify the path to the PI AF element.</p>
+</li>
+<li><p>For BES interfaces, enable the <strong>Link from parent event frames</strong> option, and specify the path to the same PI AF element.</p>
+</li>
+</ol>
+<p>This configuration is typical in an environment where an MES supervises multiple batch execution systems to manufacture a single product. For each BES, configure a dedicated interface instance and specify the same PI AF linking element. When an event frame created by the MES interface references the creation of a batch in the BES, a reference is made to the MES event frame in the linking element. Then, when the BES interface creates its event frame, a reference to it is created in the MES event frame, creating a consolidated view of all the related events from different systems.</p>
+<p>For example, the following figure illustrates an event frame created based on a batch from an Emerson DeltaV batch execution system. This event frame is referenced in an event frame created by a Werum PAS-X MES. Other batch interface instances that are configured to use the same linking element create references to their batches under the same link.</p>
+<p><img src="../../images/how-interfaces-process-batch-event-data.png" alt="how interfaces process batch event data"></p>
+<p>The .ini file code for creating those event frames looks like this example:</p>
+<pre><code class="lang-text">HOST=jshearouse5520
+PS=EMDVBCS
+ID=998
+AFHOST=jshearouse5520
+AFDATABASE=EMDVBCS
+DB=2
+Source[1].msmqpath=jshearouse5520\private$\historian2
+Source[1].websrvpath=example.com
+WRITELINK=\\LINKPARENT\LINKTEST
+</code></pre></article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/osisoft/PI-Interface-Emerson-Syncade-Docs/blob/main/content/batch-interface-framework/how-batch-interfaces-work/how-batch-data-is-stored/linking-BES-to-MES-batches-using-event-frames.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../../styles/main.js"></script>
+  </body>
+</html>

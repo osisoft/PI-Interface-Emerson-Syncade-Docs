@@ -1,0 +1,201 @@
+
+<div id="sidetoggle">
+  <div>
+    <div class="sidefilter">
+      <form class="toc-filter">
+        <span class="glyphicon glyphicon-filter filter-icon"></span>
+        <span class="glyphicon glyphicon-remove clear-icon" id="toc_filter_clear"></span>
+        <input type="text" id="toc_filter_input" placeholder="Enter here to filter..." onkeypress="if(event.keyCode==13) {return false;}">
+      </form>
+    </div>
+    <div class="sidetoc">
+      <div class="toc" id="toc">
+          
+          <ul class="nav level1">
+                <li>
+                    <span class="expand-stub"></span>
+                    <a href="batch-interface-framework/introduction/introduction.html" name="" title="Introduction to PI Interface for Emerson Syncade Batch">Introduction to PI Interface for Emerson Syncade Batch</a>
+                    
+                    <ul class="nav level2">
+                          <li>
+                              <a href="batch-interface-framework/introduction/supported-features.html" name="" title="Supported features">Supported features</a>
+                          </li>
+                          <li>
+                              <a href="batch-interface-framework/introduction/reference-manuals.html" name="" title="Reference manuals">Reference manuals</a>
+                          </li>
+                    </ul>
+                </li>
+                <li>
+                    <span class="expand-stub"></span>
+                    <a href="batch-interface-framework/installation-prerequisites/interface-configuration.html" name="" title="Batch interface configuration">Batch interface configuration</a>
+                    
+                    <ul class="nav level2">
+                          <li>
+                              <a href="batch-interface-framework/installation-prerequisites/installation-prerequisites.html" name="" title="Installation prerequisites">Installation prerequisites</a>
+                          </li>
+                          <li>
+                              <span class="expand-stub"></span>
+                              <a href="batch-interface-framework/installation-prerequisites/installation-prerequisites/security-overview.html" name="" title="Security overview">Security overview</a>
+                              
+                              <ul class="nav level3">
+                                    <li>
+                                        <a href="batch-interface-framework/installation-prerequisites/installation-prerequisites/security-overview/assign-permissions.html" name="" title="Assign permissions for user accounts and PI points">Assign permissions for user accounts and PI points</a>
+                                    </li>
+                                    <li>
+                                        <a href="batch-interface-framework/installation-prerequisites/installation-prerequisites/security-overview/configure-security-for-pi-af.html" name="" title="Configure security for the PI Asset Framework">Configure security for the PI Asset Framework</a>
+                                    </li>
+                                    <li>
+                                        <a href="batch-interface-framework/installation-prerequisites/installation-prerequisites/security-overview/configure-security-for-pi-data-archive.html" name="" title="Configure security for PI Data Archive">Configure security for PI Data Archive</a>
+                                    </li>
+                              </ul>
+                          </li>
+                          <li>
+                              <a href="batch-interface-framework/installation-prerequisites/installation-prerequisites/create-and-configure-the-interface-instance.html" name="" title="Create and configure the interface instance">Create and configure the interface instance</a>
+                          </li>
+                          <li>
+                              <a href="batch-interface-framework/installation-prerequisites/installation-prerequisites/pi-server-connectivity.html" name="" title="PI server connectivity">PI server connectivity</a>
+                          </li>
+                          <li>
+                              <a href="batch-interface-framework/installation-prerequisites/installation-prerequisites/logging-and-error-messages.html" name="" title="Logging and error messages">Logging and error messages</a>
+                          </li>
+                    </ul>
+                </li>
+                <li>
+                    <span class="expand-stub"></span>
+                    <a href="batch-interface-framework/how-batch-interfaces-work/how-batch-interfaces-work.html" name="" title="How batch interfaces work">How batch interfaces work</a>
+                    
+                    <ul class="nav level2">
+                          <li>
+                              <span class="expand-stub"></span>
+                              <a href="batch-interface-framework/how-batch-interfaces-work/how-interfaces-process-batch-event-data.html" name="" title="How batch interfaces process event data">How batch interfaces process event data</a>
+                              
+                              <ul class="nav level3">
+                                    <li>
+                                        <a href="batch-interface-framework/how-batch-interfaces-work/interface-modes.html" name="" title="Interface modes">Interface modes</a>
+                                    </li>
+                                    <li>
+                                        <span class="expand-stub"></span>
+                                        <a href="batch-interface-framework/how-batch-interfaces-work/how-batch-data-is-stored/how-batch-data-is-stored.html" name="" title="How batch data is stored">How batch data is stored</a>
+                                        
+                                        <ul class="nav level4">
+                                              <li>
+                                                  <a href="batch-interface-framework/how-batch-interfaces-work/how-batch-data-is-stored/event-frames.html" name="" title="Event frames">Event frames</a>
+                                              </li>
+                                              <li>
+                                                  <a href="batch-interface-framework/how-batch-interfaces-work/how-batch-data-is-stored/equipment-hierarchy.html" name="" title="Equipment hierarchy">Equipment hierarchy</a>
+                                              </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="batch-interface-framework/how-batch-interfaces-work/how-batch-data-is-stored/how-to-merge-multiple-source-batches.html" name="" title="How to merge multiple source batches">How to merge multiple source batches</a>
+                                    </li>
+                                    <li>
+                                        <a href="batch-interface-framework/how-batch-interfaces-work/how-batch-data-is-stored/linking-BES-to-MES-batches-using-event-frames.html" name="" title="Linking BES to MES batches using event frames">Linking BES to MES batches using event frames</a>
+                                    </li>
+                              </ul>
+                          </li>
+                          <li>
+                              <a href="batch-interface-framework/how-batch-interfaces-work/templates-for-mapping-data-source-events/templates-for-mapping-data-source-events.html" name="" title="Templates for mapping data source events">Templates for mapping data source events</a>
+                          </li>
+                    </ul>
+                </li>
+                <li>
+                    <span class="expand-stub"></span>
+                    <a href="batch-interface-framework/specific-considerations/workflow-support.html" name="" title="Workflow support">Workflow support</a>
+                    
+                    <ul class="nav level2">
+                          <li>
+                              <a href="batch-interface-framework/specific-considerations/data-sources.html" name="" title="Data sources">Data sources</a>
+                          </li>
+                          <li>
+                              <a href="batch-interface-framework/specific-considerations/start-and-stop-support.html" name="" title="Start and stop events">Start and stop events</a>
+                          </li>
+                          <li>
+                              <a href="batch-interface-framework/specific-considerations/template-placholders.html" name="" title="Template placeholders">Template placeholders</a>
+                          </li>
+                    </ul>
+                </li>
+                <li>
+                    <span class="expand-stub"></span>
+                    <a href="batch-interface-framework/pi-event-frames-interface-manager/pi-event-frames-interface-manager.html" name="" title="PI Event Frames Interface Manager">PI Event Frames Interface Manager</a>
+                    
+                    <ul class="nav level2">
+                          <li>
+                              <a href="batch-interface-framework/pi-event-frames-interface-manager/interface-selection-tab.html" name="" title="Interface Selection tab">Interface Selection tab</a>
+                          </li>
+                          <li>
+                              <a href="batch-interface-framework/pi-event-frames-interface-manager/server-information-tab.html" name="" title="Server Information tab">Server Information tab</a>
+                          </li>
+                          <li>
+                              <span class="expand-stub"></span>
+                              <a href="batch-interface-framework/pi-event-frames-interface-manager/source-tab.html" name="" title="Source tab">Source tab</a>
+                              
+                              <ul class="nav level3">
+                                    <li>
+                                        <a href="batch-interface-framework/pi-event-frames-interface-manager/windows-credential-manager-authentication.html" name="" title="Windows Credential Manager for authentication">Windows Credential Manager for authentication</a>
+                                    </li>
+                              </ul>
+                          </li>
+                          <li>
+                              <span class="expand-stub"></span>
+                              <a href="batch-interface-framework/pi-event-frames-interface-manager/templates-tab.html" name="" title="Templates tab">Templates tab</a>
+                              
+                              <ul class="nav level3">
+                                    <li>
+                                        <a href="batch-interface-framework/how-batch-interfaces-work/templates-for-mapping-data-source-events/property-templates.html" name="" title="Property templates">Property templates</a>
+                                    </li>
+                                    <li>
+                                        <a href="batch-interface-framework/pi-event-frames-interface-manager/templates-tab/recipe-templates-efim.html" name="" title="Recipe templates">Recipe templates</a>
+                                    </li>
+                                    <li>
+                                        <a href="batch-interface-framework/how-batch-interfaces-work/templates-for-mapping-data-source-events/tag-templates.html" name="" title="Tag templates">Tag templates</a>
+                                    </li>
+                              </ul>
+                          </li>
+                          <li>
+                              <a href="batch-interface-framework/pi-event-frames-interface-manager/filters-tab.html" name="" title="Filters tab">Filters tab</a>
+                          </li>
+                          <li>
+                              <a href="batch-interface-framework/pi-event-frames-interface-manager/time-settings-tab.html" name="" title="Time Settings tab">Time Settings tab</a>
+                          </li>
+                          <li>
+                              <a href="batch-interface-framework/pi-event-frames-interface-manager/batch-settings.html" name="" title="Batch Setup tab">Batch Setup tab</a>
+                          </li>
+                          <li>
+                              <a href="batch-interface-framework/pi-event-frames-interface-manager/merge-setup-tab.html" name="" title="Merge Setup tab">Merge Setup tab</a>
+                          </li>
+                          <li>
+                              <a href="batch-interface-framework/pi-event-frames-interface-manager/operational-settings-tab.html" name="" title="Operational Settings tab">Operational Settings tab</a>
+                          </li>
+                          <li>
+                              <a href="batch-interface-framework/pi-event-frames-interface-manager/test-configuration-tab.html" name="" title="Test configuration tab">Test configuration tab</a>
+                          </li>
+                          <li>
+                              <a href="batch-interface-framework/pi-event-frames-interface-manager/service-configuration-tab.html" name="" title="Service Configuration tab">Service Configuration tab</a>
+                          </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="batch-interface-framework/command-line-parameter-reference/command-line-parameter-reference.html" name="" title="Command line parameter reference">Command line parameter reference</a>
+                </li>
+                <li>
+                    <span class="expand-stub"></span>
+                    <a href="batch-interface-framework/initialization-file-reference/initialization-file-reference.html" name="" title="Initialization file reference">Initialization file reference</a>
+                    
+                    <ul class="nav level2">
+                          <li>
+                              <a href="batch-interface-framework/initialization-file-reference/initialization-file-examples.html" name="" title="Initialization file examples">Initialization file examples</a>
+                          </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="batch-interface-framework/diagnostic-point-reference/diagnostic-point-reference.html" name="" title="Diagnostic point reference">Diagnostic point reference</a>
+                </li>
+                <li>
+                    <a href="batch-interface-framework/glossary/glossary.html" name="" title="Glossary">Glossary</a>
+                </li>
+          </ul>
+      </div>
+    </div>
+  </div>
+</div>

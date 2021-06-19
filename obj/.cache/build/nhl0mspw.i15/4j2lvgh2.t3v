@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Initialization file reference </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Initialization file reference ">
+    <meta name="generator" content="docfx 2.58.0.0">
+    
+    <link rel="shortcut icon" href="../../../favicon.ico">
+    <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../../styles/docfx.css">
+    <link rel="stylesheet" href="../../../styles/main.css">
+    <meta property="docfx:navrel" content="../../../toc.html">
+    <meta property="docfx:tocrel" content="../../toc.html">
+    
+    <meta property="docfx:rel" content="../../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../../index.html">
+                <img id="logo" class="svg" src="../../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="BIF_InitializationFileReference">
+<h1 id="initialization-file-reference" sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="5" sourceendlinenumber="5">Initialization file reference</h1>
+
+<!-- Customized for Emerson Syncade -->
+<p sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="9" sourceendlinenumber="9">The initialization (.ini) file stores configuration information for an interface instance. This file is generated and updated by the PI Event Frame Interface Manager configuration tool. To enable you to control access to these files, initialization files are stored under the ProgramData folder. (Prior to release 4.x, initialization files were stored in the interface installation directory.)</p>
+<p sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="11" sourceendlinenumber="11"><strong>Note:</strong> To ensure a correctly configured .ini file, use the PI Event Frame Interface Manager configuration tool. Do not edit the .ini file manually.</p>
+<p sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="13" sourceendlinenumber="13">The information in this appendix is intended for troubleshooting purposes, to enable you to understand the contents of the .ini file.</p>
+<p sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="15" sourceendlinenumber="15">The .ini file is divided into the following sections:</p>
+<ul sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="17" sourceendlinenumber="24">
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="17" sourceendlinenumber="17"><strong>COMMAND LINE PARAMETERS:</strong> Basic interface settings.</li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="18" sourceendlinenumber="18"><strong>SIMPLE SWITCHES:</strong> Connection settings.</li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="19" sourceendlinenumber="19"><strong>SOURCE TEMPLATE:</strong> Specifies the settings required to connect to the data source, and events to be skipped (filtered)</li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="20" sourceendlinenumber="20"><strong>RECIPE TEMPLATE:</strong> Defines how data is recorded at each level of the batch hierarchy.</li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="21" sourceendlinenumber="21"><strong>TAG TEMPLATE:</strong> Defines how tags are created and updated based on incoming data from the data source.</li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="22" sourceendlinenumber="22"><strong>PROPERTY TEMPLATE:</strong> Define how PI properties or event frame attributes are created based on incoming data from the data source.</li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="23" sourceendlinenumber="23"><strong>TRANSLATIONS:</strong> Maps text from the data source language to the target language for the PI System.</li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="24" sourceendlinenumber="24"><strong>DCS LINK TEMPLATE:</strong> Define rules for linking event frames created by different interfaces.</li>
+</ul>
+<p sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="26" sourceendlinenumber="26">In defining settings for templates, you can use the following wildcards to compose expressions:</p>
+<table sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="28" sourceendlinenumber="34">
+<thead>
+<tr>
+<th>Wildcard</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>#</td>
+<td>single digit numerical value (0-9)</td>
+</tr>
+<tr>
+<td>@</td>
+<td>single alphabetic character (a-z, A-Z)</td>
+</tr>
+<tr>
+<td>?</td>
+<td>any single character</td>
+</tr>
+<tr>
+<td>!</td>
+<td>repeat previous mask symbol</td>
+</tr>
+<tr>
+<td>*</td>
+<td>any number of characters</td>
+</tr>
+</tbody>
+</table>
+<h2 id="source-template-settings" sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="36" sourceendlinenumber="36">Source template settings</h2>
+<p sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="38" sourceendlinenumber="38">A single interface instance can gather data from one or more data sources. In the .ini file, each data source is assigned an index, which is used to specify the settings for the data source. To specify a setting for a data source, use the following syntax:</p>
+<pre sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="40" sourceendlinenumber="42"><code class="lang-text">Source[&lt;index&gt;].&lt;setting&gt; = &lt;value&gt;
+</code></pre><p sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="44" sourceendlinenumber="44">Following are some simple examples of data source templates.</p>
+<!-- Code sample below is custom for Emerson Syncade -->
+<p sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="48" sourceendlinenumber="48">Single Batch Historian: </p>
+<pre sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="50" sourceendlinenumber="53"><code class="lang-text">SOURCE[1].msmqpath=localhost\private$\QueueForOSIjshearouse
+Source[1].websrvpath=https://localhost:8081/emrWF/WebService/OrdersInterface.asmx
+</code></pre><h3 id="data-source-template-parameters" sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="55" sourceendlinenumber="55">Data source template parameters</h3>
+<!-- Commented out headings don't apply to Emerson Syncade -->
+<p sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="59" sourceendlinenumber="59">The following headings describe the parameters for data source templates.</p>
+<!-- #### `cursor= client | server` 
+
+Optional for SQL data source. Available in DeltaV 9.3+.
+
+* Client (default): The interface retrieves complete dataset prior to processing. High memory consumption on interface node.
+* Server: The interface requests and processes one dataset record at a time. Reduces interface node memory consumption.
+
+#### `evtdir=<path>`
+
+Required for event file data sources, specifies the folder that contains the event files. 
+
+Example:
+
+```text
+Source[1].evtdir = D:\TEST\RELEASE\test_1
+```  -->
+<h4 id="excludestateslist" sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="78" sourceendlinenumber="78"><code>excludestates=&lt;list&gt;</code></h4>
+<p sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="80" sourceendlinenumber="80">(Optional) Specifies a comma-separated list of phase states to ignore. Not case-sensitive. You can use wildcards for matching. </p>
+<p sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="82" sourceendlinenumber="82">Examples:</p>
+<pre sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="84" sourceendlinenumber="86"><code class="lang-text">excludestates=COMPLETED,AB*ING,IDLING, COMPLE*
+</code></pre><h4 id="msmqpathpath-to-the-msmq-queue-" sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="88" sourceendlinenumber="88"><code>MSMQPATH=&lt;PATH to the MSMQ queue&gt;</code></h4>
+<p sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="90" sourceendlinenumber="90">Required for MSMQ data source. Specifies the total path to the MSMQ queue. </p>
+<!-- #### `isAE=true`
+
+Indicates that the data source is a DeltaV Alarms and Events server.
+
+#### `opcnode=<node name or IP address>`
+
+Required for OPC alarms and events data source. Available in DeltaV 10.3 and higher. Specifies the host of the DeltaV OPCAE server is installed. If used with DeltaV SQL server, must be defined for the same source. 
+
+Example:
+
+```text
+Source[1].sqlserver = deltav10
+Source[1].sqldatabase = DVHisDB
+Source[1].opcnode = deltav10
+Source[1].opcserver = DeltaV.OPCEventServer.1
+```
+
+#### `opcserver=<server name>`
+
+Optional for OPC alarms and events data source. Specifies the name of the alarms and events server, if you are not using the default server. -->
+<h4 id="skipphaseslist" sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="113" sourceendlinenumber="113"><code>skipphases=&lt;list&gt;</code></h4>
+<p sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="115" sourceendlinenumber="115">(Optional) Specifies a comma-separated list of phases to ignore. Not case-sensitive. You can use wildcards for matching. The interface checks the list against the [Phase] field (batch recipe) or [PhaseModule] field (equipment). </p>
+<p sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="117" sourceendlinenumber="117">Examples:</p>
+<pre sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="119" sourceendlinenumber="121"><code class="lang-text">skipphases=phase_1, ph*2,ph_test*, ph*ort*
+</code></pre><h4 id="skiprecipeslist" sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="123" sourceendlinenumber="123"><code>skiprecipes=&lt;list&gt;</code></h4>
+<p sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="125" sourceendlinenumber="125">(Optional) Specifies a comma-separated list of recipes to ignore. Not case-sensitive. You can use wildcards for matching. The interface checks the list against the corresponding event field, depending on recipe type, as follows:</p>
+<pre sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="127" sourceendlinenumber="129"><code class="lang-text">skiprecipes=recipe_1, rec*2,PRC_PAINT*, UP_TEST:2
+</code></pre><h4 id="skipunitslist" sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="131" sourceendlinenumber="131"><code>skipunits=&lt;list&gt;</code></h4>
+<p sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="133" sourceendlinenumber="133">(Optional) Specifies a comma-separated list of units to ignore. Not case-sensitive. You can use wildcards for matching. The interface checks the list against the corresponding [Unit] field. </p>
+<p sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="135" sourceendlinenumber="135">Example:</p>
+<pre sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="137" sourceendlinenumber="139"><code class="lang-text">skipunits = unit_1, u*2
+</code></pre><h4 id="websrvpathurl-to-ordersinterface-web-service" sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="141" sourceendlinenumber="141"><code>websrvpath=&lt;URL to OrdersInterface web service&gt;</code></h4>
+<p sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="143" sourceendlinenumber="143">Required for Work Flow history recovery. Specifies the URL that points to the Orders Interface web service. The complete web service must me configured. </p>
+<p sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="145" sourceendlinenumber="145">Example: </p>
+<p sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="147" sourceendlinenumber="147"><code>https://localhost:8081/emrWF/WebService/OrdersInterface.asmx</code></p>
+<!-- 
+#### `sqlserver=<node name or IP address>`
+
+Required for SQL Server data source. Specifies the host where SQL Server is running. Available in DeltaV 9.3+.
+
+#### `sqldatabase=<database name>`
+
+Optional for SQL Server data source. Specifies the name of the database, if you are not using the default database. (DVHisDB).
+
+#### `sqlpswd=<password>` 
+
+For explicit login to SQL Server, password for user specified in sqluser setting.
+
+#### `sqluser=<user name>` 
+
+User name for explicit login to SQL Server. By default the interface uses Windows authentication to connect to SQL Server. -->
+<h2 id="property-template-settings" sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="166" sourceendlinenumber="166">Property template settings</h2>
+<p sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="168" sourceendlinenumber="168">To define properties (batch database) or attributes (PI AF) to be stored at a particular level of the batch hierarchy, you create property templates. The syntax for property templates is as follows:</p>
+<pre sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="170" sourceendlinenumber="172"><code class="lang-text">PROPERTY[&lt;index&gt;].&lt;setting&gt; = &lt;value&gt;
+</code></pre><p sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="174" sourceendlinenumber="174">Instead of PROPERTY, you can specify ATTRIBUTE. The <code>&lt;index&gt;</code> is a unique identifier used to group the settings for a particular property. To include data from the data source, specify placeholders.</p>
+<p sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="176" sourceendlinenumber="176">For example, if you define the following template:</p>
+<pre sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="178" sourceendlinenumber="180"><code class="lang-text">Property[1].Value=[Time]:[Descript]:[Pval]:[EU]-[Event]_Testing
+</code></pre><p sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="182" sourceendlinenumber="182">...and the interface applies it to the following incoming data:</p>
+<pre sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="184" sourceendlinenumber="186"><code class="lang-text">[Time]=&quot;12/01/2015 12:01:05&quot; [Descript]=abc [Pval]=123.456 [EU]=cm [Event]=Report
+</code></pre><p sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="188" sourceendlinenumber="188">The following property is added to the resulting batch or batch-level event frame:</p>
+<pre sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="190" sourceendlinenumber="192"><code class="lang-text">12/01/2015 12:01:05:abc:123.456:cm-Report_Testing
+</code></pre><h3 id="available-property-template-settings" sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="194" sourceendlinenumber="194">Available property template settings</h3>
+<p sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="196" sourceendlinenumber="196">The following headings describes the settings required to define property templates.</p>
+<h4 id="name" sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="198" sourceendlinenumber="198">NAME</h4>
+<p sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="200" sourceendlinenumber="200">(Optional) Specifies how the property is to be named. You can use an expression to configure the name, but note that the resulting name must be unique. If two different name templates generate the same name, the property value will be overwritten and no error is logged. If you omit the name setting, the interface assigns a default name (&quot;Event_n&quot;).</p>
+<p sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="202" sourceendlinenumber="202">By default, properties are created at the level of the batch hierarchy that triggers their creation. To create a property at the top of the hierarchy, regardless of where it was triggered, specify &quot;$&quot; at the beginning of the expression that defines the name. </p>
+<p sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="204" sourceendlinenumber="204">For example: </p>
+<pre sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="206" sourceendlinenumber="208"><code class="lang-text">Property[1].Name = $\[Event]
+</code></pre><p sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="210" sourceendlinenumber="210"><strong>Valid Placeholders</strong></p>
+<ul sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="212" sourceendlinenumber="234">
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="212" sourceendlinenumber="212">[AREA]</li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="213" sourceendlinenumber="213">[BATCHID]</li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="214" sourceendlinenumber="214">[COMMENT]</li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="215" sourceendlinenumber="215">[DESCRIPT]</li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="216" sourceendlinenumber="216">[EU]</li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="217" sourceendlinenumber="217">[EVENT]</li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="218" sourceendlinenumber="218">[OPERATION]</li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="219" sourceendlinenumber="219">[PHASE]</li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="220" sourceendlinenumber="220">[PHASEMODULE]</li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="221" sourceendlinenumber="221">[PHASESTATE]</li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="222" sourceendlinenumber="222">[PHASESTEP]</li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="223" sourceendlinenumber="223">[PROCEDURE]</li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="224" sourceendlinenumber="224">[PROCESSCELL]</li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="225" sourceendlinenumber="225">[PVAL]</li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="226" sourceendlinenumber="226">[TIME]</li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="227" sourceendlinenumber="227">[UNIQUEID]</li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="228" sourceendlinenumber="228">[UNIT]</li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="229" sourceendlinenumber="229">[UNITPROCEDURE]</li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="230" sourceendlinenumber="230"><p sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="230" sourceendlinenumber="230">[USERID] </p>
+</li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="232" sourceendlinenumber="232"><p sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="232" sourceendlinenumber="232">[*,value=&quot;Exact Field&quot;]</p>
+</li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="233" sourceendlinenumber="233">[*,value=&quot;Field Mask&quot;]</li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="234" sourceendlinenumber="234">advanced parsing</li>
+</ul>
+<h4 id="value" sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="236" sourceendlinenumber="236">VALUE</h4>
+<p sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="238" sourceendlinenumber="238">(Required) Specifies the value to be stored in the property. To compose the value, you can use free text plus valid placeholders.</p>
+<p sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="240" sourceendlinenumber="240">Basic example:</p>
+<pre sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="242" sourceendlinenumber="244"><code class="lang-text">Property[1].Value = [BatchID] | event: &lt;State*&gt; | [Descript] | val: [Pval] 
+</code></pre><p sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="246" sourceendlinenumber="246">Advanced parsing:</p>
+<pre sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="248" sourceendlinenumber="250"><code class="lang-text">Property[1].Value = [BatchID] | event: [*,value=&quot;State*&quot;] | [Descript] | val: [Pval]
+</code></pre><p sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="252" sourceendlinenumber="252"><strong>Note:</strong> For SQL dta sources with the &quot;Use original batch event view&quot; option enabled (/UOBEV), you cannot use the [PVAL] or [EU] placeholders. To obtain this data you must parse it from the [DESCRIPT] placeholder.</p>
+<p sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="254" sourceendlinenumber="254"><strong>Valid Placeholders</strong></p>
+<ul sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="256" sourceendlinenumber="279">
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="256" sourceendlinenumber="256">[AREA]</li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="257" sourceendlinenumber="257">[BATCHID]</li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="258" sourceendlinenumber="258">[COMMENT]</li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="259" sourceendlinenumber="259">[DESCRIPT]</li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="260" sourceendlinenumber="260">[EU]</li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="261" sourceendlinenumber="261">[EVENT]</li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="262" sourceendlinenumber="262">[OPERATION]</li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="263" sourceendlinenumber="263">[PHASE]</li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="264" sourceendlinenumber="264">[PHASEMODULE]</li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="265" sourceendlinenumber="265">[PHASESTATE]</li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="266" sourceendlinenumber="266">[PHASESTEP]</li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="267" sourceendlinenumber="267">[PROCEDURE]</li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="268" sourceendlinenumber="268">[PROCESSCELL]</li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="269" sourceendlinenumber="269">[PVAL]</li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="270" sourceendlinenumber="270">[TAG]</li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="271" sourceendlinenumber="271">[TIME]</li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="272" sourceendlinenumber="272">[UNIQUEID]</li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="273" sourceendlinenumber="273">[UNIT]</li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="274" sourceendlinenumber="274">[UNITPROCEDURE]</li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="275" sourceendlinenumber="275"><p sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="275" sourceendlinenumber="275">[USERID] </p>
+</li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="277" sourceendlinenumber="277"><p sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="277" sourceendlinenumber="277">[*,value=&quot;Exact Field&quot;]</p>
+</li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="278" sourceendlinenumber="278">[*,value=&quot;Field Mask&quot;]</li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="279" sourceendlinenumber="279">advanced parsing</li>
+</ul>
+<h4 id="trigger" sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="281" sourceendlinenumber="281">TRIGGER</h4>
+<p sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="283" sourceendlinenumber="283">Specifies the event that causes the interface to generate the property. To define a trigger, specify an expression composed of a placeholder and value. When the interface detects the specified value in the placeholder, it generates the property. You can specify multiple triggers for a single property. If you specify the triggers on a single line, the property is generated only when all the conditions are met (logical AND). If you specify the trigger expressions on separate lines, the property is generated when any of the conditions is met (logical OR). </p>
+<p sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="285" sourceendlinenumber="285">Examples:</p>
+<pre sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="287" sourceendlinenumber="289"><code class="lang-text">Property[1].Trigger = [Parameter, value=&quot;State Ch*&quot;]
+</code></pre><pre sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="291" sourceendlinenumber="293"><code class="lang-text">Property[1].Trigger = [Value, value=&quot;tes*&quot;]
+</code></pre><pre sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="295" sourceendlinenumber="297"><code class="lang-text">Property[1].Trigger=[Event, value=&quot;State*] [Pval,value=RUNNING&quot;]
+</code></pre><p sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="299" sourceendlinenumber="299"><strong>Valid Placeholders</strong></p>
+<ul sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="301" sourceendlinenumber="322">
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="301" sourceendlinenumber="301">[AREA]</li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="302" sourceendlinenumber="302">[BATCHID]</li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="303" sourceendlinenumber="303">[COMMENT]</li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="304" sourceendlinenumber="304">[DESCRIPT]</li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="305" sourceendlinenumber="305">[EU]</li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="306" sourceendlinenumber="306">[EVENT]</li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="307" sourceendlinenumber="307">[OPERATION]</li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="308" sourceendlinenumber="308">[PHASE]</li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="309" sourceendlinenumber="309">[PHASEMODULE]</li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="310" sourceendlinenumber="310">[PHASESTATE]</li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="311" sourceendlinenumber="311">[PHASESTEP]</li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="312" sourceendlinenumber="312">[PROCEDURE]</li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="313" sourceendlinenumber="313">[PROCESSCELL]</li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="314" sourceendlinenumber="314">[PVAL]</li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="315" sourceendlinenumber="315">[UNIQUEID]</li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="316" sourceendlinenumber="316">[UNIT]</li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="317" sourceendlinenumber="317">[UNITPROCEDURE]</li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="318" sourceendlinenumber="318"><p sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="318" sourceendlinenumber="318">[USERID] </p>
+</li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="320" sourceendlinenumber="320"><p sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="320" sourceendlinenumber="320">[*,value=&quot;Exact Field&quot;]</p>
+</li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="321" sourceendlinenumber="321">[*,value=&quot;Field Mask&quot;]</li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="322" sourceendlinenumber="322">advanced parsing</li>
+</ul>
+<h4 id="translate" sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="324" sourceendlinenumber="324">TRANSLATE</h4>
+<p sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="326" sourceendlinenumber="326">To specify that the value is to be translated according to the translation map you define set this setting to TRUE.</p>
+<p sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="328" sourceendlinenumber="328"><strong>Valid Placeholders</strong></p>
+<ul sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="330" sourceendlinenumber="331">
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="330" sourceendlinenumber="330">TRUE </li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="331" sourceendlinenumber="331">FALSE</li>
+</ul>
+<h4 id="type" sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="333" sourceendlinenumber="333">TYPE</h4>
+<p sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="335" sourceendlinenumber="335">Specifies the data type for the value. To configure the interface to evaluate the data and assign the data type accordingly, specify <strong>AUTO</strong>.</p>
+<p sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="337" sourceendlinenumber="337"><strong>Valid Placeholders</strong></p>
+<ul sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="339" sourceendlinenumber="342">
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="339" sourceendlinenumber="339">STRING</li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="340" sourceendlinenumber="340">FLOAT</li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="341" sourceendlinenumber="341">INTEGER</li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="342" sourceendlinenumber="342">AUTO</li>
+</ul>
+<h4 id="category" sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="344" sourceendlinenumber="344">CATEGORY</h4>
+<p sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="346" sourceendlinenumber="346">(AF only) Specifies the AF category to be assigned to the attribute.</p>
+<p sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="348" sourceendlinenumber="348"><strong>Valid Placeholders</strong></p>
+<ul sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="350" sourceendlinenumber="372">
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="350" sourceendlinenumber="350">[AREA]</li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="351" sourceendlinenumber="351">[BATCHID]</li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="352" sourceendlinenumber="352">[COMMENT]</li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="353" sourceendlinenumber="353">[DESCRIPT]</li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="354" sourceendlinenumber="354">[EU]</li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="355" sourceendlinenumber="355">[EVENT]</li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="356" sourceendlinenumber="356">[OPERATION]</li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="357" sourceendlinenumber="357">[PHASE]</li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="358" sourceendlinenumber="358">[PHASEMODULE]</li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="359" sourceendlinenumber="359">[PHASESTATE]</li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="360" sourceendlinenumber="360">[PHASESTEP]</li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="361" sourceendlinenumber="361">[PROCEDURE]</li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="362" sourceendlinenumber="362">[PROCESSCELL]</li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="363" sourceendlinenumber="363">[PVAL]</li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="364" sourceendlinenumber="364">[TIME]</li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="365" sourceendlinenumber="365">[UNIQUEID]</li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="366" sourceendlinenumber="366">[UNIT]</li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="367" sourceendlinenumber="367">[UNITPROCEDURE]</li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="368" sourceendlinenumber="368"><p sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="368" sourceendlinenumber="368">[USERID] </p>
+</li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="370" sourceendlinenumber="370"><p sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="370" sourceendlinenumber="370">[*,value=&quot;Exact Field&quot;]</p>
+</li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="371" sourceendlinenumber="371">[*,value=&quot;Field Mask&quot;]</li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="372" sourceendlinenumber="372">advanced parsing</li>
+</ul>
+<h4 id="uom-or-engunits-or-eu" sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="374" sourceendlinenumber="374">UOM or ENGUNITS or EU</h4>
+<p sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="376" sourceendlinenumber="376">Specifies the units of measure for the attribute. (See /UOBEV note for VALUE setting, above.)</p>
+<p sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="378" sourceendlinenumber="378"><strong>Valid Placeholders</strong></p>
+<ul sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="380" sourceendlinenumber="402">
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="380" sourceendlinenumber="380">[AREA]</li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="381" sourceendlinenumber="381">[BATCHID]</li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="382" sourceendlinenumber="382">[COMMENT]</li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="383" sourceendlinenumber="383">[DESCRIPT]</li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="384" sourceendlinenumber="384">[EU]</li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="385" sourceendlinenumber="385">[EVENT]</li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="386" sourceendlinenumber="386">[OPERATION]</li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="387" sourceendlinenumber="387">[PHASE]</li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="388" sourceendlinenumber="388">[PHASEMODULE]</li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="389" sourceendlinenumber="389">[PHASESTATE]</li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="390" sourceendlinenumber="390">[PHASESTEP]</li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="391" sourceendlinenumber="391">[PROCEDURE]</li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="392" sourceendlinenumber="392">[PROCESSCELL]</li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="393" sourceendlinenumber="393">[PVAL]</li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="394" sourceendlinenumber="394">[TIME]</li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="395" sourceendlinenumber="395">[UNIQUEID]</li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="396" sourceendlinenumber="396">[UNIT]</li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="397" sourceendlinenumber="397">[UNITPROCEDURE]</li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="398" sourceendlinenumber="398"><p sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="398" sourceendlinenumber="398">[USERID] </p>
+</li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="400" sourceendlinenumber="400"><p sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="400" sourceendlinenumber="400">[*,value=&quot;Exact Field&quot;]</p>
+</li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="401" sourceendlinenumber="401">[*,value=&quot;Field Mask&quot;]</li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="402" sourceendlinenumber="402">advanced parsing</li>
+</ul>
+<h2 id="tag-templates" sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="404" sourceendlinenumber="404">Tag templates</h2>
+<p sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="406" sourceendlinenumber="406">Tag template specify how the interface creates and updates PI tags based on incoming data. For example, the following template creates one tag per unit for state change events:</p>
+<pre sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="408" sourceendlinenumber="415"><code class="lang-text">Tag[1].Name=BESName:[UNIT].Event.[EVENT] 
+Tag[1].Descriptor=[UNIT] [EVENT] 
+Tag[1].EngUnits=[EU] 
+Tag[1].Value=[DESCRIPT]|[EVENT]|[PVAL]|[EU]|[AREA]|[PROCESSCELL]|[UNIT]|[PHASEMODULE]|[USERID] 
+Tag[1].Type=string Tag[1].UnitAlias=Event.[EVENT] 
+Tag[1].Trigger=[EVENT,value=&quot;State Change&quot;]
+</code></pre><h3 id="tag-template-settings" sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="417" sourceendlinenumber="417">Tag template settings</h3>
+<p sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="419" sourceendlinenumber="419">The following table lists valid settings for tag templates. The timestamp for tag events is taken from the triggering event.</p>
+<h4 id="annotation" sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="421" sourceendlinenumber="421">ANNOTATION</h4>
+<p sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="423" sourceendlinenumber="423">Annotate the tag using a string.</p>
+<p sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="425" sourceendlinenumber="425"><strong>Valid Placeholders</strong></p>
+<ul sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="427" sourceendlinenumber="446">
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="427" sourceendlinenumber="427">[AREA]</li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="428" sourceendlinenumber="428">[BATCHID]</li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="429" sourceendlinenumber="429">[COMMENT]</li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="430" sourceendlinenumber="430">[DESCRIPT]</li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="431" sourceendlinenumber="431">[EU]</li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="432" sourceendlinenumber="432">[EVENT]</li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="433" sourceendlinenumber="433">[OPERATION]</li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="434" sourceendlinenumber="434">[PHASE]</li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="435" sourceendlinenumber="435">[PHASEMODULE]</li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="436" sourceendlinenumber="436">[PROCEDURE]</li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="437" sourceendlinenumber="437">[PROCESSCELL]</li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="438" sourceendlinenumber="438">[PVAL]</li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="439" sourceendlinenumber="439">[UNIQUEID] </li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="440" sourceendlinenumber="440">[UNIT]</li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="441" sourceendlinenumber="441">[UNITPROCEDURE]</li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="442" sourceendlinenumber="442"><p sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="442" sourceendlinenumber="442">[USERID]</p>
+</li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="444" sourceendlinenumber="444"><p sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="444" sourceendlinenumber="444">[*,value=&quot;Exact Field&quot;]</p>
+</li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="445" sourceendlinenumber="445">[*,value=&quot;Field Mask&quot;]</li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="446" sourceendlinenumber="446">advanced parsing</li>
+</ul>
+<h4 id="annotation2" sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="448" sourceendlinenumber="448">ANNOTATION2</h4>
+<p sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="450" sourceendlinenumber="450">Annotate the tag using a name/value object.</p>
+<p sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="452" sourceendlinenumber="452"><strong>Valid Placeholders</strong></p>
+<ul sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="454" sourceendlinenumber="473">
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="454" sourceendlinenumber="454">[AREA]</li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="455" sourceendlinenumber="455">[BATCHID]</li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="456" sourceendlinenumber="456">[COMMENT]</li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="457" sourceendlinenumber="457">[DESCRIPT]</li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="458" sourceendlinenumber="458">[EU]</li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="459" sourceendlinenumber="459">[EVENT]</li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="460" sourceendlinenumber="460">[OPERATION]</li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="461" sourceendlinenumber="461">[PHASE]</li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="462" sourceendlinenumber="462">[PHASEMODULE]</li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="463" sourceendlinenumber="463">[PROCEDURE]</li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="464" sourceendlinenumber="464">[PROCESSCELL]</li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="465" sourceendlinenumber="465">[PVAL]</li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="466" sourceendlinenumber="466">[UNIQUEID] </li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="467" sourceendlinenumber="467">[UNIT]</li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="468" sourceendlinenumber="468">[UNITPROCEDURE]</li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="469" sourceendlinenumber="469"><p sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="469" sourceendlinenumber="469">[USERID]</p>
+</li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="471" sourceendlinenumber="471"><p sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="471" sourceendlinenumber="471">[*,value=&quot;Exact Field&quot;]</p>
+</li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="472" sourceendlinenumber="472">[*,value=&quot;Field Mask&quot;]</li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="473" sourceendlinenumber="473">advanced parsing</li>
+</ul>
+<h4 id="descriptor" sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="475" sourceendlinenumber="475">DESCRIPTOR</h4>
+<p sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="477" sourceendlinenumber="477">Specifies how the descriptor field of the tag is populated.</p>
+<p sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="479" sourceendlinenumber="479"><strong>Valid Placeholders</strong></p>
+<ul sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="481" sourceendlinenumber="500">
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="481" sourceendlinenumber="481">[AREA]</li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="482" sourceendlinenumber="482">[BATCHID]</li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="483" sourceendlinenumber="483">[COMMENT]</li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="484" sourceendlinenumber="484">[DESCRIPT]</li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="485" sourceendlinenumber="485">[EU]</li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="486" sourceendlinenumber="486">[EVENT]</li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="487" sourceendlinenumber="487">[OPERATION]</li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="488" sourceendlinenumber="488">[PHASE]</li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="489" sourceendlinenumber="489">[PHASEMODULE]</li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="490" sourceendlinenumber="490">[PROCEDURE]</li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="491" sourceendlinenumber="491">[PROCESSCELL]</li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="492" sourceendlinenumber="492">[PVAL]</li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="493" sourceendlinenumber="493">[UNIQUEID] </li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="494" sourceendlinenumber="494">[UNIT]</li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="495" sourceendlinenumber="495">[UNITPROCEDURE]</li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="496" sourceendlinenumber="496"><p sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="496" sourceendlinenumber="496">[USERID]</p>
+</li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="498" sourceendlinenumber="498"><p sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="498" sourceendlinenumber="498">[*,value=&quot;Exact Field&quot;]</p>
+</li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="499" sourceendlinenumber="499">[*,value=&quot;Field Mask&quot;]</li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="500" sourceendlinenumber="500">advanced parsing</li>
+</ul>
+<h4 id="eu" sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="502" sourceendlinenumber="502">EU</h4>
+<p sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="504" sourceendlinenumber="504">Specifies the engineering units for the tag.</p>
+<p sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="506" sourceendlinenumber="506"><strong>Valid Placeholders</strong></p>
+<ul sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="508" sourceendlinenumber="527">
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="508" sourceendlinenumber="508">[AREA]</li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="509" sourceendlinenumber="509">[BATCHID]</li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="510" sourceendlinenumber="510">[COMMENT]</li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="511" sourceendlinenumber="511">[DESCRIPT]</li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="512" sourceendlinenumber="512">[EU]</li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="513" sourceendlinenumber="513">[EVENT]</li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="514" sourceendlinenumber="514">[OPERATION]</li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="515" sourceendlinenumber="515">[PHASE]</li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="516" sourceendlinenumber="516">[PHASEMODULE]</li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="517" sourceendlinenumber="517">[PROCEDURE]</li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="518" sourceendlinenumber="518">[PROCESSCELL]</li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="519" sourceendlinenumber="519">[PVAL]</li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="520" sourceendlinenumber="520">[UNIQUEID] </li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="521" sourceendlinenumber="521">[UNIT]</li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="522" sourceendlinenumber="522">[UNITPROCEDURE]</li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="523" sourceendlinenumber="523"><p sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="523" sourceendlinenumber="523">[USERID]</p>
+</li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="525" sourceendlinenumber="525"><p sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="525" sourceendlinenumber="525">[*,value=&quot;Exact Field&quot;]</p>
+</li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="526" sourceendlinenumber="526">[*,value=&quot;Field Mask&quot;]</li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="527" sourceendlinenumber="527">advanced parsing</li>
+</ul>
+<h4 id="name-1" sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="529" sourceendlinenumber="529">NAME</h4>
+<p sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="531" sourceendlinenumber="531">Specifies how the tag is to be named.</p>
+<p sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="533" sourceendlinenumber="533"><strong>Valid Placeholders</strong></p>
+<ul sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="535" sourceendlinenumber="554">
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="535" sourceendlinenumber="535">[AREA]</li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="536" sourceendlinenumber="536">[BATCHID]</li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="537" sourceendlinenumber="537">[COMMENT]</li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="538" sourceendlinenumber="538">[DESCRIPT]</li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="539" sourceendlinenumber="539">[EU]</li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="540" sourceendlinenumber="540">[EVENT]</li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="541" sourceendlinenumber="541">[OPERATION]</li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="542" sourceendlinenumber="542">[PHASE]</li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="543" sourceendlinenumber="543">[PHASEMODULE]</li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="544" sourceendlinenumber="544">[PROCEDURE]</li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="545" sourceendlinenumber="545">[PROCESSCELL]</li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="546" sourceendlinenumber="546">[PVAL]</li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="547" sourceendlinenumber="547">[UNIQUEID] </li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="548" sourceendlinenumber="548">[UNIT]</li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="549" sourceendlinenumber="549">[UNITPROCEDURE]</li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="550" sourceendlinenumber="550"><p sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="550" sourceendlinenumber="550">[USERID]</p>
+</li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="552" sourceendlinenumber="552"><p sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="552" sourceendlinenumber="552">[*,value=&quot;Exact Field&quot;]</p>
+</li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="553" sourceendlinenumber="553">[*,value=&quot;Field Mask&quot;]</li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="554" sourceendlinenumber="554">advanced parsing</li>
+</ul>
+<h4 id="phasealias" sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="556" sourceendlinenumber="556">PHASEALIAS</h4>
+<p sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="558" sourceendlinenumber="558">Configures the naming convention for the phase module alias generated by the interface. The unit alias refers to the MDB module or AF asset representing the phase module associated with the incoming event.</p>
+<p sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="560" sourceendlinenumber="560"><strong>Valid Placeholders</strong></p>
+<ul sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="562" sourceendlinenumber="581">
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="562" sourceendlinenumber="562">[AREA]</li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="563" sourceendlinenumber="563">[BATCHID]</li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="564" sourceendlinenumber="564">[COMMENT]</li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="565" sourceendlinenumber="565">[DESCRIPT]</li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="566" sourceendlinenumber="566">[EU]</li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="567" sourceendlinenumber="567">[EVENT]</li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="568" sourceendlinenumber="568">[OPERATION]</li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="569" sourceendlinenumber="569">[PHASE]</li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="570" sourceendlinenumber="570">[PHASEMODULE]</li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="571" sourceendlinenumber="571">[PROCEDURE]</li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="572" sourceendlinenumber="572">[PROCESSCELL]</li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="573" sourceendlinenumber="573">[PVAL]</li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="574" sourceendlinenumber="574">[UNIQUEID] </li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="575" sourceendlinenumber="575">[UNIT]</li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="576" sourceendlinenumber="576">[UNITPROCEDURE]</li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="577" sourceendlinenumber="577"><p sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="577" sourceendlinenumber="577">[USERID]</p>
+</li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="579" sourceendlinenumber="579"><p sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="579" sourceendlinenumber="579">[*,value=&quot;Exact Field&quot;]</p>
+</li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="580" sourceendlinenumber="580">[*,value=&quot;Field Mask&quot;]</li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="581" sourceendlinenumber="581">advanced parsing</li>
+</ul>
+<h4 id="trigger-1" sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="583" sourceendlinenumber="583">TRIGGER</h4>
+<p sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="585" sourceendlinenumber="585">Specifies the event that causes the interface to generate or update the tag. To define a trigger, specify an expression composed of a placeholder and value. When the interface detects the specified value in the placeholder, it generates or updates the tag. You can specify multiple triggers for a single tag. If you specify the triggers on a single line, the tag is generated only when all the conditions are met (logical AND). If you specify the trigger expressions on separate lines, the tag is generated when any of the conditions is met (logical OR).</p>
+<p sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="587" sourceendlinenumber="587"><strong>Valid Placeholders</strong></p>
+<ul sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="589" sourceendlinenumber="608">
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="589" sourceendlinenumber="589">[AREA]</li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="590" sourceendlinenumber="590">[BATCHID]</li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="591" sourceendlinenumber="591">[COMMENT]</li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="592" sourceendlinenumber="592">[DESCRIPT]</li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="593" sourceendlinenumber="593">[EU]</li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="594" sourceendlinenumber="594">[EVENT]</li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="595" sourceendlinenumber="595">[OPERATION]</li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="596" sourceendlinenumber="596">[PHASE]</li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="597" sourceendlinenumber="597">[PHASEMODULE]</li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="598" sourceendlinenumber="598">[PROCEDURE]</li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="599" sourceendlinenumber="599">[PROCESSCELL]</li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="600" sourceendlinenumber="600">[PVAL]</li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="601" sourceendlinenumber="601">[UNIQUEID] </li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="602" sourceendlinenumber="602">[UNIT]</li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="603" sourceendlinenumber="603">[UNITPROCEDURE]</li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="604" sourceendlinenumber="604"><p sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="604" sourceendlinenumber="604">[USERID]</p>
+</li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="606" sourceendlinenumber="606"><p sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="606" sourceendlinenumber="606">[*,value=&quot;Exact Field&quot;]</p>
+</li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="607" sourceendlinenumber="607">[*,value=&quot;Field Mask&quot;]</li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="608" sourceendlinenumber="608">advanced parsing</li>
+</ul>
+<h4 id="translate-1" sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="610" sourceendlinenumber="610">TRANSLATE</h4>
+<p sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="612" sourceendlinenumber="612">To specify that tag settings are to be translated according to the translation map you define, set this setting to TRUE.</p>
+<p sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="614" sourceendlinenumber="614"><strong>Valid Placeholders</strong></p>
+<ul sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="616" sourceendlinenumber="617">
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="616" sourceendlinenumber="616">TRUE</li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="617" sourceendlinenumber="617">FALSE</li>
+</ul>
+<h4 id="type-1" sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="619" sourceendlinenumber="619">TYPE</h4>
+<p sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="621" sourceendlinenumber="621">Specifies the data type for the tag. To configure the interface to evaluate the data and assign the data type accordingly, specify AUTO.</p>
+<p sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="623" sourceendlinenumber="623"><strong>Valid Placeholders</strong></p>
+<ul sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="625" sourceendlinenumber="628">
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="625" sourceendlinenumber="625">STRING</li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="626" sourceendlinenumber="626">FLOAT</li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="627" sourceendlinenumber="627">INTEGER</li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="628" sourceendlinenumber="628">AUTO</li>
+</ul>
+<h4 id="unitalias" sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="630" sourceendlinenumber="630">UNITALIAS</h4>
+<p sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="632" sourceendlinenumber="632">Configures the naming convention for the unit alias generated by the interface. The unit alias refers to the MDB module or AF asset representing the unit associated with the incoming event.</p>
+<p sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="634" sourceendlinenumber="634"><strong>Valid Placeholders</strong></p>
+<ul sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="636" sourceendlinenumber="655">
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="636" sourceendlinenumber="636">[AREA]</li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="637" sourceendlinenumber="637">[BATCHID]</li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="638" sourceendlinenumber="638">[COMMENT]</li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="639" sourceendlinenumber="639">[DESCRIPT]</li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="640" sourceendlinenumber="640">[EU]</li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="641" sourceendlinenumber="641">[EVENT]</li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="642" sourceendlinenumber="642">[OPERATION]</li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="643" sourceendlinenumber="643">[PHASE]</li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="644" sourceendlinenumber="644">[PHASEMODULE]</li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="645" sourceendlinenumber="645">[PROCEDURE]</li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="646" sourceendlinenumber="646">[PROCESSCELL]</li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="647" sourceendlinenumber="647">[PVAL]</li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="648" sourceendlinenumber="648">[UNIQUEID] </li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="649" sourceendlinenumber="649">[UNIT]</li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="650" sourceendlinenumber="650">[UNITPROCEDURE]</li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="651" sourceendlinenumber="651"><p sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="651" sourceendlinenumber="651">[USERID]</p>
+</li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="653" sourceendlinenumber="653"><p sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="653" sourceendlinenumber="653">[*,value=&quot;Exact Field&quot;]</p>
+</li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="654" sourceendlinenumber="654">[*,value=&quot;Field Mask&quot;]</li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="655" sourceendlinenumber="655">advanced parsing</li>
+</ul>
+<h4 id="value-1" sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="657" sourceendlinenumber="657">VALUE</h4>
+<p sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="659" sourceendlinenumber="659">(Required) Specifies the value to be stored in the tag. To compose the value, you can use free text plus valid placeholders.</p>
+<p sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="661" sourceendlinenumber="661"><strong>Valid Placeholders</strong></p>
+<ul sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="663" sourceendlinenumber="684">
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="663" sourceendlinenumber="663">[AREA]</li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="664" sourceendlinenumber="664">[BATCHID]</li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="665" sourceendlinenumber="665">[COMMENT]</li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="666" sourceendlinenumber="666">[DESCRIPT]</li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="667" sourceendlinenumber="667">[EU]</li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="668" sourceendlinenumber="668">[EVENT]</li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="669" sourceendlinenumber="669">[OPERATION]</li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="670" sourceendlinenumber="670">[PHASE]</li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="671" sourceendlinenumber="671">[PHASEMODULE]</li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="672" sourceendlinenumber="672">[PROCEDURE]</li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="673" sourceendlinenumber="673">[PROCESSCELL]</li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="674" sourceendlinenumber="674">[PVAL]</li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="675" sourceendlinenumber="675">[TAG]</li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="676" sourceendlinenumber="676">[TIME]</li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="677" sourceendlinenumber="677">[UNIQUEID] </li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="678" sourceendlinenumber="678">[UNIT]</li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="679" sourceendlinenumber="679">[UNITPROCEDURE]</li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="680" sourceendlinenumber="680"><p sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="680" sourceendlinenumber="680">[USERID]</p>
+</li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="682" sourceendlinenumber="682"><p sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="682" sourceendlinenumber="682">[*,value=&quot;Exact Field&quot;]</p>
+</li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="683" sourceendlinenumber="683">[*,value=&quot;Field Mask&quot;]</li>
+<li sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="684" sourceendlinenumber="684">advanced parsing</li>
+</ul>
+<h2 id="recipe-templates" sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="686" sourceendlinenumber="686">Recipe Templates</h2>
+<p sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="688" sourceendlinenumber="688">To define the data generated for each level of the batch hierarchy, you define recipe templates.</p>
+<p sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="690" sourceendlinenumber="690">Following is a typical set of default recipe templates, though the precise set of default templates that a batch interface provides for a BES is vendor-specific.</p>
+<pre sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="692" sourceendlinenumber="730"><code class="lang-text">RECIPE[1].NAME=[PROCEDURE] 
+RECIPE[1].CATEGORY=OSIBatch 
+RECIPE[1].TEMPLATE=Procedure 
+RECIPE[1].BATCHID=[BATCHID] 
+RECIPE[1].PRODUCT=[PVAL] 
+RECIPE[1].PRODUCTTRIGGER=[EVENT, value=&quot;Recipe Header&quot;][DESCRIPT, value=&quot;Product Code&quot;] 
+RECIPE[1].PROPERTY[1].NAME=[Descript] 
+RECIPE[1].PROPERTY[1].VALUE=[Pval] 
+RECIPE[1].PROPERTY[1].ENGUNITS=[EU] 
+RECIPE[1].PROPERTY[1].CATEGORY=Recipe Header 
+RECIPE[1].PROPERTY[1].TRIGGER=[Event, value=&quot;Recipe Header&quot;] RECIPE[1].PROPERTY[2].NAME=[Descript] 
+RECIPE[1].PROPERTY[2].VALUE=[Pval] 
+RECIPE[1].PROPERTY[2].CATEGORY=Formula Header 
+RECIPE[1].PROPERTY[2].TRIGGER=[Event, value=&quot;Formula Header&quot;] 
+
+RECIPE[2].NAME=[UNITPROCEDURE] 
+RECIPE[2].CATEGORY=OSIBatch 
+RECIPE[2].TEMPLATE=UnitProcedure 
+RECIPE[2].BATCHID=[BATCHID] 
+RECIPE[2].MODULEPATH=[AREA]\[PROCESSCELL]\[UNIT] 
+RECIPE[2].PRODUCT=[PVAL] 
+RECIPE[2].PRODUCTTRIGGER=[EVENT, value=&quot;Recipe Header&quot;][DESCRIPT, value=&quot;Product Code&quot;] 
+
+RECIPE[3].NAME=[OPERATION] 
+RECIPE[3].CATEGORY=OSIBatch 
+RECIPE[3].TEMPLATE=Operation 
+
+RECIPE[4].NAME=[PHASE] 
+RECIPE[4].CATEGORY=OSIBatch 
+RECIPE[4].TEMPLATE=Phase 
+RECIPE[4].MODULEPATH=[AREA]\[PROCESSCELL]\[UNIT]\[PHASEMODULE] 
+RECIPE[5].NAME=[PHASESTATE] 
+RECIPE[5].CATEGORY=OSIBatch 
+RECIPE[5].TEMPLATE=PhaseState 
+RECIPE[6].NAME=[PHASESTEP] 
+RECIPE[6].CATEGORY=OSIBatch 
+RECIPE[6].TEMPLATE=PhaseStep
+</code></pre><h2 id="translation-templates" sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="732" sourceendlinenumber="732">Translation Templates</h2>
+<p sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="734" sourceendlinenumber="734">Following is a simple template that translates German source data to English for storage in the PI System.</p>
+<pre sourcefile="content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md" sourcestartlinenumber="736" sourceendlinenumber="741"><code class="lang-text">TRANSLATE: &quot;Grundrezept&quot; = &quot;Procedure&quot;
+TRANSLATE: &quot;Teilrezept&quot; = &quot;Unit Procedure&quot;
+TRANSLATE: &quot;Grundoperation&quot; = &quot;Operation&quot;
+TRANSLATE: &quot;Grundfunktion&quot; = &quot;Phase&quot;
+</code></pre></article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/osisoft/PI-Interface-Emerson-Syncade-Docs/blob/main/content/batch-interface-framework/initialization-file-reference/initialization-file-reference.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../styles/main.js"></script>
+  </body>
+</html>

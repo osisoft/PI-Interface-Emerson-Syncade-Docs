@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Operational Settings tab </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Operational Settings tab ">
+    <meta name="generator" content="docfx 2.58.0.0">
+    
+    <link rel="shortcut icon" href="../../../favicon.ico">
+    <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../../styles/docfx.css">
+    <link rel="stylesheet" href="../../../styles/main.css">
+    <meta property="docfx:navrel" content="../../../toc.html">
+    <meta property="docfx:tocrel" content="../../toc.html">
+    
+    <meta property="docfx:rel" content="../../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../../index.html">
+                <img id="logo" class="svg" src="../../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="BIF_OperationalSettingsTab">
+<h1 id="operational-settings-tab" sourcefile="content/batch-interface-framework/pi-event-frames-interface-manager/operational-settings-tab.md" sourcestartlinenumber="5" sourceendlinenumber="5">Operational Settings tab</h1>
+
+<!-- Unmodified -->
+<p sourcefile="content/batch-interface-framework/pi-event-frames-interface-manager/operational-settings-tab.md" sourcestartlinenumber="9" sourceendlinenumber="9">Modify the settings on the Operational Settings tab to configure the interface mode and other related settings.</p>
+<h2 id="operational-settings" sourcefile="content/batch-interface-framework/pi-event-frames-interface-manager/operational-settings-tab.md" sourcestartlinenumber="11" sourceendlinenumber="11">Operational Settings</h2>
+<h3 id="realtime-mode-modemode" sourcefile="content/batch-interface-framework/pi-event-frames-interface-manager/operational-settings-tab.md" sourcestartlinenumber="13" sourceendlinenumber="13">Realtime mode (/MODE=<mode>)</mode></h3>
+<p sourcefile="content/batch-interface-framework/pi-event-frames-interface-manager/operational-settings-tab.md" sourcestartlinenumber="15" sourceendlinenumber="15">Interface modes are selected from the drop-down menu. Options are described in the table below. </p>
+<p sourcefile="content/batch-interface-framework/pi-event-frames-interface-manager/operational-settings-tab.md" sourcestartlinenumber="17" sourceendlinenumber="17">For the Recovery, Statistics, Preprocess, and Delete options, you can identify a <strong>Start Time</strong> and an <strong>End Time</strong>. Click the calendar icon associated with each field to select dates and times.</p>
+<table sourcefile="content/batch-interface-framework/pi-event-frames-interface-manager/operational-settings-tab.md" sourcestartlinenumber="19" sourceendlinenumber="25">
+<thead>
+<tr>
+<th>Mode</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Realtime (default)</td>
+<td>Scan data source to collect data in realtime.</td>
+</tr>
+<tr>
+<td>Recovery</td>
+<td>Scan data source and generate or correct events accordingly. Always starts in recovery mode, then switches to realtime mode.</td>
+</tr>
+<tr>
+<td>Statistics</td>
+<td>Compare data source history against events and report results without updating any data.</td>
+</tr>
+<tr>
+<td>Preprocess</td>
+<td>Source data is written to the PI Data archives with timestamps earlier than those written to the primary PI archive.<br><br><strong>Note:</strong> This mode requires that you use the offline archive utility to reprocess older archives. This is done after completion when the interface stops.</td>
+</tr>
+<tr>
+<td>Delete</td>
+<td>Delete events for a specified period.<br><br><strong>Note:</strong> Selecting &quot;Delete mode&quot; limits you to specifying a Start Time only. In the GUI, the End Time is always specified with &quot;*&quot; asterisk symbol, a dereference operator pointed to by the variable&#39;s value.<br><br>The interface allows for &quot;spot deletion&quot;, meaning the deletion of event frames from within a specific time window. For example, you may have a scenario where you have received &quot;junk data&quot; from previous days. Spot deletion allows you to delete event frames back to the date when you began receiving unusable data. The GUI does not provide the means to specify both ends of the time window that you wish to delete. That can be done through edits to the configuration file.<br><br>An RST for Delete mode can still be specified in the initialization file, but the GUI will always disable spot deletion.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="perform-one-scan-then-stop-singlerun" sourcefile="content/batch-interface-framework/pi-event-frames-interface-manager/operational-settings-tab.md" sourcestartlinenumber="27" sourceendlinenumber="27">Perform one scan then stop (/SINGLERUN)</h3>
+<p sourcefile="content/batch-interface-framework/pi-event-frames-interface-manager/operational-settings-tab.md" sourcestartlinenumber="29" sourceendlinenumber="29">The interface performs one scan of active points, then exits. </p>
+<h3 id="print-result-of-first-scan-to-file-printfile-name" sourcefile="content/batch-interface-framework/pi-event-frames-interface-manager/operational-settings-tab.md" sourcestartlinenumber="31" sourceendlinenumber="31">Print result of first scan to file (/PRINT=<file name="">)</file></h3>
+<p sourcefile="content/batch-interface-framework/pi-event-frames-interface-manager/operational-settings-tab.md" sourcestartlinenumber="33" sourceendlinenumber="33">Print the results of the first scan to the specified text file. The results include the event frame hierarchy tree, the tag list, and the equipment tree. This parameter is designed primarily for troubleshooting and configuration testing when the interface is run in statistics mode. Enter a name for the scan in the field provided (for example, <code>C:\Users\jdoe\Documents\PIWPASXBatch1_stat.dat</code>). You have the option of clicking <strong>Select file</strong> to browse to the file path. </p>
+<h3 id="local-debug-messages-db" sourcefile="content/batch-interface-framework/pi-event-frames-interface-manager/operational-settings-tab.md" sourcestartlinenumber="35" sourceendlinenumber="35">Local debug messages (/DB=&lt;#&gt;)</h3>
+<p sourcefile="content/batch-interface-framework/pi-event-frames-interface-manager/operational-settings-tab.md" sourcestartlinenumber="37" sourceendlinenumber="37">Specifies level of detail for logging as follows:</p>
+<ul sourcefile="content/batch-interface-framework/pi-event-frames-interface-manager/operational-settings-tab.md" sourcestartlinenumber="39" sourceendlinenumber="42">
+<li sourcefile="content/batch-interface-framework/pi-event-frames-interface-manager/operational-settings-tab.md" sourcestartlinenumber="39" sourceendlinenumber="39">0: Log errors and warnings (default)</li>
+<li sourcefile="content/batch-interface-framework/pi-event-frames-interface-manager/operational-settings-tab.md" sourcestartlinenumber="40" sourceendlinenumber="40">1: Log errors, warnings and major successes</li>
+<li sourcefile="content/batch-interface-framework/pi-event-frames-interface-manager/operational-settings-tab.md" sourcestartlinenumber="41" sourceendlinenumber="41">2: Log all messages</li>
+<li sourcefile="content/batch-interface-framework/pi-event-frames-interface-manager/operational-settings-tab.md" sourcestartlinenumber="42" sourceendlinenumber="42">3: Log all messages including Unirecord diagnostic messages</li>
+</ul>
+<h3 id="numeric-settings-nslang" sourcefile="content/batch-interface-framework/pi-event-frames-interface-manager/operational-settings-tab.md" sourcestartlinenumber="44" sourceendlinenumber="44">Numeric settings (/NS=<lang>)</lang></h3>
+<p sourcefile="content/batch-interface-framework/pi-event-frames-interface-manager/operational-settings-tab.md" sourcestartlinenumber="46" sourceendlinenumber="46">Configures how numeric values are formatted by the interface, to enable the interface to properly interpret numeric values based on the machine&#39;s regional setting or a user-specified language. Default is &quot;English (United States)&quot;. </p>
+<h3 id="interface-id-idx" sourcefile="content/batch-interface-framework/pi-event-frames-interface-manager/operational-settings-tab.md" sourcestartlinenumber="48" sourceendlinenumber="48">Interface ID (/ID=x)</h3>
+<p sourcefile="content/batch-interface-framework/pi-event-frames-interface-manager/operational-settings-tab.md" sourcestartlinenumber="50" sourceendlinenumber="50">Specifies the numeric interface instance identifier (maximum nine digits). To detect PI points maintained by the interface instance, the interface matches this setting against the value in the points&#39; Location1 attribute. </p>
+<h2 id="point-source-psx" sourcefile="content/batch-interface-framework/pi-event-frames-interface-manager/operational-settings-tab.md" sourcestartlinenumber="52" sourceendlinenumber="52">Point source (/PS=x)</h2>
+<p sourcefile="content/batch-interface-framework/pi-event-frames-interface-manager/operational-settings-tab.md" sourcestartlinenumber="54" sourceendlinenumber="54">Point source for the interface instance. Point source is not case sensitive. Corresponds to the PointSource attribute of individual PI points. The interface loads PI points with the same point source. </p>
+<h2 id="failover-settings" sourcefile="content/batch-interface-framework/pi-event-frames-interface-manager/operational-settings-tab.md" sourcestartlinenumber="56" sourceendlinenumber="56">Failover settings</h2>
+<h3 id="failover-tag-failovertagx" sourcefile="content/batch-interface-framework/pi-event-frames-interface-manager/operational-settings-tab.md" sourcestartlinenumber="58" sourceendlinenumber="58">Failover tag (/FAILOVERTAG=x)</h3>
+<p sourcefile="content/batch-interface-framework/pi-event-frames-interface-manager/operational-settings-tab.md" sourcestartlinenumber="60" sourceendlinenumber="60">The PI tag to be used to coordinate failover. Click the icon to open the Tag search window, where you provide the name of the tag in the <strong>Tag Mask</strong> field. The tag that you select displays in the <strong>Failover tag</strong> field of PI Event Frames Interface Manager. </p>
+<h3 id="failover-identifier-failoveridx" sourcefile="content/batch-interface-framework/pi-event-frames-interface-manager/operational-settings-tab.md" sourcestartlinenumber="62" sourceendlinenumber="62">Failover identifier (/FAILOVERID=x)</h3>
+<p sourcefile="content/batch-interface-framework/pi-event-frames-interface-manager/operational-settings-tab.md" sourcestartlinenumber="64" sourceendlinenumber="64">A unique identifier for this interface instance, used to coordinate which instance is primary. </p>
+<h3 id="failover-swap-time-swaptimeseconds" sourcefile="content/batch-interface-framework/pi-event-frames-interface-manager/operational-settings-tab.md" sourcestartlinenumber="66" sourceendlinenumber="66">Failover swap time (/SWAPTIME=<seconds>)</seconds></h3>
+<p sourcefile="content/batch-interface-framework/pi-event-frames-interface-manager/operational-settings-tab.md" sourcestartlinenumber="68" sourceendlinenumber="68">Select to specify how long an interface can be inactive before failover to another instance occurs. The default is 300 seconds. </p>
+<h2 id="security-settings" sourcefile="content/batch-interface-framework/pi-event-frames-interface-manager/operational-settings-tab.md" sourcestartlinenumber="70" sourceendlinenumber="70">Security settings</h2>
+<h3 id="specify-point-security-ptsecx" sourcefile="content/batch-interface-framework/pi-event-frames-interface-manager/operational-settings-tab.md" sourcestartlinenumber="72" sourceendlinenumber="72">Specify point security (/PTSEC=x)</h3>
+<p sourcefile="content/batch-interface-framework/pi-event-frames-interface-manager/operational-settings-tab.md" sourcestartlinenumber="74" sourceendlinenumber="74">Override the default point security created by the interface. Click <strong>Change</strong> to open the Change security window. There you can select from or add to the options listed, and specify read/write authorizations for each. Click <strong>OK</strong> to change point security. </p>
+<h3 id="specify-data-security-datasecx" sourcefile="content/batch-interface-framework/pi-event-frames-interface-manager/operational-settings-tab.md" sourcestartlinenumber="76" sourceendlinenumber="76">Specify data security (/DATASEC=x)</h3>
+<p sourcefile="content/batch-interface-framework/pi-event-frames-interface-manager/operational-settings-tab.md" sourcestartlinenumber="78" sourceendlinenumber="78">Override the default data security of PI points created by the interface. Click Change to open the Change security window. </p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/osisoft/PI-Interface-Emerson-Syncade-Docs/blob/main/content/batch-interface-framework/pi-event-frames-interface-manager/operational-settings-tab.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../styles/main.js"></script>
+  </body>
+</html>

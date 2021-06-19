@@ -1,0 +1,193 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Tag templates </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Tag templates ">
+    <meta name="generator" content="docfx 2.58.0.0">
+    
+    <link rel="shortcut icon" href="../../../../favicon.ico">
+    <link rel="stylesheet" href="../../../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../../../styles/docfx.css">
+    <link rel="stylesheet" href="../../../../styles/main.css">
+    <meta property="docfx:navrel" content="../../../../toc.html">
+    <meta property="docfx:tocrel" content="../../../toc.html">
+    
+    <meta property="docfx:rel" content="../../../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../../../index.html">
+                <img id="logo" class="svg" src="../../../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="BIF_TagTemplatesEFIM">
+<h1 id="tag-templates">Tag templates</h1>
+
+<p>Tag templates create and update PI tags when events are read from the data source. Alarm tag templates create and update PI tags based on alarms raised by Emerson DeltaV Event Chronicle (alarms and events historian). If you define one or more triggers, the target PI tag is updated only when the specified events occur. If you do not define any triggers, every event from the data source triggers an update of the target PI tag.</p>
+<p>Tag aliases enable you to associate PI tags with equipment assets (PI units or AF elements). All batch interfaces support the creation of aliases at the unit batch and phase level. In addition, some batch interfaces permit you to define aliases at any level of the batch hierarchy by providing level-specific placeholders. For details, refer to the interface-specific section in this guide.</p>
+<h2 id="tag-configuration">Tag configuration</h2>
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Definition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Index</td>
+<td>Specify a unique numeric identifier for the entry.</td>
+</tr>
+<tr>
+<td>Name</td>
+<td>Configures how the tag is named. To include data from the data source, use placeholders.</td>
+</tr>
+<tr>
+<td>Value</td>
+<td>The value to be written to the PI tag. To include data from the data source, use placeholders.</td>
+</tr>
+<tr>
+<td>Type</td>
+<td>The data type to be used to write the value to the tag. Note that if the incoming value is incompatible with the tag type, the event is not processed, and an error is logged.</td>
+</tr>
+<tr>
+<td>Translate</td>
+<td>Maps text from the data source to the text that you want to record in the PI System.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="advanced-features-attributes">Advanced features (attributes)</h2>
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Descriptor</td>
+<td>Populates the descriptor field for the target PI tag.</td>
+</tr>
+<tr>
+<td>Engineering units</td>
+<td>The engineering units for the data.</td>
+</tr>
+<tr>
+<td>Unit Alias</td>
+<td>Specifies an alias to be recorded under the Aliases node in the corresponding PIUnit or AF element.</td>
+</tr>
+<tr>
+<td>Phase Alias</td>
+<td>Specifies an alias to be recorded under the Phases &gt; Aliases node in the corresponding PIUnit or element.</td>
+</tr>
+<tr>
+<td>Annotation</td>
+<td>Specifies the annotation to be associated with the event. The result is stored in a PI tag as a string.</td>
+</tr>
+<tr>
+<td>Use the NamedValues collection for annotations</td>
+<td>Store annotations in a PI tag as a name-value collection. The name is derived from the event sent by the data source.</td>
+</tr>
+<tr>
+<td>Remove annotations from tag values</td>
+<td>Store values without annotations.</td>
+</tr>
+</tbody>
+</table>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/osisoft/PI-Interface-Emerson-Syncade-Docs/blob/main/content/batch-interface-framework/pi-event-frames-interface-manager/templates-tab/tag-templates-efim.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../../styles/main.js"></script>
+  </body>
+</html>

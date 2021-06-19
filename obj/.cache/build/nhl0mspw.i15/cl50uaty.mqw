@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Time Settings tab </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Time Settings tab ">
+    <meta name="generator" content="docfx 2.58.0.0">
+    
+    <link rel="shortcut icon" href="../../../favicon.ico">
+    <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../../styles/docfx.css">
+    <link rel="stylesheet" href="../../../styles/main.css">
+    <meta property="docfx:navrel" content="../../../toc.html">
+    <meta property="docfx:tocrel" content="../../toc.html">
+    
+    <meta property="docfx:rel" content="../../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../../index.html">
+                <img id="logo" class="svg" src="../../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="BIF_TimeSettingsTab">
+<h1 id="time-settings-tab" sourcefile="content/batch-interface-framework/pi-event-frames-interface-manager/time-settings-tab.md" sourcestartlinenumber="5" sourceendlinenumber="5">Time Settings tab</h1>
+
+<!-- Unmodified -->
+<p sourcefile="content/batch-interface-framework/pi-event-frames-interface-manager/time-settings-tab.md" sourcestartlinenumber="9" sourceendlinenumber="9">You use the <strong>Time Settings</strong> tab to configure the settings that control how the interface handles loss of connectivity and how it processes data.</p>
+<h2 id="query-time-settings" sourcefile="content/batch-interface-framework/pi-event-frames-interface-manager/time-settings-tab.md" sourcestartlinenumber="11" sourceendlinenumber="11">Query time settings</h2>
+<h3 id="scan-scanseconds" sourcefile="content/batch-interface-framework/pi-event-frames-interface-manager/time-settings-tab.md" sourcestartlinenumber="13" sourceendlinenumber="13">Scan (/SCAN=<seconds>)</seconds></h3>
+<p sourcefile="content/batch-interface-framework/pi-event-frames-interface-manager/time-settings-tab.md" sourcestartlinenumber="15" sourceendlinenumber="15">Specifies how frequently the interface scans the data source. </p>
+<h3 id="cache-time-cachetimedays" sourcefile="content/batch-interface-framework/pi-event-frames-interface-manager/time-settings-tab.md" sourcestartlinenumber="17" sourceendlinenumber="17"><strong>Cache time (/CACHETIME=<days>)</days></strong></h3>
+<p sourcefile="content/batch-interface-framework/pi-event-frames-interface-manager/time-settings-tab.md" sourcestartlinenumber="19" sourceendlinenumber="20">Specifies how long completed events are retained in memory. Default is one day. Specify the maximum duration expected between events that need to be merged, plus any desired margin of safety. 
+The value can be specified as whole day or fraction of a day. For example, to release completed batches when their end time is less than 7 days and 12 hours from current time, specify the following cache time setting:</p>
+<p sourcefile="content/batch-interface-framework/pi-event-frames-interface-manager/time-settings-tab.md" sourcestartlinenumber="22" sourceendlinenumber="22"><code>CACHETIME=7.5 days</code></p>
+<h3 id="abandoned-batch-timeout-abtodays" sourcefile="content/batch-interface-framework/pi-event-frames-interface-manager/time-settings-tab.md" sourcestartlinenumber="24" sourceendlinenumber="24">Abandoned batch timeout (/ABTO=<days>)</days></h3>
+<p sourcefile="content/batch-interface-framework/pi-event-frames-interface-manager/time-settings-tab.md" sourcestartlinenumber="26" sourceendlinenumber="26">The timeout has 2 functions:</p>
+<ol sourcefile="content/batch-interface-framework/pi-event-frames-interface-manager/time-settings-tab.md" sourcestartlinenumber="28" sourceendlinenumber="30">
+<li sourcefile="content/batch-interface-framework/pi-event-frames-interface-manager/time-settings-tab.md" sourcestartlinenumber="28" sourceendlinenumber="28"><p sourcefile="content/batch-interface-framework/pi-event-frames-interface-manager/time-settings-tab.md" sourcestartlinenumber="28" sourceendlinenumber="28">In history recovery, if a batch starts less than the recovery start time minus the abandoned batch timeout it is not recovered. For example, if a batch is open in recovery start time, and the start time is June 1, 2019 and we have a 30-day abandoned batch time, and the batch you found is on May 1, 2019, it will not be recovered.</p>
+</li>
+<li sourcefile="content/batch-interface-framework/pi-event-frames-interface-manager/time-settings-tab.md" sourcestartlinenumber="30" sourceendlinenumber="30"><p sourcefile="content/batch-interface-framework/pi-event-frames-interface-manager/time-settings-tab.md" sourcestartlinenumber="30" sourceendlinenumber="30">In real time mode, if a batch has not received a start or end time in the hierarchy - meaning in the top level of the event frame, or any of the children - and if the last updated time you get is less than the cache time minus the abandoned batch timeout, it will be considered abandoned. If July 1 is real time and cache time is one day, and our abandoned batch timeout is 30 days, and our last start time was April 29, it will be thrown from cache as abandoned.</p>
+</li>
+</ol>
+<p sourcefile="content/batch-interface-framework/pi-event-frames-interface-manager/time-settings-tab.md" sourcestartlinenumber="32" sourceendlinenumber="32">The following graphic illustrates the timeout logic:</p>
+<p sourcefile="content/batch-interface-framework/pi-event-frames-interface-manager/time-settings-tab.md" sourcestartlinenumber="34" sourceendlinenumber="34"><img src="../images/time-settings-tab.png" alt="Time settings tab" sourcefile="content/batch-interface-framework/pi-event-frames-interface-manager/time-settings-tab.md" sourcestartlinenumber="34" sourceendlinenumber="34"></p>
+<h3 id="maximum-query-time-frame-maxqtfdays" sourcefile="content/batch-interface-framework/pi-event-frames-interface-manager/time-settings-tab.md" sourcestartlinenumber="36" sourceendlinenumber="36">Maximum query time frame (/MAXQTF=<days>)</days></h3>
+<p sourcefile="content/batch-interface-framework/pi-event-frames-interface-manager/time-settings-tab.md" sourcestartlinenumber="38" sourceendlinenumber="38">To help manage workload and memory usage, defines the maximum time frame for queries. For example, if you specify 30 days and the interface queries for one year&#39;s worth of data, the interface issues 12 one-month queries rather than one (large) one-year query.</p>
+<h3 id="maximum-stop-time-maxstoptimeseconds" sourcefile="content/batch-interface-framework/pi-event-frames-interface-manager/time-settings-tab.md" sourcestartlinenumber="40" sourceendlinenumber="40">Maximum stop time (/MAXSTOPTIME=<seconds>)</seconds></h3>
+<p sourcefile="content/batch-interface-framework/pi-event-frames-interface-manager/time-settings-tab.md" sourcestartlinenumber="42" sourceendlinenumber="42">Specifies the maximum time allowed for the interface to properly shutdown. If the shutdown process takes longer than the specified time, the interface is forced to terminate immediately. The default value is 120 seconds.</p>
+<h3 id="use-local-time-stamps-to-process-incoming-events-ts" sourcefile="content/batch-interface-framework/pi-event-frames-interface-manager/time-settings-tab.md" sourcestartlinenumber="44" sourceendlinenumber="44">Use local time stamps to process incoming events (/TS)</h3>
+<p sourcefile="content/batch-interface-framework/pi-event-frames-interface-manager/time-settings-tab.md" sourcestartlinenumber="46" sourceendlinenumber="46">Specifies whether timestamps from an SQL data source are interpreted as local time or GMT. By default, timestamps are interpreted as GMT. </p>
+<h2 id="pi-connection-settings" sourcefile="content/batch-interface-framework/pi-event-frames-interface-manager/time-settings-tab.md" sourcestartlinenumber="48" sourceendlinenumber="48">PI connection settings</h2>
+<h3 id="pi-connection-timeout-piconntoseconds" sourcefile="content/batch-interface-framework/pi-event-frames-interface-manager/time-settings-tab.md" sourcestartlinenumber="50" sourceendlinenumber="50">PI connection timeout (/PICONNTO=<seconds>)</seconds></h3>
+<p sourcefile="content/batch-interface-framework/pi-event-frames-interface-manager/time-settings-tab.md" sourcestartlinenumber="52" sourceendlinenumber="52">Override the default PI SDK Connection TimeOut property.</p>
+<h3 id="pi-data-access-timeout-pidatoseconds" sourcefile="content/batch-interface-framework/pi-event-frames-interface-manager/time-settings-tab.md" sourcestartlinenumber="54" sourceendlinenumber="54">PI data access timeout (/PIDATO=<seconds>)</seconds></h3>
+<p sourcefile="content/batch-interface-framework/pi-event-frames-interface-manager/time-settings-tab.md" sourcestartlinenumber="56" sourceendlinenumber="56">Override the default PI SDK Data Access TimeOut property.</p>
+<h3 id="retry-retryseconds" sourcefile="content/batch-interface-framework/pi-event-frames-interface-manager/time-settings-tab.md" sourcestartlinenumber="58" sourceendlinenumber="58">Retry (/RETRY=<seconds>)</seconds></h3>
+<p sourcefile="content/batch-interface-framework/pi-event-frames-interface-manager/time-settings-tab.md" sourcestartlinenumber="60" sourceendlinenumber="60">Specifies how often the interface retries failed attempts to write data. The default is 60 seconds.</p>
+<h3 id="retry-timeout-retrytoseconds" sourcefile="content/batch-interface-framework/pi-event-frames-interface-manager/time-settings-tab.md" sourcestartlinenumber="62" sourceendlinenumber="62">Retry timeout (/RETRYTO=<seconds>)</seconds></h3>
+<p sourcefile="content/batch-interface-framework/pi-event-frames-interface-manager/time-settings-tab.md" sourcestartlinenumber="64" sourceendlinenumber="64">Specifies how long the interface continues retrying an attempt to write data. To avoid data loss, set to 0 (default, no timeout). </p>
+<h2 id="sql-server-connection-settings" sourcefile="content/batch-interface-framework/pi-event-frames-interface-manager/time-settings-tab.md" sourcestartlinenumber="66" sourceendlinenumber="66">SQL server connection settings</h2>
+<h3 id="sql-connection-timeout-piconntoseconds" sourcefile="content/batch-interface-framework/pi-event-frames-interface-manager/time-settings-tab.md" sourcestartlinenumber="68" sourceendlinenumber="68">SQL connection timeout (/PICONNTO=<seconds>)</seconds></h3>
+<p sourcefile="content/batch-interface-framework/pi-event-frames-interface-manager/time-settings-tab.md" sourcestartlinenumber="70" sourceendlinenumber="70">Override the default SQL Connection TimeOut property.</p>
+<h3 id="sql-data-access-timeout-pidatoseconds" sourcefile="content/batch-interface-framework/pi-event-frames-interface-manager/time-settings-tab.md" sourcestartlinenumber="72" sourceendlinenumber="72">SQL data access timeout (/PIDATO=<seconds>)</seconds></h3>
+<p sourcefile="content/batch-interface-framework/pi-event-frames-interface-manager/time-settings-tab.md" sourcestartlinenumber="74" sourceendlinenumber="74">Override the default SQL Data Access TimeOut property. </p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/osisoft/PI-Interface-Emerson-Syncade-Docs/blob/main/content/batch-interface-framework/pi-event-frames-interface-manager/time-settings-tab.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../styles/main.js"></script>
+  </body>
+</html>

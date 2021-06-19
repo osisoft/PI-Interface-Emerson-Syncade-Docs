@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Template placeholders </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Template placeholders ">
+    <meta name="generator" content="docfx 2.58.0.0">
+    
+    <link rel="shortcut icon" href="../../../favicon.ico">
+    <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../../styles/docfx.css">
+    <link rel="stylesheet" href="../../../styles/main.css">
+    <meta property="docfx:navrel" content="../../../toc.html">
+    <meta property="docfx:tocrel" content="../../toc.html">
+    
+    <meta property="docfx:rel" content="../../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../../index.html">
+                <img id="logo" class="svg" src="../../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="BIF_TemplatePlaceholders">
+<h1 id="template-placeholders" sourcefile="content/batch-interface-framework/specific-considerations/template-placholders.md" sourcestartlinenumber="5" sourceendlinenumber="5">Template placeholders</h1>
+
+<!-- Mark Bishop 6/18/21: Customized for Emerson Syncade -->
+<p sourcefile="content/batch-interface-framework/specific-considerations/template-placholders.md" sourcestartlinenumber="9" sourceendlinenumber="9">The following sections list placeholders provided by PI Interface for Emerson Syncade Batch for defining template settings.</p>
+<h2 id="syncade-placeholders" sourcefile="content/batch-interface-framework/specific-considerations/template-placholders.md" sourcestartlinenumber="11" sourceendlinenumber="11">Syncade Placeholders</h2>
+<p sourcefile="content/batch-interface-framework/specific-considerations/template-placholders.md" sourcestartlinenumber="13" sourceendlinenumber="13">The data source provides XML formatted messages that the interface reads. The placeholders describing the recipe hierarchy depend on the style of recipe. The following examples use terminology like: OrderInstanceSummary/@Name where @Name is the name attribute on the OrderInstanceSummary XML element.</p>
+<p sourcefile="content/batch-interface-framework/specific-considerations/template-placholders.md" sourcestartlinenumber="15" sourceendlinenumber="15">In this release the supported batch hierarchical levels are:</p>
+<p sourcefile="content/batch-interface-framework/specific-considerations/template-placholders.md" sourcestartlinenumber="17" sourceendlinenumber="17"><img src="../../images/supported-batch-hierarchical-levels.png" alt="supported batch hierarchical levels" sourcefile="content/batch-interface-framework/specific-considerations/template-placholders.md" sourcestartlinenumber="17" sourceendlinenumber="17"></p>
+<p sourcefile="content/batch-interface-framework/specific-considerations/template-placholders.md" sourcestartlinenumber="19" sourceendlinenumber="19">The following tables illustrate Placeholders for &quot;Master Recipe&quot;, &quot;Process Segment&quot;, &quot;Procedure&quot;, and &quot;Unit Procedure&quot; recipe styles:</p>
+<table sourcefile="content/batch-interface-framework/specific-considerations/template-placholders.md" sourcestartlinenumber="21" sourceendlinenumber="27">
+<thead>
+<tr>
+<th style="text-align:left">Placeholder</th>
+<th style="text-align:left">Master Recipe-style recipe</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">[MASTERRECIPE]</td>
+<td style="text-align:left"><code>OrderInstanceSummary/@Name</code></td>
+</tr>
+<tr>
+<td style="text-align:left">[PROCESSSEGMENT]</td>
+<td style="text-align:left"><code>OrderInstanceSummary/ItemInstanceSummary/@Name</code></td>
+</tr>
+<tr>
+<td style="text-align:left">[PROCEDURE]</td>
+<td style="text-align:left"><code>OrderInstanceSummary/ItemInstanceSummary/ItemInstanceSummary/@Name</code></td>
+</tr>
+<tr>
+<td style="text-align:left">[UNITPROCEDURE]</td>
+<td style="text-align:left"><code>OrderInstanceSummary/ItemInstanceSummary/ItemInstanceSummary/ItemInstanceSummary/@Name</code></td>
+</tr>
+<tr>
+<td style="text-align:left">[OPERATION]</td>
+<td style="text-align:left"><code>OrderInstanceSummary/ItemInstanceSummary/ItemInstanceSummary/ItemInstanceSummary/ItemInstanceSummary/@Name</code><br><br>In this example, the name of the fifth level down in the recipe</td>
+</tr>
+</tbody>
+</table>
+<table sourcefile="content/batch-interface-framework/specific-considerations/template-placholders.md" sourcestartlinenumber="30" sourceendlinenumber="35">
+<thead>
+<tr>
+<th style="text-align:left">Placeholder</th>
+<th style="text-align:left">Process Segment-style recipe</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">[PROCESSSEGMENT]</td>
+<td style="text-align:left"><code>OrderInstanceSummary/@Name</code></td>
+</tr>
+<tr>
+<td style="text-align:left">[PROCEDURE]</td>
+<td style="text-align:left"><code>OrderInstanceSummary/ItemInstanceSummary/@Name</code></td>
+</tr>
+<tr>
+<td style="text-align:left">[UNITPROCEDURE]</td>
+<td style="text-align:left"><code>OrderInstanceSummary/ItemInstanceSummary/ItemInstanceSummary/@Name</code></td>
+</tr>
+<tr>
+<td style="text-align:left">[OPERATION]</td>
+<td style="text-align:left"><code>OrderInstanceSummary/ItemInstanceSummary/ItemInstanceSummary/ItemInstanceSummary/@Name</code><br><br>In this example, the name of the fourth level down in the recipe.</td>
+</tr>
+</tbody>
+</table>
+<table sourcefile="content/batch-interface-framework/specific-considerations/template-placholders.md" sourcestartlinenumber="37" sourceendlinenumber="41">
+<thead>
+<tr>
+<th style="text-align:left">Placeholder</th>
+<th style="text-align:left">Procedure-style recipe</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">[PROCEDURE]</td>
+<td style="text-align:left"><code>OrderInstanceSummary/@Name</code></td>
+</tr>
+<tr>
+<td style="text-align:left">[UNITPROCEDURE]</td>
+<td style="text-align:left"><code>OrderInstanceSummary/ItemInstanceSummary/@Name</code></td>
+</tr>
+<tr>
+<td style="text-align:left">[OPERATION]</td>
+<td style="text-align:left"><code>OrderInstanceSummary/ItemInstanceSummary/ItemInstanceSummary/@Name</code><br><br>In this example, the name of the third level down in the recipe.</td>
+</tr>
+</tbody>
+</table>
+<table sourcefile="content/batch-interface-framework/specific-considerations/template-placholders.md" sourcestartlinenumber="43" sourceendlinenumber="46">
+<thead>
+<tr>
+<th style="text-align:left">Placeholder</th>
+<th style="text-align:left">Unit Procedure-style recipe</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">[UNITPROCEDURE]</td>
+<td style="text-align:left"><code>OrderInstanceSummary/@Name</code></td>
+</tr>
+<tr>
+<td style="text-align:left">[OPERATION]</td>
+<td style="text-align:left"><code>OrderInstanceSummary/ItemInstanceSummary/@Name</code><br><br>In this example, the name of the second level down in the recipe.</td>
+</tr>
+</tbody>
+</table>
+<p sourcefile="content/batch-interface-framework/specific-considerations/template-placholders.md" sourcestartlinenumber="49" sourceendlinenumber="49">Placeholders that vary depending on whether the event occurs at the start or end of a step in the recipe:</p>
+<table sourcefile="content/batch-interface-framework/specific-considerations/template-placholders.md" sourcestartlinenumber="51" sourceendlinenumber="54">
+<thead>
+<tr>
+<th style="text-align:left">Placeholder</th>
+<th style="text-align:left">Event at start of step</th>
+<th style="text-align:left">Event at end of step</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">[TIME]</td>
+<td style="text-align:left"><code>InstructionParameterInstance/@ActionDateTime</code> for instruction parameters.<br><br>or<br><br><code>OrderInstanceSummary/@StartDateTime</code> or <code>ItemInstanceSummary/@StartDateTime</code> for events.</td>
+<td style="text-align:left"><code>OrderInstanceSummary/@EndDateTime</code><br><br>or<br><br><code>ItemInstanceSummary/@EndDateTime</code> for events.</td>
+</tr>
+<tr>
+<td style="text-align:left">[TIMESTAMP]</td>
+<td style="text-align:left"><code>InstructionParameterInstance/@ActionDateTime</code> for instruction parameters.<br><br>or<br><br><code>OrderInstanceSummary/@StartDateTime</code> or <code>ItemInstanceSummary/@StartDateTime</code> for events.</td>
+<td style="text-align:left"><code>OrderInstanceSummary/@EndDateTime</code><br><br>or<br><br><code>ItemInstanceSummary/@EndDateTime</code> for events.</td>
+</tr>
+</tbody>
+</table>
+<p sourcefile="content/batch-interface-framework/specific-considerations/template-placholders.md" sourcestartlinenumber="57" sourceendlinenumber="57">Placeholders for events that do not depend on recipe style or temporal relationship to step:</p>
+<table sourcefile="content/batch-interface-framework/specific-considerations/template-placholders.md" sourcestartlinenumber="59" sourceendlinenumber="73">
+<thead>
+<tr>
+<th style="text-align:left">Placeholder</th>
+<th style="text-align:left">Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">[AREA]</td>
+<td style="text-align:left"><code>constant string &quot;AREA_CS&quot;</code></td>
+</tr>
+<tr>
+<td style="text-align:left">[BATCHID]</td>
+<td style="text-align:left"><code>OrderInstanceSummary/@OrderNumber</code></td>
+</tr>
+<tr>
+<td style="text-align:left">[DESCRIPT]</td>
+<td style="text-align:left"><code>InstructionParameter/@Description</code></td>
+</tr>
+<tr>
+<td style="text-align:left">[HIGH]</td>
+<td style="text-align:left"><code>InstructionParameterInstance/@High</code></td>
+</tr>
+<tr>
+<td style="text-align:left">[LOW]</td>
+<td style="text-align:left"><code>InstructionParameterInstance/@Low</code></td>
+</tr>
+<tr>
+<td style="text-align:left">[PARAMETER]</td>
+<td style="text-align:left"><code>InstructionParameter/@Name</code></td>
+</tr>
+<tr>
+<td style="text-align:left">[PHASE]</td>
+<td style="text-align:left"><code>InstructionParameter/@Name</code></td>
+</tr>
+<tr>
+<td style="text-align:left">[PROCESSCELL]</td>
+<td style="text-align:left"><code>constant string &quot;PROCESSCELL_CS&quot;</code></td>
+</tr>
+<tr>
+<td style="text-align:left">[PVAL]</td>
+<td style="text-align:left"><code>InstructionParameterInstance/@CV</code></td>
+</tr>
+<tr>
+<td style="text-align:left">[SET]</td>
+<td style="text-align:left"><code>InstructionParameterInstance/@Set</code></td>
+</tr>
+<tr>
+<td style="text-align:left">[UNIQUEID]</td>
+<td style="text-align:left"><code>OrderInstanceSummary/@OrderNumber</code></td>
+</tr>
+<tr>
+<td style="text-align:left">[UNIT]</td>
+<td style="text-align:left"><code>ItemInstanceSummary/@ActualUnitName</code></td>
+</tr>
+<tr>
+<td style="text-align:left">[VALUE]</td>
+<td style="text-align:left"><code>InstructionParameterInstance/@CV</code></td>
+</tr>
+</tbody>
+</table>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/osisoft/PI-Interface-Emerson-Syncade-Docs/blob/main/content/batch-interface-framework/specific-considerations/template-placholders.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../styles/main.js"></script>
+  </body>
+</html>

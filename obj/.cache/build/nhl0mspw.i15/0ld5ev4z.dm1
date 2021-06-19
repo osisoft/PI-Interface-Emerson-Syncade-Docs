@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Command line parameter reference </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Command line parameter reference ">
+    <meta name="generator" content="docfx 2.58.0.0">
+    
+    <link rel="shortcut icon" href="../../../favicon.ico">
+    <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../../styles/docfx.css">
+    <link rel="stylesheet" href="../../../styles/main.css">
+    <meta property="docfx:navrel" content="../../../toc.html">
+    <meta property="docfx:tocrel" content="../../toc.html">
+    
+    <meta property="docfx:rel" content="../../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../../index.html">
+                <img id="logo" class="svg" src="../../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="BIF_CommandLineParameterReference">
+<h1 id="command-line-parameter-reference" sourcefile="content/batch-interface-framework/command-line-parameter-reference/command-line-parameter-reference.md" sourcestartlinenumber="5" sourceendlinenumber="5">Command line parameter reference</h1>
+
+<!-- Customized for Emerson Syncade -->
+<p sourcefile="content/batch-interface-framework/command-line-parameter-reference/command-line-parameter-reference.md" sourcestartlinenumber="9" sourceendlinenumber="9">Use PI Event Frames Interface Manager to configure the interface, and to maintain batch interface settings files. This section describes the command line settings and is provided for troubleshooting purposes. </p>
+<p sourcefile="content/batch-interface-framework/command-line-parameter-reference/command-line-parameter-reference.md" sourcestartlinenumber="11" sourceendlinenumber="11"><strong>Note:</strong> To ensure that settings files are formatted correctly, always use PI Event Frames Interface Manager to configure settings. Do not edit settings files manually.</p>
+<p sourcefile="content/batch-interface-framework/command-line-parameter-reference/command-line-parameter-reference.md" sourcestartlinenumber="13" sourceendlinenumber="13">The following table displays command line settings supported by PI Interface for Emerson Syncade Batch. This list of settings can also be invoked from the command line by specifying the -? flag. </p>
+<!-- Mark Bishop 6/18/21: Commented-out parameters don't apply to Emerson Syncade -->
+<h2 id="available-command-line-parameters" sourcefile="content/batch-interface-framework/command-line-parameter-reference/command-line-parameter-reference.md" sourcestartlinenumber="17" sourceendlinenumber="17">Available command line parameters</h2>
+<p sourcefile="content/batch-interface-framework/command-line-parameter-reference/command-line-parameter-reference.md" sourcestartlinenumber="19" sourceendlinenumber="19">The following headings describe each command line parameter available.</p>
+<h3 id="abto-days" sourcefile="content/batch-interface-framework/command-line-parameter-reference/command-line-parameter-reference.md" sourcestartlinenumber="21" sourceendlinenumber="21"><code>/abto =&lt;#days&gt;</code></h3>
+<p sourcefile="content/batch-interface-framework/command-line-parameter-reference/command-line-parameter-reference.md" sourcestartlinenumber="23" sourceendlinenumber="23">(Optional) Specifies how long, in addition to the CACHETIME setting, the interface waits before closing a batch for which no end event has arrived. When an abandoned batch is closed, the interface uses the timestamp of its last event as the end time and logs an &quot;Abandoned batch found&quot; message. Default is 100 days, minimum is .042 days (approximately one hour), and maximum is 365 days.</p>
+<h3 id="adu-true--false" sourcefile="content/batch-interface-framework/command-line-parameter-reference/command-line-parameter-reference.md" sourcestartlinenumber="25" sourceendlinenumber="25"><code>/adu =[true | false]</code></h3>
+<p sourcefile="content/batch-interface-framework/command-line-parameter-reference/command-line-parameter-reference.md" sourcestartlinenumber="27" sourceendlinenumber="27">(Optional) Enable the creation of unit batches for recipes in units that are allocated at the phase level rather than the unit batch level. By default, the interface requires the unit name to be present in the unit batch start event. When you enable /adu, the interface creates the unit batch and defers setting the unit name until the phase-level allocation event arrives.</p>
+<!-- ### `/batchrcp =[true | false]` 
+
+(ABB only) Collect full task hierarchy. By default, the interface collects four levels. For details, refer to ABB 800xA batch start and stop events. -->
+<h3 id="bidm-list" sourcefile="content/batch-interface-framework/command-line-parameter-reference/command-line-parameter-reference.md" sourcestartlinenumber="33" sourceendlinenumber="33"><code>/bidm =&lt;list&gt;</code></h3>
+<p sourcefile="content/batch-interface-framework/command-line-parameter-reference/command-line-parameter-reference.md" sourcestartlinenumber="35" sourceendlinenumber="35">(Optional) Override the incoming batch ID by selecting a substring. Specify one or more masks composed of text and wildcards, to be used to compose the desired batch ID from the contents of the source BatchID field. The resulting batch ID is used for the Batch ID field of the top-level procedure and for the [BATCHID] placeholder. By default, the batch ID field in unit procedures contain the full batch ID from the data source. To use the truncated batch ID instead, configure the TBID setting. </p>
+<p sourcefile="content/batch-interface-framework/command-line-parameter-reference/command-line-parameter-reference.md" sourcestartlinenumber="37" sourceendlinenumber="37">Valid wildcards are as follows:</p>
+<table sourcefile="content/batch-interface-framework/command-line-parameter-reference/command-line-parameter-reference.md" sourcestartlinenumber="39" sourceendlinenumber="45">
+<thead>
+<tr>
+<th>Wildcard</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>#</td>
+<td>Single digit numerical value, 0-9</td>
+</tr>
+<tr>
+<td>@</td>
+<td>Single alpha character, a-z, A-Z</td>
+</tr>
+<tr>
+<td>?</td>
+<td>Any single symbol</td>
+</tr>
+<tr>
+<td>!</td>
+<td>Repeat the previous mask symbol</td>
+</tr>
+<tr>
+<td>*</td>
+<td>Any set of symbols</td>
+</tr>
+</tbody>
+</table>
+<p sourcefile="content/batch-interface-framework/command-line-parameter-reference/command-line-parameter-reference.md" sourcestartlinenumber="47" sourceendlinenumber="47">For example, if the incoming Batch ID is: <code>lot30112 / 90dev123 / 12345stp / ld567</code></p>
+<p sourcefile="content/batch-interface-framework/command-line-parameter-reference/command-line-parameter-reference.md" sourcestartlinenumber="49" sourceendlinenumber="49">The following list shows example masks and resulting data.</p>
+<table sourcefile="content/batch-interface-framework/command-line-parameter-reference/command-line-parameter-reference.md" sourcestartlinenumber="51" sourceendlinenumber="56">
+<thead>
+<tr>
+<th>Mask</th>
+<th>Result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>&quot;######&quot;</td>
+<td>30112</td>
+</tr>
+<tr>
+<td>&quot;###@!&quot;</td>
+<td>90dev</td>
+</tr>
+<tr>
+<td>&quot;*###@!&quot;</td>
+<td>lot30112 / 90dev</td>
+</tr>
+<tr>
+<td>&quot;@@@@, #8dev4, #!&quot;</td>
+<td>30112</td>
+</tr>
+</tbody>
+</table>
+<p sourcefile="content/batch-interface-framework/command-line-parameter-reference/command-line-parameter-reference.md" sourcestartlinenumber="58" sourceendlinenumber="58">In the last example, the first and second masks do not match, so the third mask is used. </p>
+<h3 id="cachetimedays" sourcefile="content/batch-interface-framework/command-line-parameter-reference/command-line-parameter-reference.md" sourcestartlinenumber="60" sourceendlinenumber="60"><code>/cachetime=&lt;days&gt;</code></h3>
+<p sourcefile="content/batch-interface-framework/command-line-parameter-reference/command-line-parameter-reference.md" sourcestartlinenumber="62" sourceendlinenumber="62">(Optional) Batches are cached in memory to enable the interface to capture events sent by the BES after the batch has closed. This setting specifies how long (in days) completed batches are cached. To specify fractions of a day, use decimal values. For example, /cachetime=7.5 releases completed batches when their end time is more than 7 days and 12 hours from the current time. The default value is 1 day, minimum is .042 days (approximately one hour), and maximum is 60 days.</p>
+<h3 id="dac" sourcefile="content/batch-interface-framework/command-line-parameter-reference/command-line-parameter-reference.md" sourcestartlinenumber="64" sourceendlinenumber="64"><code>/dac</code></h3>
+<p sourcefile="content/batch-interface-framework/command-line-parameter-reference/command-line-parameter-reference.md" sourcestartlinenumber="66" sourceendlinenumber="66">(Optional) Disable arbitration counters: directs the interface to release a unit on the first resource release event even if the number of acquire events is higher than number of release events. By default, the interface requires the number of acquire and release events for a unit to be the same.</p>
+<h3 id="damcae" sourcefile="content/batch-interface-framework/command-line-parameter-reference/command-line-parameter-reference.md" sourcestartlinenumber="68" sourceendlinenumber="68"><code>/damcae</code></h3>
+<p sourcefile="content/batch-interface-framework/command-line-parameter-reference/command-line-parameter-reference.md" sourcestartlinenumber="70" sourceendlinenumber="70">Ignore events from an Event Chronicle (alarms &amp; events) data source when creating or checking PI Module Database objects. If the module path defined for an AlarmTag[#].Alias entry contains the root node symbol ($), the interface checks the module path regardless of whether this option is enabled. </p>
+<h3 id="datasecstring" sourcefile="content/batch-interface-framework/command-line-parameter-reference/command-line-parameter-reference.md" sourcestartlinenumber="72" sourceendlinenumber="72"><code>/datasec=&lt;string&gt;</code></h3>
+<p sourcefile="content/batch-interface-framework/command-line-parameter-reference/command-line-parameter-reference.md" sourcestartlinenumber="74" sourceendlinenumber="74">(Optional) Specifies the security settings to be assigned to interface-generated tags. For PI Data Archive 3.4.375.99 or earlier, use owner, group, world format. Example: /datasec=&quot;o:rw g:r w:r&quot; For PI Data Archive 3.4.380.36 or later, specify an access control list (ACL). </p>
+<p sourcefile="content/batch-interface-framework/command-line-parameter-reference/command-line-parameter-reference.md" sourcestartlinenumber="76" sourceendlinenumber="76">Example: </p>
+<pre sourcefile="content/batch-interface-framework/command-line-parameter-reference/command-line-parameter-reference.md" sourcestartlinenumber="78" sourceendlinenumber="80"><code class="lang-text">/datasec=&quot;piadmin: A(r,w) | PIEngineers: A(r)&quot;
+</code></pre><h3 id="db-" sourcefile="content/batch-interface-framework/command-line-parameter-reference/command-line-parameter-reference.md" sourcestartlinenumber="82" sourceendlinenumber="82"><code>/db =[#]</code></h3>
+<p sourcefile="content/batch-interface-framework/command-line-parameter-reference/command-line-parameter-reference.md" sourcestartlinenumber="84" sourceendlinenumber="84">(Optional) Enabled debugging output:</p>
+<ul sourcefile="content/batch-interface-framework/command-line-parameter-reference/command-line-parameter-reference.md" sourcestartlinenumber="86" sourceendlinenumber="88">
+<li sourcefile="content/batch-interface-framework/command-line-parameter-reference/command-line-parameter-reference.md" sourcestartlinenumber="86" sourceendlinenumber="86">0: Log only errors and warnings (default)</li>
+<li sourcefile="content/batch-interface-framework/command-line-parameter-reference/command-line-parameter-reference.md" sourcestartlinenumber="87" sourceendlinenumber="87">1: Log errors, warnings and major success messages</li>
+<li sourcefile="content/batch-interface-framework/command-line-parameter-reference/command-line-parameter-reference.md" sourcestartlinenumber="88" sourceendlinenumber="88">2: Log all messages (most verbose)</li>
+</ul>
+<h3 id="dpretc" sourcefile="content/batch-interface-framework/command-line-parameter-reference/command-line-parameter-reference.md" sourcestartlinenumber="90" sourceendlinenumber="90"><code>/dpretc</code></h3>
+<p sourcefile="content/batch-interface-framework/command-line-parameter-reference/command-line-parameter-reference.md" sourcestartlinenumber="92" sourceendlinenumber="92">(Optional – event frames only) Disable propagation of referenced elements to children. By default, the interface propagates each event frame element reference to its children event frames.</p>
+<!-- ### `/equipmentXML =<filepath>` 
+
+(Optional) Specifies the location of the DeltaV-generated equipment hierarchy XML file. The EMDVB interface uses this reference data to locate missing ProcessCell field by searching based on the combination of Area and Unit fields. Valid only when a DeltaV AE SQL datasource is defined. 
+
+Example: 
+
+```text
+/EquipmentXML="C:\DeltaV\Equip.xml"
+``` -->
+<h3 id="failoverid-string" sourcefile="content/batch-interface-framework/command-line-parameter-reference/command-line-parameter-reference.md" sourcestartlinenumber="104" sourceendlinenumber="104"><code>/failoverID =&lt;string&gt;</code></h3>
+<p sourcefile="content/batch-interface-framework/command-line-parameter-reference/command-line-parameter-reference.md" sourcestartlinenumber="106" sourceendlinenumber="106">(Optional) Configure a unique failover ID for the interface instance. Must be used with the /FailOverTag parameter.</p>
+<p sourcefile="content/batch-interface-framework/command-line-parameter-reference/command-line-parameter-reference.md" sourcestartlinenumber="108" sourceendlinenumber="108">Example: <code>/FailOverID=&quot;intf1&quot;</code></p>
+<h3 id="failovertag-tag-name" sourcefile="content/batch-interface-framework/command-line-parameter-reference/command-line-parameter-reference.md" sourcestartlinenumber="110" sourceendlinenumber="110"><code>/failovertag =&lt;tag name&gt;</code></h3>
+<p sourcefile="content/batch-interface-framework/command-line-parameter-reference/command-line-parameter-reference.md" sourcestartlinenumber="112" sourceendlinenumber="112">(Optional) Specifies the PI tag to be used to track the primary interface instance. Must be used with the /FailOverID parameter.</p>
+<p sourcefile="content/batch-interface-framework/command-line-parameter-reference/command-line-parameter-reference.md" sourcestartlinenumber="114" sourceendlinenumber="114">Example: <code>/FailOverTag=&quot;Batch_FailoverTag&quot;</code></p>
+<h3 id="host-hostport" sourcefile="content/batch-interface-framework/command-line-parameter-reference/command-line-parameter-reference.md" sourcestartlinenumber="116" sourceendlinenumber="116"><code>/host =host:port</code></h3>
+<p sourcefile="content/batch-interface-framework/command-line-parameter-reference/command-line-parameter-reference.md" sourcestartlinenumber="118" sourceendlinenumber="118">(Required) Specifies the PI Data server where data is to be stored. Host is the IP address or domain name of the server node. Port is the port number for TCP/IP communication. The port is always 5450.</p>
+<p sourcefile="content/batch-interface-framework/command-line-parameter-reference/command-line-parameter-reference.md" sourcestartlinenumber="120" sourceendlinenumber="120">Examples: </p>
+<ul sourcefile="content/batch-interface-framework/command-line-parameter-reference/command-line-parameter-reference.md" sourcestartlinenumber="122" sourceendlinenumber="125">
+<li sourcefile="content/batch-interface-framework/command-line-parameter-reference/command-line-parameter-reference.md" sourcestartlinenumber="122" sourceendlinenumber="122"><code>/host=marvin</code></li>
+<li sourcefile="content/batch-interface-framework/command-line-parameter-reference/command-line-parameter-reference.md" sourcestartlinenumber="123" sourceendlinenumber="123"><code>/host=marvin:5450</code></li>
+<li sourcefile="content/batch-interface-framework/command-line-parameter-reference/command-line-parameter-reference.md" sourcestartlinenumber="124" sourceendlinenumber="124"><code>/host=206.79.198.30</code></li>
+<li sourcefile="content/batch-interface-framework/command-line-parameter-reference/command-line-parameter-reference.md" sourcestartlinenumber="125" sourceendlinenumber="125"><code>/host=206.79.198.30:5450</code></li>
+</ul>
+<h3 id="id-identifier" sourcefile="content/batch-interface-framework/command-line-parameter-reference/command-line-parameter-reference.md" sourcestartlinenumber="127" sourceendlinenumber="127"><code>/id =&lt;identifier&gt;</code></h3>
+<p sourcefile="content/batch-interface-framework/command-line-parameter-reference/command-line-parameter-reference.md" sourcestartlinenumber="129" sourceendlinenumber="129">(Required) Specify a one- to nine-number identifier for the interface instance. Assigned to the Location1 attribute of tags that are updated by the interface instance.</p>
+<h3 id="includeincompletedata" sourcefile="content/batch-interface-framework/command-line-parameter-reference/command-line-parameter-reference.md" sourcestartlinenumber="131" sourceendlinenumber="131"><code>/includeincompletedata</code></h3>
+<p sourcefile="content/batch-interface-framework/command-line-parameter-reference/command-line-parameter-reference.md" sourcestartlinenumber="133" sourceendlinenumber="133">(Optional) Enables the collection of all unit procedures without and associated UNIT. Without this option unit procedures that do not have phase state that associated with a particular UNIT will not be shown as events in PI AF.</p>
+<h3 id="inifile-path" sourcefile="content/batch-interface-framework/command-line-parameter-reference/command-line-parameter-reference.md" sourcestartlinenumber="135" sourceendlinenumber="135"><code>/inifile =&lt;path&gt;</code></h3>
+<p sourcefile="content/batch-interface-framework/command-line-parameter-reference/command-line-parameter-reference.md" sourcestartlinenumber="137" sourceendlinenumber="137">(Optional) Override the default location and name for the initialization file. By default, the .ini file resides in the interface installation directory and has the same file name and the .bat file.</p>
+<h3 id="link-af-element-path" sourcefile="content/batch-interface-framework/command-line-parameter-reference/command-line-parameter-reference.md" sourcestartlinenumber="139" sourceendlinenumber="139"><code>/link =&lt;AF element path&gt;</code></h3>
+<p sourcefile="content/batch-interface-framework/command-line-parameter-reference/command-line-parameter-reference.md" sourcestartlinenumber="141" sourceendlinenumber="141">(Deprecated, see /readlink and /writelink.) Combine event frames from different interface instances. Useful when you have an MES controlling multiple BESs. Configure an interface instance for each BES, specifying the same linkage element. The BES interface instances create event frame references under the MES event frames that refer to the BES interface instances. For Emerson Syncade systems, the AutomationBatchID field must match the batchID of the batch created by the BES.</p>
+<h3 id="maxqtf-days" sourcefile="content/batch-interface-framework/command-line-parameter-reference/command-line-parameter-reference.md" sourcestartlinenumber="143" sourceendlinenumber="143"><code>/maxqtf =&lt;days&gt;</code></h3>
+<p sourcefile="content/batch-interface-framework/command-line-parameter-reference/command-line-parameter-reference.md" sourcestartlinenumber="145" sourceendlinenumber="145">(Optional) Sets the maximum number of days for which a query can return data. Used to break a large query into a set of smaller queries, to ensure that the system does not run out of memory. The value can be fractional.</p>
+<ul sourcefile="content/batch-interface-framework/command-line-parameter-reference/command-line-parameter-reference.md" sourcestartlinenumber="147" sourceendlinenumber="149">
+<li sourcefile="content/batch-interface-framework/command-line-parameter-reference/command-line-parameter-reference.md" sourcestartlinenumber="147" sourceendlinenumber="147">Minimum: 0.001</li>
+<li sourcefile="content/batch-interface-framework/command-line-parameter-reference/command-line-parameter-reference.md" sourcestartlinenumber="148" sourceendlinenumber="148">Maximum: 180</li>
+<li sourcefile="content/batch-interface-framework/command-line-parameter-reference/command-line-parameter-reference.md" sourcestartlinenumber="149" sourceendlinenumber="149">Default: 30</li>
+</ul>
+<h3 id="maxstoptime-seconds" sourcefile="content/batch-interface-framework/command-line-parameter-reference/command-line-parameter-reference.md" sourcestartlinenumber="151" sourceendlinenumber="151"><code>/maxstoptime =&lt;seconds&gt;</code></h3>
+<p sourcefile="content/batch-interface-framework/command-line-parameter-reference/command-line-parameter-reference.md" sourcestartlinenumber="153" sourceendlinenumber="153">(Optional) Specifies (in seconds) the maximum time allowed for the interface to properly shutdown. If shutdown takes longer than the specified time, the interface is forced to terminate immediately. Default: 120 seconds</p>
+<h3 id="merge" sourcefile="content/batch-interface-framework/command-line-parameter-reference/command-line-parameter-reference.md" sourcestartlinenumber="155" sourceendlinenumber="155"><code>/merge</code></h3>
+<p sourcefile="content/batch-interface-framework/command-line-parameter-reference/command-line-parameter-reference.md" sourcestartlinenumber="157" sourceendlinenumber="157">(Optional) Enable merging of multiple source batches with same ID. The original data for each batch merged is stored in PI properties under a node named using the ID of the original batch. The data includes the original batch ID, start time (UTC), end time (UTC), product and formula name. The interface merges only batches that are cached in local memory. The time frame for merging is configured using the /cachetime switch.</p>
+<p sourcefile="content/batch-interface-framework/command-line-parameter-reference/command-line-parameter-reference.md" sourcestartlinenumber="159" sourceendlinenumber="159">If the IDs of the batches you want to merge are different, use the /bidm flag to override incoming IDs.</p>
+<p sourcefile="content/batch-interface-framework/command-line-parameter-reference/command-line-parameter-reference.md" sourcestartlinenumber="161" sourceendlinenumber="161">Example: Given the following five batches running within the cache time frame.</p>
+<ul sourcefile="content/batch-interface-framework/command-line-parameter-reference/command-line-parameter-reference.md" sourcestartlinenumber="163" sourceendlinenumber="167">
+<li sourcefile="content/batch-interface-framework/command-line-parameter-reference/command-line-parameter-reference.md" sourcestartlinenumber="163" sourceendlinenumber="163">Test12345_1</li>
+<li sourcefile="content/batch-interface-framework/command-line-parameter-reference/command-line-parameter-reference.md" sourcestartlinenumber="164" sourceendlinenumber="164">Test_12345_2</li>
+<li sourcefile="content/batch-interface-framework/command-line-parameter-reference/command-line-parameter-reference.md" sourcestartlinenumber="165" sourceendlinenumber="165">CleaningTest</li>
+<li sourcefile="content/batch-interface-framework/command-line-parameter-reference/command-line-parameter-reference.md" sourcestartlinenumber="166" sourceendlinenumber="166">USPO12345_test</li>
+<li sourcefile="content/batch-interface-framework/command-line-parameter-reference/command-line-parameter-reference.md" sourcestartlinenumber="167" sourceendlinenumber="167">CleaningTest</li>
+</ul>
+<p sourcefile="content/batch-interface-framework/command-line-parameter-reference/command-line-parameter-reference.md" sourcestartlinenumber="169" sourceendlinenumber="169">With merging enabled, only the CleaningTest batches are merged. To merge the other three batches, which have IDs containing the string &quot;12345&quot;, specify /bidm=######.</p>
+<h3 id="mode-mode" sourcefile="content/batch-interface-framework/command-line-parameter-reference/command-line-parameter-reference.md" sourcestartlinenumber="171" sourceendlinenumber="171"><code>/mode =&lt;mode&gt;</code></h3>
+<p sourcefile="content/batch-interface-framework/command-line-parameter-reference/command-line-parameter-reference.md" sourcestartlinenumber="173" sourceendlinenumber="173">(Optional) Valid modes are as follows:</p>
+<ul sourcefile="content/batch-interface-framework/command-line-parameter-reference/command-line-parameter-reference.md" sourcestartlinenumber="175" sourceendlinenumber="181">
+<li sourcefile="content/batch-interface-framework/command-line-parameter-reference/command-line-parameter-reference.md" sourcestartlinenumber="175" sourceendlinenumber="175"><p sourcefile="content/batch-interface-framework/command-line-parameter-reference/command-line-parameter-reference.md" sourcestartlinenumber="175" sourceendlinenumber="175"><strong>Realtime:</strong> (Default) Real-time data collection. If a recovery start time is specified (/rst), the interface recovers data before starting realtime collection.</p>
+</li>
+<li sourcefile="content/batch-interface-framework/command-line-parameter-reference/command-line-parameter-reference.md" sourcestartlinenumber="177" sourceendlinenumber="177"><p sourcefile="content/batch-interface-framework/command-line-parameter-reference/command-line-parameter-reference.md" sourcestartlinenumber="177" sourceendlinenumber="177"><strong>Stat:</strong> Statistics mode. Compare source data with the corresponding PI System batch data. The interface does not write to or modify any data PI batch data. On completion, the interface reports results and stops.</p>
+</li>
+<li sourcefile="content/batch-interface-framework/command-line-parameter-reference/command-line-parameter-reference.md" sourcestartlinenumber="179" sourceendlinenumber="179"><p sourcefile="content/batch-interface-framework/command-line-parameter-reference/command-line-parameter-reference.md" sourcestartlinenumber="179" sourceendlinenumber="179"><strong>Delete:</strong> Delete batch data from PI archives for specified period, leaving data from all other sources intact. Use only if the interface is unable to synchronize source batch data with the PI System. Must be used in conjunction with the recovery mode switches (/rst and /ret).</p>
+</li>
+<li sourcefile="content/batch-interface-framework/command-line-parameter-reference/command-line-parameter-reference.md" sourcestartlinenumber="181" sourceendlinenumber="181"><p sourcefile="content/batch-interface-framework/command-line-parameter-reference/command-line-parameter-reference.md" sourcestartlinenumber="181" sourceendlinenumber="181"><strong>NoData:</strong> Newly-added tags, units and modules are indexed (referenced) in the primary PI archive, but older archives do not have entries for these modules, units and tags. In NoData mode, the interface creates modules, units, tags and tag aliases without processing batch data and writing events to the tags. To recover batch data for a period prior to the one in the primary archive, you must reprocess older archives with the offline archive utility. Manual archive reprocessing creates indexes for newly-added units, modules, tags. Always run the interface in this mode before writing new batch data to older PI archives (that is, archives other than the primary archive).</p>
+</li>
+</ul>
+<h3 id="mop" sourcefile="content/batch-interface-framework/command-line-parameter-reference/command-line-parameter-reference.md" sourcestartlinenumber="183" sourceendlinenumber="183"><code>/mop</code></h3>
+<p sourcefile="content/batch-interface-framework/command-line-parameter-reference/command-line-parameter-reference.md" sourcestartlinenumber="185" sourceendlinenumber="185">(Optional) Merge identically-named operations under the same parent unit procedure. The start time of the combined operation is the start of the earliest operation and the end time is the end time of the latest or longest operation that was merged.</p>
+<h3 id="mup" sourcefile="content/batch-interface-framework/command-line-parameter-reference/command-line-parameter-reference.md" sourcestartlinenumber="187" sourceendlinenumber="187"><code>/mup</code></h3>
+<p sourcefile="content/batch-interface-framework/command-line-parameter-reference/command-line-parameter-reference.md" sourcestartlinenumber="189" sourceendlinenumber="189">(Optional) Merge identically-named sequential unit procedures running on the same unit into a single unit procedure. Unit procedures are not merged if the unit was used by another recipe between candidates for merging. The start time of the resulting merged unit procedure is the start of the earliest unit procedure, and the end time is the end time of the latest or longest unit procedure that was merged.</p>
+<h3 id="noarbitration" sourcefile="content/batch-interface-framework/command-line-parameter-reference/command-line-parameter-reference.md" sourcestartlinenumber="191" sourceendlinenumber="191"><code>/noarbitration</code></h3>
+<p sourcefile="content/batch-interface-framework/command-line-parameter-reference/command-line-parameter-reference.md" sourcestartlinenumber="193" sourceendlinenumber="193">Create unit batches based solely on source batch recipe data. For use when the source Batch Executive System (BES) provides batch data without equipment arbitration.</p>
+<h3 id="nslang" sourcefile="content/batch-interface-framework/command-line-parameter-reference/command-line-parameter-reference.md" sourcestartlinenumber="195" sourceendlinenumber="195"><code>/ns[=lang]</code></h3>
+<p sourcefile="content/batch-interface-framework/command-line-parameter-reference/command-line-parameter-reference.md" sourcestartlinenumber="197" sourceendlinenumber="197">(Optional) Perform numerical conversions using the specified language&#39;s conventions. Useful when the numerical conventions differ from the default settings (for example, comma instead of decimal point). Default is &quot;English_UnitedStates&quot;. If you omit the language parameter, the interface uses the &quot;Regional and Language Options&quot; settings in effect for the interface node.</p>
+<details>
+<summary>Language types and abbreviations:</summary>
+
+* chinese chinese-simplified (chs)
+* chinese-traditional (cht)
+* czech (csy)
+* danish (dan)
+* belgian, dutch-belgian (nlb)
+* dutch (nld)
+* australian, english-aus (ena)
+* canadian, english-can (enc)
+* english english-nz (enz)
+* english-uk (uk)
+* american, american-english, english-american, english-us, english-usa, (enu) (us) (usa)
+* finnish (fin)
+* french-belgian (frb)
+* french-canadian (frc)
+* french (fra)
+* french-swiss (frs)
+* german-swiss, swiss (des)
+* german (deu)
+* german-austrian (dea)
+* greek (ell)
+* hungarian (hun)
+* icelandic (isl)
+* italian (ita)
+* italian-swiss (its)
+* japanese (jpn)
+* korean (kor)
+* norwegian-bokmal (nor)
+* norwegian norwegian-nynorsk (non)
+* polish (plk)
+* portuguese-brazilian (ptb)
+* portuguese (ptg)
+* russian (rus)
+* slovak (sky)
+* spanish (esp)
+* spanish-mexican (esm)
+* spanish-modern (esn)
+* swedish (sve)
+* turkish (trk)
+
+</details>
+
+<h3 id="piconnto-seconds" sourcefile="content/batch-interface-framework/command-line-parameter-reference/command-line-parameter-reference.md" sourcestartlinenumber="243" sourceendlinenumber="243"><code>/piconnto =&lt;seconds&gt;</code></h3>
+<p sourcefile="content/batch-interface-framework/command-line-parameter-reference/command-line-parameter-reference.md" sourcestartlinenumber="245" sourceendlinenumber="245">(Optional) Override the default SDK setting for PI connection timeout.</p>
+<h3 id="pidato-seconds" sourcefile="content/batch-interface-framework/command-line-parameter-reference/command-line-parameter-reference.md" sourcestartlinenumber="247" sourceendlinenumber="247"><code>/pidato =&lt;seconds&gt;</code></h3>
+<p sourcefile="content/batch-interface-framework/command-line-parameter-reference/command-line-parameter-reference.md" sourcestartlinenumber="249" sourceendlinenumber="249">(Optional) Override the default SDK setting for PI data access timeout.</p>
+<h3 id="pipswd-password" sourcefile="content/batch-interface-framework/command-line-parameter-reference/command-line-parameter-reference.md" sourcestartlinenumber="250" sourceendlinenumber="250"><code>/pipswd =&lt;password&gt;</code></h3>
+<p sourcefile="content/batch-interface-framework/command-line-parameter-reference/command-line-parameter-reference.md" sourcestartlinenumber="252" sourceendlinenumber="252">(Optional) Specify the user password to be used to connect to the PI Data Archive. By default, the interface uses PI trusts for authentication.</p>
+<h3 id="piuser-name" sourcefile="content/batch-interface-framework/command-line-parameter-reference/command-line-parameter-reference.md" sourcestartlinenumber="254" sourceendlinenumber="254"><code>/piuser =&lt;name&gt;</code></h3>
+<p sourcefile="content/batch-interface-framework/command-line-parameter-reference/command-line-parameter-reference.md" sourcestartlinenumber="256" sourceendlinenumber="256">(Optional) Specify the user name to be used to connect to the PI Data Archive. By default, the interface uses PI trusts for authentication.</p>
+<h3 id="print-filename" sourcefile="content/batch-interface-framework/command-line-parameter-reference/command-line-parameter-reference.md" sourcestartlinenumber="258" sourceendlinenumber="258"><code>/print =&lt;filename&gt;</code></h3>
+<p sourcefile="content/batch-interface-framework/command-line-parameter-reference/command-line-parameter-reference.md" sourcestartlinenumber="260" sourceendlinenumber="260">(Optional) Prints the results of first scan to specified text file. The results include the batch tree, tag list, and equipment tree. Used for troubleshooting.</p>
+<h3 id="ps-pointsource" sourcefile="content/batch-interface-framework/command-line-parameter-reference/command-line-parameter-reference.md" sourcestartlinenumber="262" sourceendlinenumber="262"><code>/ps =pointsource</code></h3>
+<p sourcefile="content/batch-interface-framework/command-line-parameter-reference/command-line-parameter-reference.md" sourcestartlinenumber="264" sourceendlinenumber="264">Specifies the point source for the points maintained by the interface.</p>
+<h3 id="ptsec-string" sourcefile="content/batch-interface-framework/command-line-parameter-reference/command-line-parameter-reference.md" sourcestartlinenumber="265" sourceendlinenumber="265"><code>/ptsec =&lt;string&gt;</code></h3>
+<p sourcefile="content/batch-interface-framework/command-line-parameter-reference/command-line-parameter-reference.md" sourcestartlinenumber="267" sourceendlinenumber="267">(Optional) Specifies the access security settings to be assigned to interface-generated tags. For PI Data Archive version 3.4.375.99 or earlier, use owner, group, world format.</p>
+<p sourcefile="content/batch-interface-framework/command-line-parameter-reference/command-line-parameter-reference.md" sourcestartlinenumber="269" sourceendlinenumber="269">Example:</p>
+<pre sourcefile="content/batch-interface-framework/command-line-parameter-reference/command-line-parameter-reference.md" sourcestartlinenumber="271" sourceendlinenumber="273"><code class="lang-text">/ptsec=&quot;o:rw g:r w:r&quot;
+</code></pre><p sourcefile="content/batch-interface-framework/command-line-parameter-reference/command-line-parameter-reference.md" sourcestartlinenumber="275" sourceendlinenumber="275">For PI Data Archive version 3.4.380.36 or later, specify an access control list (ACL). </p>
+<p sourcefile="content/batch-interface-framework/command-line-parameter-reference/command-line-parameter-reference.md" sourcestartlinenumber="277" sourceendlinenumber="277">Example:</p>
+<pre sourcefile="content/batch-interface-framework/command-line-parameter-reference/command-line-parameter-reference.md" sourcestartlinenumber="279" sourceendlinenumber="281"><code class="lang-text">/ptsec=&quot;piadmin: A(r,w) | PIEngineers: A(r)&quot;
+</code></pre><h3 id="ras-startstr-stopstr" sourcefile="content/batch-interface-framework/command-line-parameter-reference/command-line-parameter-reference.md" sourcestartlinenumber="283" sourceendlinenumber="283"><code>/ras =&lt;startstr, stopstr&gt;</code></h3>
+<p sourcefile="content/batch-interface-framework/command-line-parameter-reference/command-line-parameter-reference.md" sourcestartlinenumber="285" sourceendlinenumber="285">(Optional) Directs the interface to use the &quot;Report&quot; event to create phase steps under active phase states. The phase step name and start/stop events are obtained from the &quot;Descript&quot; column. The start and stop strings must start in the same position in the data source and must not be the first characters in the &quot;Descript&quot; column. The phase step name is derived from the characters preceding the start/stop text. Specify the strings in a double-quoted comma-separated list, as shown in the example below.</p>
+<p sourcefile="content/batch-interface-framework/command-line-parameter-reference/command-line-parameter-reference.md" sourcestartlinenumber="287" sourceendlinenumber="287">Example: <code>/ras=&quot;-STRT, -STOP&quot;</code></p>
+<p sourcefile="content/batch-interface-framework/command-line-parameter-reference/command-line-parameter-reference.md" sourcestartlinenumber="289" sourceendlinenumber="289">If the Descript Column contains TEST123-STRT-B, the interface generates a phase step named &quot;TEST123&quot; under the currently active phase state. Open phase steps are closed by the end of the parent operation and not by the end of parent phase or phase state.</p>
+<!-- ### `/readlink= <AFelementpath>`
+
+Combine event frames from different interface instances. For an MES controlling one or more BES systems, configure /readlink on the MES interface and configure an interface instance for each BES, specifying the same linkage element in the BES /writelink setting. The BES interface instances will then create event frame references under the MES event frames that refer to the BES event frames. For Emerson Syncade systems, the AutomationBatchID field must match the batchID of the batch created by the BES.
+
+For a BES interface controlling one or more MES systems, configure /readlink on the MES interface and configure an interface instance for each BES, specifying the same linkage element in the BES /writelink setting. The MES interface will then create event frame references under the BES event frames that refer to the MES event frames. Link templates must also be configured to define which events specify a link.
+
+### `/restore` 
+
+For the ABB 800xA interface, enable recovery of batches from restored archives in all configured ABB 800xA data sources. -->
+<h3 id="restef" sourcefile="content/batch-interface-framework/command-line-parameter-reference/command-line-parameter-reference.md" sourcestartlinenumber="301" sourceendlinenumber="301"><code>/restef</code></h3>
+<p sourcefile="content/batch-interface-framework/command-line-parameter-reference/command-line-parameter-reference.md" sourcestartlinenumber="303" sourceendlinenumber="303">(Optional) Enables an event frame with references to inherit security settings from its primary reference element.</p>
+<h3 id="ret-datetime" sourcefile="content/batch-interface-framework/command-line-parameter-reference/command-line-parameter-reference.md" sourcestartlinenumber="305" sourceendlinenumber="305"><code>/ret =&lt;datetime&gt;</code></h3>
+<p sourcefile="content/batch-interface-framework/command-line-parameter-reference/command-line-parameter-reference.md" sourcestartlinenumber="307" sourceendlinenumber="307">(Optional) Specifies the end time for data recovery. The interface recovers batches that start before the specified time, including batches that end after the specified end time. Specify the time using the interface node format and time zone.</p>
+<h3 id="retry-seconds" sourcefile="content/batch-interface-framework/command-line-parameter-reference/command-line-parameter-reference.md" sourcestartlinenumber="309" sourceendlinenumber="309"><code>/retry =&lt;seconds&gt;</code></h3>
+<p sourcefile="content/batch-interface-framework/command-line-parameter-reference/command-line-parameter-reference.md" sourcestartlinenumber="311" sourceendlinenumber="311">(Optional) Specifies how often the interface retries a failed attempt to write data. The default is 60 seconds.</p>
+<h3 id="retryto-seconds" sourcefile="content/batch-interface-framework/command-line-parameter-reference/command-line-parameter-reference.md" sourcestartlinenumber="313" sourceendlinenumber="313"><code>/retryto =&lt;seconds&gt;</code></h3>
+<p sourcefile="content/batch-interface-framework/command-line-parameter-reference/command-line-parameter-reference.md" sourcestartlinenumber="315" sourceendlinenumber="315">Specifies how long the interface retries a failed attempt to write data before timing out. By default, the interface never times out. If you configure a timeout setting, be advised that you risk losing data.</p>
+<h3 id="rst-datetime" sourcefile="content/batch-interface-framework/command-line-parameter-reference/command-line-parameter-reference.md" sourcestartlinenumber="316" sourceendlinenumber="316"><code>/rst =&lt;datetime&gt;</code></h3>
+<p sourcefile="content/batch-interface-framework/command-line-parameter-reference/command-line-parameter-reference.md" sourcestartlinenumber="318" sourceendlinenumber="318">(Optional) Specifies recovery start time. The interface recovers batches that start after the specified time, as well as batches that start before the specified time but end after it. Specify the time using the interface node format and time zone.</p>
+<h3 id="rti" sourcefile="content/batch-interface-framework/command-line-parameter-reference/command-line-parameter-reference.md" sourcestartlinenumber="320" sourceendlinenumber="320"><code>/rti</code></h3>
+<p sourcefile="content/batch-interface-framework/command-line-parameter-reference/command-line-parameter-reference.md" sourcestartlinenumber="322" sourceendlinenumber="322">Remove trailing index from Recipe fields. Applicable to Procedure, Unit Procedure and Operation Recipe fields. Emerson EVT data source only.</p>
+<h3 id="scan-seconds" sourcefile="content/batch-interface-framework/command-line-parameter-reference/command-line-parameter-reference.md" sourcestartlinenumber="324" sourceendlinenumber="324"><code>/scan =&lt;seconds&gt;</code></h3>
+<p sourcefile="content/batch-interface-framework/command-line-parameter-reference/command-line-parameter-reference.md" sourcestartlinenumber="326" sourceendlinenumber="326">(Optional) Specifies, in seconds, how often to scan the data source for new data. The default is 60 seconds. A scan that returns a large amount of data can cause the interface to skip the subsequent scan.</p>
+<h3 id="singlerun" sourcefile="content/batch-interface-framework/command-line-parameter-reference/command-line-parameter-reference.md" sourcestartlinenumber="328" sourceendlinenumber="328"><code>/singlerun</code></h3>
+<p sourcefile="content/batch-interface-framework/command-line-parameter-reference/command-line-parameter-reference.md" sourcestartlinenumber="330" sourceendlinenumber="330">(Optional) Perform one scan and stop.</p>
+<h3 id="smp-equipment-path" sourcefile="content/batch-interface-framework/command-line-parameter-reference/command-line-parameter-reference.md" sourcestartlinenumber="332" sourceendlinenumber="332"><code>/smp =&quot;equipment path&quot;</code></h3>
+<p sourcefile="content/batch-interface-framework/command-line-parameter-reference/command-line-parameter-reference.md" sourcestartlinenumber="334" sourceendlinenumber="334">(Optional) Specifies an alternate PI Module path or PI AF element path for a particular equipment hierarchy. By default, the interface scans starting at the root level. Use the following syntax:</p>
+<p sourcefile="content/batch-interface-framework/command-line-parameter-reference/command-line-parameter-reference.md" sourcestartlinenumber="336" sourceendlinenumber="336"><code>\\&lt;RootModule&gt;\&lt;SubModule&gt;\&lt;…&gt;</code></p>
+<!-- ### `/sqlconnto =<seconds>` (DeltaV SQL only)
+
+(Optional) Override the default SQL timeout setting (60 seconds).
+
+### `/sqldato=<seconds>` (DeltaV SQL only)
+
+(Optional) Override the default SQL data access timeout setting (100 seconds). -->
+<h3 id="swaptime-seconds" sourcefile="content/batch-interface-framework/command-line-parameter-reference/command-line-parameter-reference.md" sourcestartlinenumber="346" sourceendlinenumber="346"><code>/swaptime =&lt;seconds&gt;</code></h3>
+<p sourcefile="content/batch-interface-framework/command-line-parameter-reference/command-line-parameter-reference.md" sourcestartlinenumber="348" sourceendlinenumber="348">(Optional) Specifies, in seconds, how long the current primary interface must be unavailable before failover occurs. Default: 300 seconds.</p>
+<h3 id="tbid" sourcefile="content/batch-interface-framework/command-line-parameter-reference/command-line-parameter-reference.md" sourcestartlinenumber="350" sourceendlinenumber="350"><code>/tbid</code></h3>
+<p sourcefile="content/batch-interface-framework/command-line-parameter-reference/command-line-parameter-reference.md" sourcestartlinenumber="352" sourceendlinenumber="352">(Optional) Use the truncated batch ID in the batch ID field of unit procedures. Incoming batch IDs are reformatted using the mask defined in the /bidm parameter.</p>
+<h3 id="tbse" sourcefile="content/batch-interface-framework/command-line-parameter-reference/command-line-parameter-reference.md" sourcestartlinenumber="354" sourceendlinenumber="354"><code>/tbse</code></h3>
+<p sourcefile="content/batch-interface-framework/command-line-parameter-reference/command-line-parameter-reference.md" sourcestartlinenumber="356" sourceendlinenumber="356">(Optional) Directs the interface to use top level recipe start/end events for creating batch objects. By default, the interface uses batch load/unload events. Intended for batches with S88 recipe types: Procedure, Unit Procedure, Operation, and Phase.</p>
+<h3 id="tsgmt--lcl" sourcefile="content/batch-interface-framework/command-line-parameter-reference/command-line-parameter-reference.md" sourcestartlinenumber="358" sourceendlinenumber="358"><code>/ts=GMT | LCL</code></h3>
+<p sourcefile="content/batch-interface-framework/command-line-parameter-reference/command-line-parameter-reference.md" sourcestartlinenumber="360" sourceendlinenumber="360">(Optional) Specifies how the interface interprets event timestamps from an SQL data source. Options are local time or GMT. Default is GMT.</p>
+<!-- ### `/uobev` (DeltaV SQL 9.3+ only)
+
+(Optional) Directs the interface to use the original batch event view. By default the interface queries 17 tables to retrieve data for batch-associated events. Note that this view does not provide explicit [Descript], [Pval] and [EU] fields. Instead the [Descript] field combines data from all three fields. This option is provided for backward compatibility. -->
+<h3 id="ubr" sourcefile="content/batch-interface-framework/command-line-parameter-reference/command-line-parameter-reference.md" sourcestartlinenumber="366" sourceendlinenumber="366"><code>/ubr</code></h3>
+<!-- Customized for Emerson Syncade -->
+<p sourcefile="content/batch-interface-framework/command-line-parameter-reference/command-line-parameter-reference.md" sourcestartlinenumber="370" sourceendlinenumber="370">Default settings for Emerson batch interfaces: <code>/UBR = false</code></p>
+<p sourcefile="content/batch-interface-framework/command-line-parameter-reference/command-line-parameter-reference.md" sourcestartlinenumber="372" sourceendlinenumber="372">If <code>/UBR = true</code> the interface will use <strong>SYSTEM MESSAGE</strong> to control the start and end of event frames. Example System Messages are <strong>BEGIN OF BATCH</strong>, <strong>END OF BATCH</strong>, <strong>UNIT PROCEDURE STARTED</strong>, and <strong>UNIT PROCEDURE ENDED</strong>. </p>
+<p sourcefile="content/batch-interface-framework/command-line-parameter-reference/command-line-parameter-reference.md" sourcestartlinenumber="374" sourceendlinenumber="374">If <code>/UBR = false</code> the interface will use <strong>STATE CHANGE</strong> to control the start and end of event frames. Example State Change messages are <strong>RUNNING</strong>, <strong>REMOVED</strong>, <strong>ABORTED</strong>, <strong>COMPLETE</strong>, <strong>STOPPED</strong>, and <strong>ABANDON</strong>. The interface will combine the state change with the recipe (<code>Batch</code>, <code>UnitProcedure</code>, <code>Operation</code>, <code>Phase</code>) to determine which recipe step has changed state. </p>
+<p sourcefile="content/batch-interface-framework/command-line-parameter-reference/command-line-parameter-reference.md" sourcestartlinenumber="376" sourceendlinenumber="376">Provided for backward compatibility with version 1.0.0.0 of the interface. </p>
+<!-- ### `/WEBSRVDISABLED=[true | false]` 
+
+(Optional) If not added it will default to false.
+
+This parameter is only supported in interface PIEMDVBCS and allows the interface to ignore checking or sending requests to the Syncade workflow web services. If connecting to WF 4.9 this parameter must be set to true.
+
+Added in version 4.0.30.
+
+### `/writelink= <AFelementpath>` 
+
+Combine event frames from different interface instances. For an MES controlling one or more BES systems, configure /writelink on the MES interface and configure an interface instance for each BES, specifying the same linkage element in the BES /readlink setting. The BES interface instances will then create event frame references under the MES event frames that refer to the BES event frames. For Emerson Syncade systems, the AutomationBatchID field must match the batchID of the batch created by the BES.
+
+For a BES interface controlling one or more MES systems, configure /readlink on the MES interface and configure an interface instance for each BES, specifying the same linkage element in the BES /writelink setting. The MES interface will then create event frame references under the BES event frames that refer to the MES event frames. Link templates must also be configured to define which events specify a link. -->
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/osisoft/PI-Interface-Emerson-Syncade-Docs/blob/main/content/batch-interface-framework/command-line-parameter-reference/command-line-parameter-reference.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../styles/main.js"></script>
+  </body>
+</html>

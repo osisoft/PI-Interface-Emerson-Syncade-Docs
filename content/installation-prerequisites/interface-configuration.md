@@ -4,30 +4,17 @@ uid: BIF_InterfaceConfiguration
 
 # Batch interface configuration
 
-<!-- Interface-specific framework topic. Customize this topic for your interface. Remove the diagrams that don't apply -->
+<!-- Mark Bishop 6/18/21: Customized for Emerson Syncade -->
 
-The following diagrams illustrate various options for configuring batch interfaces, depending on the data source and the desired PI System output.
+The following diagrams illustrate various options for configuring batch interfaces, depending on the data source and the desired PI System output. 
 
-![Interfacemodes](../images/batch-interface-configuration-1.png)
+The first illustrates configuration for the Data Source MSMQ. 
 
-Data source: event files. Target: PI batch database
+**Data source: MSMG Target—PI AF (event frames and assets)**
+![Interfacemodes](../../images/msmq-to-pi-af.png)
 
-![Interfacemodes](../images/batch-interface-configuration-2.png)
+This diagram illustrates configuration for recovery. 
 
-Data source: event files. Target: PI AF (event frames and assets)
+**Data source: Workflow restful web service Target—PI AF (event frames and assets)**
+![Interfacemodes](../../images/workflow-restful-web-service.png)
 
-![Interfacemodes](../images/batch-interface-configuration-3.png)
-
-Data source: SQL Server. Target: PI batch database
-
-![Interfacemodes](../images/batch-interface-configuration-4.png)
-
-Data source: SQL Server. Target: PI AF (event frames and assets)
-
-![Interfacemodes](../images/batch-interface-configuration-5.png)
-
-Data source: SQL Server + alarms and events server. Target: PI batch database
-
-![Interfacemodes](../images/batch-interface-configuration-6.png)
-
-Data source: SQL Server + alarms and events server. Target: PI AF (event frames and assets)

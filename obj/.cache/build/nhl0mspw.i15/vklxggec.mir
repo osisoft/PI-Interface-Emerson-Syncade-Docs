@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Diagnostic/performance tag reference </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Diagnostic/performance tag reference ">
+    <meta name="generator" content="docfx 2.58.0.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    <meta property="docfx:rel" content="../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="BIF_DiagnosticTagReference">
+<h1 id="diagnosticperformance-tag-reference" sourcefile="content/batch-interface-framework/diagnostic-tag-reference.md" sourcestartlinenumber="5" sourceendlinenumber="5">Diagnostic/performance tag reference</h1>
+
+<p sourcefile="content/batch-interface-framework/diagnostic-tag-reference.md" sourcestartlinenumber="7" sourceendlinenumber="7">Performance tags, which are automatically created for each instance of the interface, enable you to monitor the performance of the instance. There are 35 performance tags, categorized as follows:</p>
+<ul sourcefile="content/batch-interface-framework/diagnostic-tag-reference.md" sourcestartlinenumber="9" sourceendlinenumber="11">
+<li sourcefile="content/batch-interface-framework/diagnostic-tag-reference.md" sourcestartlinenumber="9" sourceendlinenumber="9">Health monitoring</li>
+<li sourcefile="content/batch-interface-framework/diagnostic-tag-reference.md" sourcestartlinenumber="10" sourceendlinenumber="10">Object counters</li>
+<li sourcefile="content/batch-interface-framework/diagnostic-tag-reference.md" sourcestartlinenumber="11" sourceendlinenumber="11">Timers</li>
+</ul>
+<h2 id="health-monitoring-tags" sourcefile="content/batch-interface-framework/diagnostic-tag-reference.md" sourcestartlinenumber="13" sourceendlinenumber="13">Health monitoring tags</h2>
+<p sourcefile="content/batch-interface-framework/diagnostic-tag-reference.md" sourcestartlinenumber="15" sourceendlinenumber="15">There are two tags designed to monitor the health of the interface: the <strong>HeartBeat</strong> tag and the <strong>DeviceStatus</strong> tag. The HeartBeat tag is updated with the scan frequency configured for the interface or 60 seconds, whichever is less. The value of the HeartBeat tag is a cycle of integers from 1 to 15. The device status tag is automatically created and configured by the interface on startup. The device tag reflects status as follows:</p>
+<ul sourcefile="content/batch-interface-framework/diagnostic-tag-reference.md" sourcestartlinenumber="17" sourceendlinenumber="20">
+<li sourcefile="content/batch-interface-framework/diagnostic-tag-reference.md" sourcestartlinenumber="17" sourceendlinenumber="17"><code>&quot;Good&quot;:</code> The interface is properly communicating and reading data from the data sources.</li>
+<li sourcefile="content/batch-interface-framework/diagnostic-tag-reference.md" sourcestartlinenumber="18" sourceendlinenumber="18"><code>&quot;1 | Starting&quot;:</code> The interface is executing its initialization routines.</li>
+<li sourcefile="content/batch-interface-framework/diagnostic-tag-reference.md" sourcestartlinenumber="19" sourceendlinenumber="19"><code>&quot;2 | &lt;details&gt;&quot;:</code> Indicates successful connection to the data source.</li>
+<li sourcefile="content/batch-interface-framework/diagnostic-tag-reference.md" sourcestartlinenumber="20" sourceendlinenumber="20"><code>&quot;3 | &lt;details&gt;&quot;:</code> Indicates failure to access the event journal file directory or failure to read data from the event journal file.</li>
+</ul>
+<p sourcefile="content/batch-interface-framework/diagnostic-tag-reference.md" sourcestartlinenumber="22" sourceendlinenumber="22">The properties of health monitoring tags are provided in the table below, where the Prefix represents <interface>_<id>. Note, if these tags do not exist. the interface creates them automatically during startup.<p>
+<table sourcefile="content/batch-interface-framework/diagnostic-tag-reference.md" sourcestartlinenumber="24" sourceendlinenumber="27">
+<thead>
+<tr>
+<th>Tag name</th>
+<th>Point Type</th>
+<th>Loc1</th>
+<th>Loc3</th>
+<th>PointSource</th>
+<th>ExcDesc</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Prefix_DeviceStatus</td>
+<td>Int32</td>
+<td>Intf ID</td>
+<td>0</td>
+<td>Intf Pt Src</td>
+<td>[UI_DEVSTAT]</td>
+</tr>
+<tr>
+<td>Prefix_HeartBeat</td>
+<td>Int32</td>
+<td>Intf ID</td>
+<td>1</td>
+<td>Intf Pt Src</td>
+<td>[UI_HEARTBEAT]</td>
+</tr>
+</tbody>
+</table>
+<h2 id="object-counter-tags" sourcefile="content/batch-interface-framework/diagnostic-tag-reference.md" sourcestartlinenumber="29" sourceendlinenumber="29">Object counter tags</h2>
+<p sourcefile="content/batch-interface-framework/diagnostic-tag-reference.md" sourcestartlinenumber="31" sourceendlinenumber="31">The first time it is started, the interface creates 24 tags designed to monitor its performance. Archiving flag for these tags is turned off. The following table contains common point attributes for this group of tags:</p>
+<table sourcefile="content/batch-interface-framework/diagnostic-tag-reference.md" sourcestartlinenumber="33" sourceendlinenumber="35">
+<thead>
+<tr>
+<th>Point type</th>
+<th>Location1</th>
+<th>Point source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Int32</td>
+<td><interface id=""></interface></td>
+<td><interface point="" source=""></interface></td>
+</tr>
+</tbody>
+</table>
+<p sourcefile="content/batch-interface-framework/diagnostic-tag-reference.md" sourcestartlinenumber="37" sourceendlinenumber="37">The attributes for each performance counter tag are provided in the table below where the Prefix is defined as _<interfaceid>. All counters are set to 0 when the interface starts up.<p>
+<table sourcefile="content/batch-interface-framework/diagnostic-tag-reference.md" sourcestartlinenumber="39" sourceendlinenumber="65">
+<thead>
+<tr>
+<th>Tag Name</th>
+<th>Loc3</th>
+<th>ExcDesc</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><interfaceid>_EventReadCount</interfaceid></td>
+<td>2</td>
+<td>[UI_EVENTREADCOUNT]</td>
+<td>Number of events read from the source since startup.</td>
+</tr>
+<tr>
+<td><interfaceid>_ErrorCount</interfaceid></td>
+<td>3</td>
+<td>[UI_ERRORCOUNT]</td>
+<td>Number of errors since startup.</td>
+</tr>
+<tr>
+<td><interfaceid>_SourceUnitCount</interfaceid></td>
+<td>4</td>
+<td>[UI_SOURCEUNITCOUNT]</td>
+<td>Number of units found on the data source(s) since startup.</td>
+</tr>
+<tr>
+<td><interfaceid>_PIUnitCount</interfaceid></td>
+<td>5</td>
+<td>[UI_PIUNITCOUNT]</td>
+<td>Number of units added since startup.</td>
+</tr>
+<tr>
+<td><interfaceid>_SourcePhaseModCount</interfaceid></td>
+<td>6</td>
+<td>[UI_SOURCEPHASEMODCOUNT]</td>
+<td>Number of phase modules found on the data source(s) since startup.</td>
+</tr>
+<tr>
+<td><interfaceid>_PIPhaseModCount</interfaceid></td>
+<td>7</td>
+<td>[UI_PIPHASEMODCOUNT]</td>
+<td>Number of phase modules added since startup.</td>
+</tr>
+<tr>
+<td><interfaceid>_SourceBatchCount</interfaceid></td>
+<td>8</td>
+<td>[UI_SOURCEBATCHCOUNT]</td>
+<td>Number of batches found on the data source(s) since startup.</td>
+</tr>
+<tr>
+<td><interfaceid>_PIBatchCount</interfaceid></td>
+<td>9</td>
+<td>[UI_PIBATCHCOUNT]</td>
+<td>Number of batches added since startup.</td>
+</tr>
+<tr>
+<td><interfaceid>_SourceUnitBatchCount</interfaceid></td>
+<td>10</td>
+<td>[UI_SOURCEUNITBATCHCOUNT]</td>
+<td>Number of unit batches found on the data sources(s) since startup.</td>
+</tr>
+<tr>
+<td><interfaceid>_PIUnitBatchCount</interfaceid></td>
+<td>11</td>
+<td>[UI_PIUNITBATCHCOUNT]</td>
+<td>Number of unit batches added since startup.</td>
+</tr>
+<tr>
+<td><interfaceid>_SourceSubBatchCount</interfaceid></td>
+<td>12</td>
+<td>[UI_SOURCESUBBATCHCOUNT]</td>
+<td>Total number of operations, phases, and phase states found on the data source since startup.</td>
+</tr>
+<tr>
+<td><interfaceid>_PISubBatchCount</interfaceid></td>
+<td>13</td>
+<td>[UI_PISUBBATCHCOUNT]</td>
+<td>Total number of operations, phases, and phase states added since startup.</td>
+</tr>
+<tr>
+<td><interfaceid>_SourcePropertyNodeCount</interfaceid></td>
+<td>14</td>
+<td>[UI_SOURCEPROPNODECOUNT]</td>
+<td>Number of property nodes found in data source(s) since startup.</td>
+</tr>
+<tr>
+<td><interfaceid>_PIPropertyNodeCount</interfaceid></td>
+<td>15</td>
+<td>[UI_PIPROPNODECOUNT]</td>
+<td>Number of PIProperty objects (nodes) added since startup.</td>
+</tr>
+<tr>
+<td><interfaceid>_SourcePropertyEventCount</interfaceid></td>
+<td>16</td>
+<td>[UI_SOURCEPROPEVENTCOUNT]</td>
+<td>Number of events to be written to the batch properties found on the data source(s) since startup.</td>
+</tr>
+<tr>
+<td><interfaceid>_PIPropertyEventCount</interfaceid></td>
+<td>17</td>
+<td>[UI_PIPROPEVENTCOUNT]</td>
+<td>Number of PIProperties (events) added since startup.</td>
+</tr>
+<tr>
+<td><interfaceid>_SourceTagCount</interfaceid></td>
+<td>18</td>
+<td>[UI_SOURCETAGCOUNT]</td>
+<td>Number of tags found on the data source(s) since startup</td>
+</tr>
+<tr>
+<td><interfaceid>_PITagCount</interfaceid></td>
+<td>19</td>
+<td>[UI_PITAGCOUNT]</td>
+<td>Number of PI tags added since startup.</td>
+</tr>
+<tr>
+<td><interfaceid>_SourceTagEventCount</interfaceid></td>
+<td>20</td>
+<td>[UI_SOURCETAGEVENTCOUNT]</td>
+<td>Number of events to be written into tags found on the data sources(s) since startup.</td>
+</tr>
+<tr>
+<td><interfaceid>_PITagEventCount</interfaceid></td>
+<td>21</td>
+<td>[UI_PITAGEVENTCOUNT]</td>
+<td>Number of events written into PI points since startup.</td>
+</tr>
+<tr>
+<td><interfaceid>_SourceTagAliasCount</interfaceid></td>
+<td>22</td>
+<td>[UI_SOURCETAGALIASCOUNT]</td>
+<td>Number of tag aliases to be created based on the data source(s) since startup.</td>
+</tr>
+<tr>
+<td><interfaceid>_PITagAliasCount</interfaceid></td>
+<td>23</td>
+<td>[UI_PITAGALIASCOUNT]</td>
+<td>Number of PI aliases added since startup.</td>
+</tr>
+<tr>
+<td><interfaceid>_CachedBatchCount</interfaceid></td>
+<td>24</td>
+<td>[UI_CACHEDBATCHCOUNT]</td>
+<td>Number of batch objects cached in the local memory.</td>
+</tr>
+<tr>
+<td><interfaceid>_OpenBatchCount</interfaceid></td>
+<td>25</td>
+<td>[UI_OPENBATCHCOUNT]</td>
+<td>Subset of cached objects that have no end time set.</td>
+</tr>
+<tr>
+<td><interfaceid>_WaitingForEquipmentUB</interfaceid></td>
+<td>34</td>
+<td>[UI_UBWAITFOREQUIP]</td>
+<td>Number of unit batches that do not have equipment allocated yet.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="timers" sourcefile="content/batch-interface-framework/diagnostic-tag-reference.md" sourcestartlinenumber="67" sourceendlinenumber="67">Timers</h2>
+<p sourcefile="content/batch-interface-framework/diagnostic-tag-reference.md" sourcestartlinenumber="69" sourceendlinenumber="69">The last performance tag category is composed of timer tags, which are built automatically on first interface startup. Each timer tag reports on how much time per scan it took the interface to perform a particular task. There are three categories of timer tag: data source reading, local data caching and synchronizing cached data with the PI System.</p>
+<table sourcefile="content/batch-interface-framework/diagnostic-tag-reference.md" sourcestartlinenumber="71" sourceendlinenumber="80">
+<thead>
+<tr>
+<th>TagName</th>
+<th>Loc3</th>
+<th>ExcDesc</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><interfaceid>_SourceReadTime</interfaceid></td>
+<td>26</td>
+<td>[UI_SOURCEREADTIME]</td>
+<td>The time per scan it took the interface to read data from data source(s).</td>
+</tr>
+<tr>
+<td><interfaceid>_TagCacheTime</interfaceid></td>
+<td>27</td>
+<td>[UI_TAGCACHETIME]</td>
+<td>The time per scan it took the interface to populate local tag cache.</td>
+</tr>
+<tr>
+<td><interfaceid>_BatchCacheTime</interfaceid></td>
+<td>28</td>
+<td>[UI_BATCHCACHETIME]</td>
+<td>The time per scan it took the interface to populate the local batch cache.</td>
+</tr>
+<tr>
+<td><interfaceid>_EquipmentCacheTime</interfaceid></td>
+<td>29</td>
+<td>[UI_EQUIPCACHETIME]</td>
+<td>The time per scan it took the interface to populate the local equipment (module) cache.</td>
+</tr>
+<tr>
+<td><interfaceid>_BatchSyncTime</interfaceid></td>
+<td>30</td>
+<td>[UI_BATCHSYNCTIME]</td>
+<td>The time per scan it took the interface to synchronize local batch cache with the PI System.</td>
+</tr>
+<tr>
+<td><interfaceid>_TagSyncTime</interfaceid></td>
+<td>31</td>
+<td>[UI_TAGSYNCTIME]</td>
+<td>The time per scan it took the interface to synchronize local tag cache with the PI System.</td>
+</tr>
+<tr>
+<td><interfaceid>_EquipmentSyncTime</interfaceid></td>
+<td>32</td>
+<td>[UI_EQUIPSYNCTIME]</td>
+<td>The time per scan it took the interface to synchronize local equipment cache with the PI System.</td>
+</tr>
+<tr>
+<td><interfaceid>_TotalTime</interfaceid></td>
+<td>33</td>
+<td>[UI_TOTALTIME]</td>
+<td>The total time per scan it took to read data, cache it in local memory and synchronize the local cache with the PI System.</td>
+</tr>
+</tbody>
+</table>
+</interfaceid></id></interface></article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/osisoft/PI-Interface-Emerson-Syncade-Docs/blob/main/content/batch-interface-framework/diagnostic-tag-reference.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>
