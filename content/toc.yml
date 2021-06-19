@@ -57,10 +57,8 @@
 # Command Line Parameters
 - topicUid: BIF_CommandLineParameterReference # Customized for Emerson Syncade
 # Initialization File
-- topicUid: BIF_InitializationFileReference # Modify for interface
+- topicUid: BIF_InitializationFileReference # Customized for Emerson Syncade
   items: 
-  - topicUid: BIF_InitializationFileExamples # Modify for interface
+  - topicUid: BIF_InitializationFileExamples # Customized for Emerson Syncade
 # Diagnostic Point Reference
-- topicUid: BIF_DiagnosticPointReference # No modifications required
-# Event file monitor utility
-- topicUid: BIF_EventFileMonitorUtility # No modifications required
+- topicUid: BIF_DiagnosticPointReference # Unmodified
