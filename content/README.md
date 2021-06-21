@@ -5,13 +5,13 @@ This repository is intednded to be used as a dependency in each PI Batch Interfa
 ## To add this repo as a subtree
 
 ```bash
-git subtree add --prefix content/batch-interface-framework https://github.com/osisoft/PI-Batch-Interface-Doc-Framework main --squash
+git subtree add --prefix content https://github.com/osisoft/PI-Batch-Interface-Doc-Framework main --squash
 ```
 
 ## To pull latest repo updates into subtree
 
 ```bash
-git subtree pull --prefix content/batch-interface-framework https://github.com/osisoft/PI-Batch-Interface-Doc-Framework main --squash
+git subtree pull --prefix content https://github.com/osisoft/PI-Batch-Interface-Doc-Framework main --squash
 ```
 
 For usage on how to use subtrees, see https://docs.gitlab.com/ee/topics/git/subtree.html
