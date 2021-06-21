@@ -18,6 +18,30 @@ The following table displays command line settings supported by PI Interface for
 
 The following headings describe each command line parameter available.
 
+* [`/abto =<#days>`](#abto-days)
+* [`/adu =[true | false]`](#adu-true--false)
+* [`/bidm =<list>`](#bidm-list)
+* [`/cachetime=<days>`](#cachetimedays)
+* [`/dac`](#dac)
+* [`/damcae`](#damcae)
+* [`/datasec=<string>`](#datasecstring)
+* [`/db =[#]`](#db-)
+* [`/dpretc`](#dpretc)
+* [`/restef`](#restef)
+* [`/ret =<datetime>`](#ret-datetime)
+* [`/retry =<seconds>`](#retry-seconds)
+* [`/retryto =<seconds>`](#retryto-seconds)
+* [`/rst =<datetime>`](#rst-datetime)
+* [`/rti`](#rti)
+* [`/scan =<seconds>`](#scan-seconds)
+* [`/singlerun`](#singlerun)
+* [`/smp ="equipment path"`](#smp-equipment-path)
+* [`/swaptime =<seconds>`](#swaptime-seconds)
+* [`/tbid`](#tbid)
+* [`/tbse`](#tbse)
+* [`/ts=GMT | LCL`](#tsgmt--lcl)
+* [`/ubr`](#ubr)
+
 ### `/abto =<#days>` 
 
 (Optional) Specifies how long, in addition to the CACHETIME setting, the interface waits before closing a batch for which no end event has arrived. When an abandoned batch is closed, the interface uses the timestamp of its last event as the end time and logs an "Abandoned batch found" message. Default is 100 days, minimum is .042 days (approximately one hour), and maximum is 365 days.
