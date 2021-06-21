@@ -14,9 +14,7 @@ After this point the user name and password are stored in Windows Credential Man
 
 Credentials are stored in Windows Credential Manager using the following format:
 
-```text
-{interfacename}_{interfaceid}_{source}.
-```
+`{interfacename}_{interfaceid}_{source}`
 
 The `{source}` can be "PI", "AF", or can also be `{source}_{index number}`. For example, a credential used for the [!include[interface](../includes/interface-name.md)] may be identified in Windows Credential Manager as:
 
