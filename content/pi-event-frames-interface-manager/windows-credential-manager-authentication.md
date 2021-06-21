@@ -22,8 +22,8 @@ The `{source}` can be "PI", "AF", or can also be `{source}_{index number}`. For 
 
 <!-- Update <PLACHOLDERS> for interface -->
 
-* `<PLACEHOLDER>_1_PI` for the PI Data server associated with the [!include[interface](../includes/interface-name.md)]
-* `<PLACEHOLDER>_1_AF` for the PI Asset Framework server associated with the [!include[interface](../includes/interface-name.md)]
-* `<PLACEHOLDER>_1_Source_1` for the data source associated with the [!include[interface](../includes/interface-name.md)]
+* `Syncade_1_PI` for the PI Data server associated with the [!include[interface](../includes/interface-name.md)]
+* `Syncade_1_AF` for the PI Asset Framework server associated with the [!include[interface](../includes/interface-name.md)]
+* `Syncade_1_Source_1` for the data source associated with the [!include[interface](../includes/interface-name.md)]
 
 You can change log in credentials by modifying the batch interface configuration file. Windows Credential Manager automatically updates with the newly encrypted log in information, resetting the flags in the .ini file to True.
