@@ -1,5 +1,5 @@
 ---
-uid: SK_Glossary
+uid: BIF_Glossary
 ---
 
 # Glossary 

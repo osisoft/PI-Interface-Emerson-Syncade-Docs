@@ -14,4 +14,6 @@ git subtree add --prefix content https://github.com/osisoft/PI-Batch-Interface-D
 git subtree pull --prefix content https://github.com/osisoft/PI-Batch-Interface-Doc-Framework main --squash
 ```
 
-For usage on how to use subtrees, see https://docs.gitlab.com/ee/topics/git/subtree.html
+## About Subtrees
+
+For subtree documentation, see https://github.com/git/git/blob/master/contrib/subtree/git-subtree.txt
