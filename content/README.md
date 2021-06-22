@@ -8,10 +8,14 @@ This repository is intednded to be used as a dependency in each PI Batch Interfa
 git subtree add --prefix content https://github.com/osisoft/PI-Batch-Interface-Doc-Framework main --squash
 ```
 
+Replace `<TARGET_DIRECTORY>` with the directory path where you want your subtree to live.
+
 ## To pull latest repo updates into subtree
 
 ```bash
 git subtree pull --prefix content https://github.com/osisoft/PI-Batch-Interface-Doc-Framework main --squash
 ```
 
-For usage on how to use subtrees, see https://docs.gitlab.com/ee/topics/git/subtree.html
+## About Subtrees
+
+For subtree documentation, see https://github.com/git/git/blob/master/contrib/subtree/git-subtree.txt
