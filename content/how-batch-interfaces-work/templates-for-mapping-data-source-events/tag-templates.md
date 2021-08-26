@@ -6,7 +6,7 @@ uid: BIF_TagTemplates
 
 <!-- Mark Bishop 6/18/21: Customized for Emerson Syncade -->
 
-This section details the procedure for configuring tag templates. The tables in steps 7 and 8 define specific tag template settings and configurations to ensure that tag templates capture updates to PI Batch Database.
+This section details the procedure for configuring tag templates. The tables in last two steps define specific tag template settings and configurations to ensure that tag templates capture updates to PI Batch Database.
 
 <!-- 
 
@@ -32,22 +32,32 @@ Step does not apply to Syncade
 
 1. To specify the data to be written to the tag, configure the **Value** field. To include data read from the data source in the tag value, use placeholders.
 
-    For example, to simply record the incoming value without transforming it, specify the [PVAL] placeholder. A more complex example: to configure a value that concatenates phase module, event, description, incoming value and engineering units, specify the following: `[PHASEMODULE].[EVENT].[DESCRIPT]: [PVAL] [EU]`
-
-    The preceding expression generates data like the following: `CHARGE_DIW.Recipe Value.CPP_HIGH_LIMIT: 2535 kg`
-
+    For example, to simply record the incoming value without transforming it, specify the [PVAL] placeholder. A more complex example: to configure a value that concatenates phase module, event, description, incoming value and engineering units, specify the following:
+    
+    `[PHASEMODULE].[EVENT].[DESCRIPT]: [PVAL] [EU]`
+    
+    The preceding expression generates data like the following:
+    
+    `CHARGE_DIW.Recipe Value.CPP_HIGH_LIMIT: 2535 kg`
+    
     Unlike placeholders in tag names, value placeholders can be replaced with empty fields from the incoming event, unless you use advanced field parsing to configure the value.
     
-1. To update a tag when a particular event is read from the data source, specify the EVENT keyword in the **Name** field, as follows: `[EVENT, VALUE="event_text"]`
+1. To update a tag when a particular event is read from the data source, specify the EVENT keyword in the **Name** field, as follows:
 
+    `[EVENT, VALUE="event_text"]`
+    
     This approach enables you to write different values to the tag depending on the text in the EVENT column.
-
+    
     If you require a more refined approach, specify the incoming data that causes the template to be evaluated by configuring one or more triggers on the **Trigger** tab of the tag template.
+    
+    To configure the template to handle multiple different events, specify separate triggers ("OR" logic). To ensure that the template is triggered only when a set of multiple conditions are all detected ("AND" logic), specify a single trigger containing all the conditions. For example, to trigger the template only for system message events that are phase logic failures, specify the trigger as follows:
+    
+    `[EVENT, value="System Message"] [DESCRIPT, value="Phase Logic Failure"]`
 
-    To configure the template to handle multiple different events, specify separate triggers ("OR" logic). To ensure that the template is triggered only when a set of multiple conditions are all detected ("AND" logic), specify a single trigger containing all the conditions. For example, to trigger the template only for system message events that are phase logic failures, specify the trigger as follows: `[EVENT, value="System Message"] [DESCRIPT, value="Phase Logic Failure"]`
-
-    To ignore specified incoming values, use "!=" (not equal) . For example, to ignore undefined values, specify the following expression: `[PVAL, VALUE!="UNDEFINED"]`
-
+    To ignore specified incoming values, use "!=" (not equal) . For example, to ignore undefined values, specify the following expression:
+    
+    `[PVAL, VALUE!="UNDEFINED"]`
+    
     You can use wildcards to specify pattern-matching expressions in triggers.
 
 1. To configure the tag template settings, specify settings as described in the following table:
@@ -75,10 +85,10 @@ Step does not apply to Syncade
     | **PVAL** | **START**<br>**END** | Specifies whether to catch the start or ending event of the specified level:<br><br>[PVAL, value="START"]<br>[PVAL, value="END"] |
     
     For example, to detect the start of a batch, specify the following expression:
-
+    
     `[EVENT, VALUE="PIEVENT"][DESCRIPT, VALUE="BATCH"][PVAL, VALUE="START"]`
-
-    The following placeholders are supported when the triggering expression contains [Parameter, value="PIEVENT"].
+    
+    The following placeholders are supported when the triggering expression contains `[Parameter, value="PIEVENT"]`.
 
     | Placeholder | Batch Database | Event Frames |
     |--|--|--|

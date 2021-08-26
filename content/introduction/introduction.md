@@ -2,7 +2,7 @@
 uid: BIF_Introduction
 ---
 
-# Introduction to [!include[interface](../includes/interface-name.md)]
+# Introduction to [!include[interface](../includes/interface-name.md)] [!include[version](../includes/version.md)]
 
 <!-- Mark Bishop 6/18: Modified for Emerson Syncade -->
 
