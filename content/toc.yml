@@ -26,7 +26,6 @@
       - topicUid: BIF_EventFrames # Unmodified
       - topicUid: BIF_EquipmentHierarchy # Unmodified
     - topicUid: BIF_HowToMergeMultipleSourceBatches # Unmodified
-    - topicUid: BIF_LinkingBESToMESBatchesUsingEventFrames # Unmodified
   - topicUid: BIF_TemplatesForMappingDataSourceEvents # Unmodified
 # Specific Considerations
 - topicUid: BIF_WorkflowSupport # Customized for Emerson Syncade
