@@ -225,44 +225,44 @@ Create unit batches based solely on source batch recipe data. For use when the s
 <details>
 <summary>Language types and abbreviations:</summary>
 
-* chinese chinese-simplified (chs)
-* chinese-traditional (cht)
-* czech (csy)
-* danish (dan)
-* belgian, dutch-belgian (nlb)
-* dutch (nld)
-* australian, english-aus (ena)
-* canadian, english-can (enc)
-* english english-nz (enz)
-* english-uk (uk)
-* american, american-english, english-american, english-us, english-usa, (enu) (us) (usa)
-* finnish (fin)
-* french-belgian (frb)
-* french-canadian (frc)
-* french (fra)
-* french-swiss (frs)
-* german-swiss, swiss (des)
-* german (deu)
-* german-austrian (dea)
-* greek (ell)
-* hungarian (hun)
-* icelandic (isl)
-* italian (ita)
-* italian-swiss (its)
-* japanese (jpn)
-* korean (kor)
-* norwegian-bokmal (nor)
-* norwegian norwegian-nynorsk (non)
-* polish (plk)
-* portuguese-brazilian (ptb)
-* portuguese (ptg)
-* russian (rus)
-* slovak (sky)
-* spanish (esp)
-* spanish-mexican (esm)
-* spanish-modern (esn)
-* swedish (sve)
-* turkish (trk)
+<li>chinese chinese-simplified (chs)</li>
+<li>chinese-traditional (cht)</li>
+<li>czech (csy)</li>
+<li>danish (dan)</li>
+<li>belgian, dutch-belgian (nlb)</li>
+<li>dutch (nld)</li>
+<li>australian, english-aus (ena)</li>
+<li>canadian, english-can (enc)</li>
+<li>english english-nz (enz)</li>
+<li>english-uk (uk)</li>
+<li>american, american-english, english-american, english-us, english-usa, (enu) (us) (usa)</li>
+<li>finnish (fin)</li>
+<li>french-belgian (frb)</li>
+<li>french-canadian (frc)</li>
+<li>french (fra)</li>
+<li>french-swiss (frs)</li>
+<li>german-swiss, swiss (des)</li>
+<li>german (deu)</li>
+<li>german-austrian (dea)</li>
+<li>greek (ell)</li>
+<li>hungarian (hun)</li>
+<li>icelandic (isl)</li>
+<li>italian (ita)</li>
+<li>italian-swiss (its)</li>
+<li>japanese (jpn)</li>
+<li>korean (kor)</li>
+<li>norwegian-bokmal (nor)</li>
+<li>norwegian norwegian-nynorsk (non)</li>
+<li>polish (plk)</li>
+<li>portuguese-brazilian (ptb)</li>
+<li>portuguese (ptg)</li>
+<li>russian (rus)</li>
+<li>slovak (sky)</li>
+<li>spanish (esp)</li>
+<li>spanish-mexican (esm)</li>
+<li>spanish-modern (esn)</li>
+<li>swedish (sve)</li>
+<li>turkish (trk)</li>
 
 </details>
 
