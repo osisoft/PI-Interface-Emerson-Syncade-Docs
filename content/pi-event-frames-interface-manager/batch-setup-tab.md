@@ -18,7 +18,7 @@ Select this option to specify an alternate PI Module path or PI AF element path 
 
 ## Disable arbitration
 
-Select this option to create unit batches based solely on source batch recipe data. Select this option when the source Batch Executive System (BES) provides batch data without equipment arbitration data. 
+Select this option to create unit batches based solely on source batch recipe data. Select this option when the source Emerson Syncade system provides batch data without equipment arbitration data. 
 
 ## Disable arbitration counters
     

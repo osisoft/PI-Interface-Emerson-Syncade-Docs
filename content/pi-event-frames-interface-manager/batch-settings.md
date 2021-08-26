@@ -20,7 +20,7 @@ Specifies an alternate PI Module path or PI AF element path for a particular equ
 
 ### Disable arbitration (/NOARBITRATION)
 
-Create unit batches based solely on source batch recipe data. For use when the source Batch Executive System (BES) provides batch data without equipment arbitration data.
+Create unit batches based solely on source batch recipe data. For use when the source Emerson Syncade system provides batch data without equipment arbitration data.
 
 ### Disable arbitration counters (/DAC)
 
@@ -92,12 +92,8 @@ Specifies the Syncade attribute that contains the batch ID used to link to BES e
 
 ### Link to child eventframes( /WRITELINK ) 
 
-Combine event frames from different interface instances. For an MES controlling one or more BES systems, configure Link to child event frames on the MES interface and configure an interface instance for each BES, specifying the same linkage element in the BES Link from parent event frames setting. The BES interface instances will then create event frame references under the MES event frames that refer to the BES event frames. For Emerson Syncade systems, the AutomationBatchID field must match the batchID of the batch created by the BES.
-
-For a BES interface controlling one or more MES systems, configure Link from parent event frames on the MES interface and configure an interface instance for each BES, specifying the same linkage element in the BES Link to child event frames setting. The MES interface will then create event frame references under the BES event frames that refer to the MES event frames. Link templates must also be configured to define which events specify a link. 
+Combine event frames from different interface instances. For an Emerson Syncade system controlling one or more BES systems, configure Link to child event frames on the Emerson Syncade interface and configure an interface instance for each BES, specifying the same linkage element in the BES Link from parent event frames setting. The BES interface instances will then create event frame references under the MES event frames that refer to the BES event frames. For Emerson Syncade systems, the AutomationBatchID field must match the batchID of the batch created by the BES.
 
 ### Link from parent event frames ( /READLINK )
 
-Combine event frames from different interface instances. For an MES controlling one or more BES systems, configure Link from parent event frames on each BES instance, specifying the same linkage element in the MES Link to child event frames setting. The BES interface instances will then create event frame references under the MES event frames that refer to the BES event frames. For Emerson Syncade systems, the AutomationBatchID field must match the batchID of the batch created by the BES.
-
-For a BES controlling one or more MES systems, configure Link from parent event frames on each MES instance, specifying the same linkage element in the BES Link to child event frames setting. The MES interface instances will then create event frame references under the BES event frames that refer to the MES event frames. Link templates must also be configured to define which events specify a link.
+Combine event frames from different interface instances. For an Emerson Syncade system controlling one or more BES systems, configure Link from parent event frames on each BES instance, specifying the same linkage element in the Emerson Syncade Link to child event frames setting. The BES interface instances will then create event frame references under the Emerson Syncade event frames that refer to the BES event frames. For Emerson Syncade systems, the AutomationBatchID field must match the batchID of the batch created by the BES.
