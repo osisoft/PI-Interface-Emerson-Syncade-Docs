@@ -2,7 +2,7 @@
 uid: BIF_Introduction
 ---
 
-# Introduction to [!include[interface](../includes/product-long.md)] [!include[version](../includes/version.md)]
+# Introduction to [!include[interface](../includes/product-long.md)] [!include[version](../includes/product-version.md)]
 
 <!-- Mark Bishop 6/18: Modified for Emerson Syncade -->
 
