@@ -6,7 +6,7 @@ uid: BIF_SupportedFeatures
 
 <!-- Mark Bishop 6/18: Customized for Emerson Syncade -->
 
-[!include[interface](../includes/interface-name.md)] runs in 32-bit or 64-bit in emulation mode. No native 64-bit builds of the interfaces are available.
+[!include[interface](../includes/product-short.md)] runs in 32-bit or 64-bit in emulation mode. No native 64-bit builds of the interfaces are available.
 
 The following table provides a summary of the features supported by this interface. 
 

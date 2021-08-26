@@ -1,1 +1,1 @@
-Emerson Syncade Batch
+Syncade Batch
