@@ -4,7 +4,7 @@ uid: BIF_LinkingBESToMESBatchesUsingEventFrames
 
 # Linking BES to MES batches using event frames
 
-<!-- Static topic. No modifications usually required -->
+<!-- Customized for Emerson Syncade -->
 
 To consolidate the output of a Emerson Syncade system and a batch execution system (BES), specify the linking element as follows:
 
