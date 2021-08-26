@@ -12,8 +12,6 @@ The Syncade Manufacturing Execution System (MES) produces work procedures using 
 
 The interface populates PI Batch Database and PI Module Database based on the events and data read from a data source. The interface can be configured to create and update PI points based on the data received. It cannot update the batch data source.
     
-**Note:** If you record batch process data directly to PI tags and do not use a BES, you can generate batch data from PI tag data using the PiBaGen or PI EFGen utilities. For details, refer to the manuals for these applications. To use event frames, your PI batch interface must be version 3.x or higher.
-
 The interface can read data from multiple data sources, which enables PI Server to handle scenarios in which different overlapping batch recipes can access the same unit in different stages of the production cycle. By acquiring data for the same time frame from multiple sources and collating it into a single time-ordered sequence, a single interface instance can capture the complete history of the batch process.
 
 Batch data is persistent in the data source and not in danger of being lost, as the interface does not use PI buffering. If connection to the PI server is lost, the interface continues to collect data from the data source, transmitting it to PI Server when the connection is reestablished. If the interface is unable to collect data, the data remains available in the database or event files, so you can use recovery mode to fill in data missed during the time the interface was down.
