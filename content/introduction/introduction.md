@@ -2,13 +2,13 @@
 uid: BIF_Introduction
 ---
 
-# Introduction to [!include[interface](../includes/interface-name.md)]
+# Introduction to [!include[interface](../includes/product-long.md)] [!include[version](../includes/product-version.md)]
 
 <!-- Mark Bishop 6/18: Modified for Emerson Syncade -->
 
 The Syncade Manufacturing Execution System (MES) produces work procedures using production events and batch records, executing recipes and workflows and integrating equipment maintenance operations with process controls to optimize manufacturing environments.
 
-[!include[interface](../includes/interface-name.md)] is a scan-based interface that uses tag and property templates to capture data from Syncade batches. That includes manual phase steps, historical data from Syncade web services, and real-time data from the Microsoft Message Queue.
+[!include[interface](../includes/product-short.md)] is a scan-based interface that uses tag and property templates to capture data from Syncade batches. That includes manual phase steps, historical data from Syncade web services, and real-time data from the Microsoft Message Queue.
 
 The interface populates PI Batch Database and PI Module Database based on the events and data read from a data source. The interface can be configured to create and update PI points based on the data received. It cannot update the batch data source.
     
@@ -18,7 +18,7 @@ The interface can read data from multiple data sources, which enables PI Server 
 
 Batch data is persistent in the data source and not in danger of being lost, as the interface does not use PI buffering. If connection to the PI server is lost, the interface continues to collect data from the data source, transmitting it to PI Server when the connection is reestablished. If the interface is unable to collect data, the data remains available in the database or event files, so you can use recovery mode to fill in data missed during the time the interface was down.
 
-[!include[interface](../includes/interface-name.md)] is designed for recipes that constrain a unit to run only one unit procedure at a time. 
+[!include[interface](../includes/product-short.md)] is designed for recipes that constrain a unit to run only one unit procedure at a time. 
 
 <!-- Framework content -->
 
