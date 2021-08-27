@@ -32,7 +32,6 @@ The following headings describe each command line parameter available.
 * [`/retry =<seconds>`](#retry-seconds)
 * [`/retryto =<seconds>`](#retryto-seconds)
 * [`/rst =<datetime>`](#rst-datetime)
-* [`/rti`](#rti)
 * [`/scan =<seconds>`](#scan-seconds)
 * [`/singlerun`](#singlerun)
 * [`/smp ="equipment path"`](#smp-equipment-path)
@@ -343,9 +342,6 @@ Specifies how long the interface retries a failed attempt to write data before t
 
 (Optional) Specifies recovery start time. The interface recovers batches that start after the specified time, as well as batches that start before the specified time but end after it. Specify the time using the interface node format and time zone.
 
-### `/rti`
-
-Remove trailing index from Recipe fields. Applicable to Procedure, Unit Procedure, and Operation Recipe fields. Emerson EVT data source only.
 
 ### `/scan =<seconds>`
 
