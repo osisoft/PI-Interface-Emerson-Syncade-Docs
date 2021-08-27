@@ -44,9 +44,11 @@
     - topicUid: BIF_WindowsCredentialManagerAuthentication # Unmodified
   - topicUid: BIF_TemplatesTab # Customized for Emerson Syncade
     items: 
+    - topicUid: BIF_AlarmTagTemplates # Unmodified
     - topicUid: BIF_PropertyTemplates # Unmodified
     - topicUid: BIF_RecipeTemplatesEFIM # Unmodified
     - topicUid: BIF_TagTemplatesEFIM # Unmodified
+    - topicUid: BIF_LinkTemplatesEFIM # Unmodified
   - topicUid: BIF_FiltersTab # Unmodified
   - topicUid: BIF_TimeSettingsTab # Unmodified
   - topicUid: BIF_BatchSettings # Customized for Emerson Syncade
