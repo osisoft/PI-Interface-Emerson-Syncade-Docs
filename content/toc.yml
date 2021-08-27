@@ -46,7 +46,7 @@
     items: 
     - topicUid: BIF_PropertyTemplates # Unmodified
     - topicUid: BIF_RecipeTemplatesEFIM # Unmodified
-    - topicUid: BIF_TagTemplates # Customized for Emerson Syncade
+    - topicUid: BIF_TagTemplatesEFIM # Unmodified
   - topicUid: BIF_FiltersTab # Unmodified
   - topicUid: BIF_TimeSettingsTab # Unmodified
   - topicUid: BIF_BatchSettings # Customized for Emerson Syncade

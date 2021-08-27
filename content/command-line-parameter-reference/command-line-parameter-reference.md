@@ -414,4 +414,3 @@ Added in version 4.0.30.
 Combine event frames from different interface instances. For an MES controlling one or more BES systems, configure `/writelink` on the MES interface and configure an interface instance for each BES, specifying the same linkage element in the BES `/readlink` setting. The BES interface instances will then create event frame references under the MES event frames that refer to the BES event frames. For Emerson Syncade systems, the AutomationBatchID field must match the batchID of the batch created by the BES.
 
 For a BES interface controlling one or more MES systems, configure /readlink on the MES interface and configure an interface instance for each BES, specifying the same linkage element in the BES /writelink setting. The MES interface will then create event frame references under the BES event frames that refer to the MES event frames. Link templates must also be configured to define which events specify a link. -->
-s
