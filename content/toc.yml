@@ -1,10 +1,12 @@
 # Introduction
 - topicUid: BIF_Introduction # Customized for Emerson Syncade
+  name: Introduction
   items:
   - topicUid: BIF_SupportedFeatures # Customized for Emerson Syncade
   - topicUid: BIF_ReferenceManuals # Customized for Emerson Syncade
 # Installation Prerequisites
 - topicUid: BIF_InterfaceConfiguration # Customized for Emerson Syncade
+  name: Configuration
   items: 
   - topicUid: BIF_InstallationPrerequisites # Unmodified
   - topicUid: BIF_SecurityOverview # Unmodified
