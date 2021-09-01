@@ -10,7 +10,7 @@ The Syncade Manufacturing Execution System (MES) produces work procedures using 
 
 [!include[interface](../includes/product-short.md)] is a scan-based interface that uses tag and property templates to capture data from Syncade batches. That includes manual phase steps, historical data from Syncade web services, and real-time data from the Microsoft Message Queue.
 
-The interface populates PI Batch Database and PI Module Database based on the events and data read from a data source. The interface can be configured to create and update PI points based on the data received. It cannot update the batch data source.
+The interface populates the PI Batch Database and the PI Module Database based on the events and data read from a data source. The interface can be configured to create and update PI points based on the data received. It cannot update the batch data source.
     
 The interface can read data from multiple data sources, which enables PI Server to handle scenarios in which different overlapping batch recipes can access the same unit in different stages of the production cycle. By acquiring data for the same time frame from multiple sources and collating it into a single time-ordered sequence, a single interface instance can capture the complete history of the batch process.
 

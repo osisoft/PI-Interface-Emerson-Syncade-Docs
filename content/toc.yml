@@ -1,18 +1,19 @@
 # Introduction
 - topicUid: BIF_Introduction # Customized for Emerson Syncade
+  name: Introduction
   items:
   - topicUid: BIF_SupportedFeatures # Customized for Emerson Syncade
   - topicUid: BIF_ReferenceManuals # Customized for Emerson Syncade
 # Installation Prerequisites
-- topicUid: BIF_InterfaceConfiguration # Customized for Emerson Syncade
+- topicUid: BIF_InstallationPrerequisites # Unmodified
   items: 
-  - topicUid: BIF_InstallationPrerequisites # Unmodified
   - topicUid: BIF_SecurityOverview # Unmodified
     items:
       - topicUid: BIF_AssignPermissions # Unmodified
       - topicUid: BIF_ConfigureSecurityForPIAF # Unmodified
       - topicUid: BIF_ConfigureSecurityForPIDataArchive # Unmodified
   - topicUid: BIF_CreateAndConfigureInterfaceInstance # Unmodified
+  - topicUid: BIF_InterfaceConfiguration # Customized for Emerson Syncade
   - topicUid: BIF_PIServerConnectivity # Unmodified
   - topicUid: BIF_LoggingAndErrorMessages # Unmodified 
 # How Batch Interfaces Work

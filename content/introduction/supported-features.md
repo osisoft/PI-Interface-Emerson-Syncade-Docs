@@ -6,7 +6,7 @@ uid: BIF_SupportedFeatures
 
 <!-- Mark Bishop 6/18: Customized for Emerson Syncade -->
 
-[!include[interface](../includes/product-short.md)] runs in 32-bit or 64-bit in emulation mode. No native 64-bit builds of the interfaces are available.
+[!include[interface](../includes/product-short.md)] runs in 32-bit or 64-bit in emulation mode. No native 64-bit builds of the interface is available.
 
 The following table provides a summary of the features supported by this interface. 
 
@@ -56,7 +56,7 @@ Using `/noarbitration` ensures that the interface:
 
 * Sets the end time of unit batches using the timestamp of the "Unit Procedure Finished" event or the end of the last operation or phase for the unit, whichever is earlier.
 
-* For operation-level recipes, the interface uses the start time of the first phase as the start time for the parent operation and unit batch, and the timestamp of the "Operation Finished" message as the end time of the phase, operation and unit batch.
+* For operation-level recipes, the interface uses the start time of the first phase as the start time for the parent operation and unit batch, and the timestamp of the "Operation Finished" message as the end time of the phase, operation, and unit batch.
 
 ## History recovery
 
@@ -73,7 +73,7 @@ The following table lists standard status strings.
 | Message | Description |
 |--|--|
 | `1 Starting` | The interface is starting. |
-| `2 Connected / No Data` | The interface is connected to the data source but is not capable or reading or writing data to the foreign device. |
+| `2 Connected / No Data` | The interface is connected to the data source but is not capable of reading or writing data on the foreign device. |
 | `3 n device(s) in error` | The interface is not able to communicate with the specified number of devices. Usually includes additional interface-specific details. |
 | `4 Intf Shutdown` | The interface is shutting down. |
 | `5 interface_specific_message` | Message specific to the interface. |
