@@ -2,7 +2,7 @@
 uid: BIF_InterfaceConfiguration
 ---
 
-# Batch interface configuration
+# System Architecture Examples
 
 <!-- Mark Bishop 6/18/21: Customized for Emerson Syncade -->
 

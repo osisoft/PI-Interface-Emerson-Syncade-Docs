@@ -1,1 +1,1 @@
-`%PIHOME%\PIPC\Interfaces\EMDVBCS`
+`Program Files (x86)\PIPC\Interfaces\EMDVBCS`
