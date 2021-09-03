@@ -8,9 +8,11 @@
 - name: Installation
   items:
   - topicUid: BIF_SystemRequirements # Unmodified
-      - topicUid: BIF_AssignPermissions # Unmodified
-      - topicUid: BIF_ConfigureSecurityForPIAF # Unmodified
-      - topicUid: BIF_ConfigureSecurityForPIDataArchive # Unmodified
+    items:
+    - topicUid: BIF_InterfaceConfiguration # Customized for Emerson Syncade
+    - topicUid: BIF_AssignPermissions # Unmodified
+    - topicUid: BIF_ConfigureSecurityForPIAF # Unmodified
+    - topicUid: BIF_ConfigureSecurityForPIDataArchive # Unmodified
   - topicUid: BIF_Installation # Unmodified
 # How Batch Interfaces Work
 - topicUid: BIF_HowBatchInterfacesWork # Unmodified
@@ -32,7 +34,7 @@
   - topicUid: BIF_StartAndStopEvents # Customized for Emerson Syncade
   - topicUid: BIF_TemplatePlaceholders # Customized for Emerson Syncade
 # PI Event Frames Interface Manager
-- topicUid: BIF_PIEventFramesInterfaceManager # Unmodified
+- topicUid: BIF_ConfigurationOverview # Unmodified
   items:
   - topicUid: BIF_InterfaceSelectionTab # Unmodified
   - topicUid: BIF_ServerInformationTab # Unmodified
