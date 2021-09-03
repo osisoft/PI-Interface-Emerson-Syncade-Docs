@@ -1,1 +1,1 @@
-<PRODUCT_PATH>
+`Program Files (x86)\PIPC\Interfaces\<INTERFACE>`
