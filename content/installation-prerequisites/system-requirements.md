@@ -16,16 +16,12 @@ Beyond the operating system, [!include[product-short](../includes/product-short.
 
 ### Supported operating systems
 
-You can install [!include[product-short](../includes/product-short.md)] on the following Windows operating systems: 
+[!include[product-short](../includes/product-short.md)] is a 64-bit application that you can install on the following Windows operating systems: 
 
 * Windows 10
-* Windows 8.1
-* Windows 7 (64- and 32-bit)
 * Windows Server 2019
 * Windows Server 2016
-* Windows Server 2012 R2 (64- and 32-bit)
-* Windows Server 2012 (64- and 32-bit)
-* Windows Server 2008 R2 (64- and 32-bit)
+* Windows Server 2012 R2 (64-bit only)
 
 ### PI Server requirements
 
@@ -42,11 +38,17 @@ Install the following server roles on your PI Server:
 
 ## Supported data sources
 
-[!include[product-short](../includes/product-short.md)] supports the following data sources. These data sources can be installed on the same node as the interface or on remote nodes.
+[!include[product-short](../includes/product-short.md)] collects two different data types from two different sources:
 
-If you install the interface on a separate node from your data sources, ensure that the data sources are running and accessible from the target interface node.
+* Historical data from Syncade web services. You can specify this data source by providing its URL.
 
-<!-- Add subheaders for each supported data source -->
+* Real-time data from an instance of Microsoft MSMQ. 
+
+  * This data source can be installed on the same node as the interface or on remote nodes. 
+  * If you install the interface on a separate node from MSMQ, ensure that MSMQ is running and accessible from the target interface node.
+  * Emerson Syncade must be configured to write data to a message queue on the interface node.  
+
+For more information on configuring data sources, see <xref:BIF_DataSources>.
 
 ## User permissions 
 

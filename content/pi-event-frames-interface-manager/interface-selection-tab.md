@@ -2,7 +2,7 @@
 uid: BIF_InterfaceSelectionTab
 ---
 
-# Interface Selection
+# Interface Selection tab
 
 <!-- Static topic. No modifications usually required -->
 
