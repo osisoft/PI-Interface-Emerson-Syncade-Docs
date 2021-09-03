@@ -5,17 +5,13 @@
   - topicUid: BIF_SupportedFeatures # Customized for Emerson Syncade
   - topicUid: BIF_ReferenceManuals # Customized for Emerson Syncade
 # Installation Prerequisites
-- topicUid: BIF_InstallationPrerequisites # Unmodified
-  items: 
-  - topicUid: BIF_SecurityOverview # Unmodified
-    items:
+- name: Installation
+  items:
+  - topicUid: BIF_SystemRequirements # Unmodified
       - topicUid: BIF_AssignPermissions # Unmodified
       - topicUid: BIF_ConfigureSecurityForPIAF # Unmodified
       - topicUid: BIF_ConfigureSecurityForPIDataArchive # Unmodified
-  - topicUid: BIF_CreateAndConfigureInterfaceInstance # Unmodified
-  - topicUid: BIF_InterfaceConfiguration # Customized for Emerson Syncade
-  - topicUid: BIF_PIServerConnectivity # Unmodified
-  - topicUid: BIF_LoggingAndErrorMessages # Unmodified 
+  - topicUid: BIF_Installation # Unmodified
 # How Batch Interfaces Work
 - topicUid: BIF_HowBatchInterfacesWork # Unmodified
   items:
@@ -65,6 +61,11 @@
   - topicUid: BIF_InitializationFileExamples # Customized for Emerson Syncade
 # Diagnostic Point Reference
 - topicUid: BIF_DiagnosticPointReference # No modifications
+# Troubleshooting
+- name: Troubleshooting
+  items:
+  - topicUid: BIF_PIServerConnectivity # Unmodified
+  - topicUid: BIF_LoggingAndErrorMessages # Unmodified 
 # Glossary
 - topicUid: BIF_Glossary
 # Technical Support and Feedback
