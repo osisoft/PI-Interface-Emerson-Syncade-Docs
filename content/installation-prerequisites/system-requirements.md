@@ -58,23 +58,21 @@ The user account that you use to install and configure [!include[product-short](
 
 * Must have read permissions for PI Data Archive and PI Asset Framework. These permission are required to run PI Event Frame Manager, which is used for interface configuration. For information on how to configure these permissions, see <xref:BIF_AssignPermissions>.
 
-## Service account
+## Security settings
 
-Following installation, [!include[product-short](../includes/product-short.md)] requires a service account to operate the interface. The interface uses this service account to authenticate with PI Data Archive and PI Asset Framework. Therefore you must assign this service account the appropriate permissions to authenticate with these PI resources.
+Following installation, [!include[product-short](../includes/product-short.md)] requires a connection to the PI Data Archive. OSIsoft recommends that this connection be secure as possible. Based on the version of PI Data Archive that you are using, OSIsoft recommends different approaches to security.
 
-OSIsoft recommends different approaches to creating this service account based on the version of PI Data Archive that you are using in your environment.
+### PI Data Archive 3.4.380 or later: Configure service account
 
-### PI Data Archive 3.4.380 or later
-
-When installing [!include[product-short](../includes/product-short.md)] in an environment using PI Data Archive 3.4.380 or later, OSIsoft recommends using Windows Integrated Security to operate service accounts. Run the interface service using a service account that has the required permissions on the PI Server.
+When installing [!include[product-short](../includes/product-short.md)] in an environment using PI Data Archive 3.4.380 or later, OSIsoft recommends using Windows Integrated Security to operate service accounts for connecting to PI Data Archive. Run the interface service using a service account that has the required permissions on the PI Server.
 
 To configure Windows Integrated Security, use PI System Management Tools (PI SMT) to define a mapping that assigns a PI identity assigned the required permissions to the service account or service account user group. For instructions on how to complete this process, see <xref:BIF_ConfigureSecurityForPIDataArchive>.
 
 **Important!** For [!include[product-short](../includes/product-short.md)] service account operation, use the same service account used for PI Event Frames Interface Manager. This practice prevents issues with encryption of credentials. 
 
-### PI Data Archive earlier than 3.4.380
+### PI Data Archive earlier than 3.4.380: Create PI trust
 
-When installing [!include[product-short](../includes/product-short.md)] in an environment using a PI Data Archive earlier than 3.4.380, you must create a PI trust for the user that runs the interface and configuration tool. Limit the trust to the hostname or IP address of the interface node and the application name (BIFConfig.exe for the PI Event Frames Interface Manager). For instructions on how to complete this process, see <xref:BIF_ConfigureSecurityForPIDataArchive>.
+When installing [!include[product-short](../includes/product-short.md)] in an environment using a PI Data Archive earlier than 3.4.380, OSISoft recomments creating a PI trust for the user that runs the interface and configuration tool. Limit the trust to the hostname or IP address of the interface node and the application name (BIFConfig.exe for the PI Event Frames Interface Manager). For instructions on how to complete this process, see <xref:BIF_ConfigureSecurityForPIDataArchive>.
 
 ## Other requirements and information
 
@@ -88,4 +86,4 @@ Ensure that the system time is configured correctly on the following nodes:
 
 ### Installation drive
 
-OSIsoft recommends that you install the interface on a drive other than C:, which should be reserved for the operating system.
+OSIsoft recommends that you install the interface on a drive other than C:, which you should reserve for the operating system.
