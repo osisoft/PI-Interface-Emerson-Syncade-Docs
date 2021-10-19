@@ -18,7 +18,7 @@ To consolidate the output of a Emerson Syncade system and a batch execution syst
 
 This configuration is typical in an environment where an Emerson Syncade system supervises multiple batch execution systems to manufacture a single product. For each BES, configure a dedicated interface instance and specify the same PI AF linking element. When an event frame created by the Emerson Syncade interface references the creation of a batch in the BES, a reference is made to the Emerson Syncade event frame in the linking element. Then, when the BES interface creates its event frame, a reference to it is created in the Emerson Syncade event frame, creating a consolidated view of all the related events from different systems.
 
-*Note -- Event Frame linking is not supported with Syncade Work Flow 4.9 as the 'AutomationBatchID' does not exist at the OrderInstanceSummary level. 
+*Note -- Event Frame linking is not supported with Syncade Work Flow 4.9 as the 'AutomationBatchID' attribute does not exist at the OrderInstanceSummary level. 
 
 For example, the following figure illustrates an event frame created based on a batch from an Emerson DeltaV batch execution system. This event frame is referenced in an event frame created by a Werum PAS-X MES. Other batch interface instances that are configured to use the same linking element create references to their batches under the same link.
 
