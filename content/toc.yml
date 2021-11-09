@@ -55,7 +55,7 @@
   - topicUid: BIF_BatchSettings # Customized for Emerson Syncade
   - topicUid: BIF_MergeSetupTab # Unmodified
   - topicUid: BIF_OperationalSettingsTab # Unmodified
-  - topicUid: BIF_MonitorTagSetupTab # No modifications required
+#  - topicUid: BIF_MonitorTagSetupTab # No modifications required
   - topicUid: BIF_TestConfigurationTab # Unmodified
   - topicUid: BIF_ServiceConfigurationTab # Unmodified
 # Command Line Parameters
