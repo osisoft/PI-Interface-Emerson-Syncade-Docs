@@ -40,9 +40,9 @@
   items:
   - topicUid: BIF_InterfaceSelectionTab # Unmodified
   - topicUid: BIF_ServerInformationTab # Unmodified
-  - topicUid: BIF_SourceTab # Customized for Emerson Syncade
-    items:
+      items:
     - topicUid: BIF_WindowsCredentialManagerAuthentication # Unmodified
+  - topicUid: BIF_SourceTab # Customized for Emerson Syncade
   - topicUid: BIF_TemplatesTab # Customized for Emerson Syncade
     items: 
     - topicUid: BIF_AlarmTagTemplates # Unmodified
