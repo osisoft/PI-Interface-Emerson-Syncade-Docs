@@ -48,7 +48,7 @@ The following table provides a summary of the features supported by this interfa
 
 ## Equipment arbitration events
 
-This PI Batch Interface runs against Emerson Syncade, which supports equipment arbitration events. These events provide precise time stamps for the start and end times of unit batches. Individual installations of Emerson Syncade may not be configured to provide such events. If your implementation of Emerson Syncade is configured not to provide equipment arbitration events, use the following command line parameter: [/noarbitration](xref:BIF_CommandLineParameterReference#noarbitration). 
+This PI Batch Interface runs against Emerson Syncade, which supports equipment arbitration events. These events provide precise time stamps for the start and end times of unit batches. Individual installations of Emerson Syncade may not be configured to provide such events. If your implementation of Emerson Syncade is configured not to provide equipment arbitration events, use the following command line parameter: [/noarbitration](xref:BIF_CommandLineParameterReference#/noarbitration). 
 
 Using `/noarbitration` ensures that the interface:
 
