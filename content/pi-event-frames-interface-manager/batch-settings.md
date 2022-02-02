@@ -6,7 +6,7 @@ uid: BIF_BatchSettings
 
 <!-- Mark Bishop 6/18/21: Customized for Emerson Syncade -->
 
-The settings on this tab configure batch generation as described in the following table. For detailed information, refer to the [PI Batch Interfaces Users Guide](https://livelibrary.osisoft.com/LiveLibrary/web/ui.xql?action=html&resource=publist_home.html&pub_category=PI-Batch-Interfaces).
+The settings on this tab configure batch generation as described in the following table. For detailed information, refer to the [PI Batch Interfaces Users Guide](https://docs.osisoft.com/bundle/pi-batch-interfaces/page/batch-setup-tab-bif.html).
 
 ## Batch settings (Command line parameter settings)
 
@@ -46,7 +46,7 @@ Directs the interface to use the original batch event view. By default, the inte
 
 Use top level recipe start/end events for creating batch objects.
 
-Allow deferred units (/ADU)
+### Allow deferred units (/ADU)
 
 Enable the creation of unit batches for recipes in units that are allocated at the phase level rather than the unit batch level.
 
@@ -63,6 +63,23 @@ Ignore events from a DeltaV Event Chronicle (alarms & events) data source when c
 ### Remove trailing index from recipe fields (/RTI)
 
 Remove trailing index from Recipe fields. Applicable to Procedure, Unit Procedure and Operation Recipe fields. Emerson EVT data source only.
+
+### Show all Repeat attribute values (/REPEATPARAMS)
+
+Default setting: `/REPEATPARAMS = false`
+
+/REPEATPARAMS can be set in the .ini file, from the command line, or by using the PI Event Frames Interface Manager / Batch Setup tab.
+
+If /REPEATPARAMS is set to **false**, the interface will take *InstructionParameter* with multiple *InstructionParametersInstance* CV values and the event for that *InstructionParameter* will display the last value. 
+
+If /REPEATPARAMS is set to **true**, the interface will take *InstructionParameter* with multiple *InstructionParametersInstance* CV values and create a new *InstructionParameter* by adding either '_' or "-" and a numerical sequence starting at 2.
+
+#### Use Repeating delimiter (/REPEATDELIMITER) only if /REPEATPARMS = TRUE
+
+Default setting: `/REPEATDELIMITER = "_"`
+
+Select the **Show all Repeat attribute values** checkbox to use the repeating delimiter. You can select either *Underscore* (Underscore/REPEATDELIMITER = "_") or *Dash* (Dash/REPEATDELIMITER = "-").
+
 
 ## Merge settings (Command line parameter settings) 
 
