@@ -68,8 +68,6 @@ Remove trailing index from Recipe fields. Applicable to Procedure, Unit Procedur
 
 Default setting: `/REPEATPARAMS = false`
 
-/REPEATPARAMS can be set in the .ini file, from the command line, or by using the PI Event Frames Interface Manager / Batch Setup tab.
-
 If /REPEATPARAMS is set to **false**, the interface will take an *InstructionParameter* with multiple *InstructionParametersInstance* CV values and only display the most recent CV value for that *InstructionParameter*.
 
 If /REPEATPARAMS is set to **true**, the interface will take an *InstructionParameter* with multiple *InstructionParametersInstance* CV values and create a new *InstructionParameter* by adding the delimiter specified by /REPEATDELIMITER and a numerical sequence starting at 2.
