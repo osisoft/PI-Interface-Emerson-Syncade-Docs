@@ -6,11 +6,11 @@ uid: BIF_ServerInformationTab
 
 <!-- Static topic. No modifications usually required -->
 
-The **Server Information** tab is where you configure the PI Data server and PI Asset server that you intend to use with the interface instance. The interface can generate either batches in the PI Batch Database or event frames in the PI Asset Framework.
+The **Server Information** tab is where you configure the PI Data server and PI Asset server that you intend to use with the interface instance. This interface only creates Event Frames in PI Asset Framework. 
 
 ## PI Data server (/HOST) settings
 
-The PI Data server specified under PI Data server specifies the server to which the interface sends batch data. _Host_ is the IP address or fully-qualified domain name of the PI Data server. If the server that you want to use is not listed in the drop-down menu, add it to the known servers table using the [About PI-SDK utility](https://livelibrary.osisoft.com/LiveLibrary/content/en/server-v5/GUID-92B81C3E-8C8C-4670-AFFE-033F45A9DB5C). 
+The PI Data server specifies the server to which the interface sends PI tag data. _Host_ is the IP address or fully-qualified domain name of the PI Data server. If the server that you want to use is not listed in the drop-down menu, add it to the known servers table using the [About PI-SDK utility](https://livelibrary.osisoft.com/LiveLibrary/content/en/server-v5/GUID-92B81C3E-8C8C-4670-AFFE-033F45A9DB5C). 
 
 If you are using a PI Data Archive version prior to 3.4.380.36, select **Use explicit log** in to specify a **PI user name** and **PI password**.
 
@@ -24,7 +24,7 @@ If you are using a PI Data Archive version 3.4.380.36 and higher, use Windows In
 
 In this section you configure PI Asset Framework configuration settings. 
 
-Select **Create event frames in PI Asset Framework** to create event frames in PI Asset Framework, instead of creating batches in the PI Batch Database. 
+Select **Create event frames in PI Asset Framework** to create event frames in PI Asset Framework. 
 
 The PI Asset server and PI Asset Framework database are displayed in the **Host and Database** (/AFHOST and /AFDATABASE) field. Click **Select Asset server** to open the Select Database window to choose an alternative server. 
 
