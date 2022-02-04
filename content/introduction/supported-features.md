@@ -6,6 +6,8 @@ uid: BIF_SupportedFeatures
 
 <!-- Mark Bishop 6/18: Customized for Emerson Syncade -->
 
+[!include[interface](../includes/product-short.md)] runs as a native 64-bit interface. 
+
 The following table provides a summary of the features supported by this interface. 
 
 <!-- framework content -->
