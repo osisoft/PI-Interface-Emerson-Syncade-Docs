@@ -6,6 +6,8 @@ uid: BIF_Introduction
 
 <!-- Mark Bishop 6/18: Modified for Emerson Syncade -->
 
+[!include[interface](../includes/product-short.md)] runs as a native 64-bit interface. 
+
 The Syncade Manufacturing Execution System (MES) produces work procedures using production events and batch records, executing recipes and workflows and integrating equipment maintenance operations with process controls to optimize manufacturing environments.
 
 [!include[interface](../includes/product-short.md)] is a scan-based interface that uses tag and property templates to capture data from Syncade batches. That includes manual phase steps, historical data from Syncade web services, and real-time data from the Microsoft Message Queue.
