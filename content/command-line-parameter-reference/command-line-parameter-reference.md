@@ -23,7 +23,6 @@ The following headings describe each command line parameter available.
 * [`/bidm =<list>`](#bidm-list)
 * [`/cachetime=<days>`](#cachetimedays)
 * [`/dac`](#dac)
-* [`/damcae`](#damcae)
 * [`/datasec=<string>`](#datasecstring)
 * [`/db =[#]`](#db-)
 * [`/dpretc`](#dpretc)
@@ -90,9 +89,6 @@ In the last example, the first and second masks do not match, so the third mask 
 
 (Optional) Disable arbitration counters: directs the interface to release a unit on the first resource release event even if the number of acquire events is higher than number of release events. By default, the interface requires the number of acquire and release events for a unit to be the same.
 
-### `/damcae` 
-
-Ignore events from an Event Chronicle (alarms & events) data source when creating or checking PI Module Database objects. If the module path defined for an AlarmTag[#].Alias entry contains the root node symbol ($), the interface checks the module path regardless of whether this option is enabled. 
 
 ### `/datasec=<string>`
 
@@ -133,15 +129,6 @@ Additionally, you can enable or disable all tags using the `ALL` or `NONE` optio
 /enabledmonitortags=NONE
 ```
 
-### `/equipmentXML =<filepath>` 
-
-(Optional) Specifies the location of the DeltaV-generated equipment hierarchy XML file. The EMDVB interface uses this reference data to locate missing ProcessCell field by searching based on the combination of Area and Unit fields. Valid only when a DeltaV AE SQL datasource is defined. 
-
-Example: 
-
-```text
-/EquipmentXML="C:\DeltaV\Equip.xml"
-``` -->
 
 ### `/failoverID =<string>`
 

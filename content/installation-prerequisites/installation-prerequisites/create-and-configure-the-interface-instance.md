@@ -6,7 +6,7 @@ uid: BIF_CreateAndConfigureInterfaceInstance
 
 <!-- Static topic. No modifications usually required -->
 
-For each instance you create, settings are stored in a separate Windows command (.bat) file and an initialization (.ini) file in the [!include[%ProgramData%](../../includes/dir-long.md)] directory. The batch file launches the interface, specifying settings as command line parameters. The initialization file also contains settings, and it defines templates that determine how data from the data source is stored in the PI System. To configure settings for interfaces, use the PI Event Frames Interface Manager. Use this tool even if you are configuring the interface to store data in the PI Batch Database rather than event frames.
+For each instance you create, settings are stored in a separate Windows command (.bat) file and an initialization (.ini) file in the [!include[%ProgramData%](../../includes/dir-long.md)] directory. The batch file launches the interface, specifying settings as command line parameters. The initialization file also contains settings, and it defines templates that determine how data from the data source is stored in the PI System. To configure settings for interfaces, use the PI Event Frames Interface Manager. 
 
 A single batch interface instance can be configured to read from multiple data sources. This capability enables you to handle distributed batch processing scenarios, where multiple batch execution systems cooperate in the manufacturing of a single batch.
 

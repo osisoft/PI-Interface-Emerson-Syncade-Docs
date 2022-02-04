@@ -6,8 +6,6 @@ uid: BIF_SupportedFeatures
 
 <!-- Mark Bishop 6/18: Customized for Emerson Syncade -->
 
-[!include[interface](../includes/product-short.md)] runs in 32-bit or 64-bit in emulation mode. No native 64-bit builds of the interface is available.
-
 The following table provides a summary of the features supported by this interface. 
 
 <!-- framework content -->
@@ -60,7 +58,7 @@ Using `/noarbitration` ensures that the interface:
 
 ## History recovery
 
-You can stop the interface without losing any data, because the data is persistent in the data source. Data recovery is limited by the history available from Emerson Syncade, the number of licensed PI tags, and the size and time frame of the PI archives into which data is recovered.
+You can stop the interface without losing any data as the data is persistent in the data source. Data recovery is limited by the history available from Emerson Syncade, the number of licensed PI tags, and the size and time frame of the PI archives into which data is recovered.
 
 ## Device status tag
 

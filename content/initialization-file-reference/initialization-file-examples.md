@@ -16,8 +16,8 @@ uid: BIF_InitializationFileExamples
 [COMMAND LINE PARAMETERS]
 ID=998
 PS=EMDVBCS
-HOST=localhost
-AFHOST= localhost
+HOST=PIServer1
+AFHOST= AFServer1
 AFDATABASE=EMDVBCS
 
 [SOURCE TEMPLATE]

@@ -27,13 +27,13 @@ For example, the following figure illustrates an event frame created based on a 
 The .ini file code for creating those event frames looks like this example:
 
 ```text
-HOST=jshearouse5520
+HOST=PIServer1
 PS=EMDVBCS
 ID=998
-AFHOST=jshearouse5520
+AFHOST=AFServer1
 AFDATABASE=EMDVBCS
 DB=2
-Source[1].msmqpath=jshearouse5520\private$\historian2
+Source[1].msmqpath=MSMQMachine1\private$\historian2
 Source[1].websrvpath=example.com
 WRITELINK=\\LINKPARENT\LINKTEST
 ```

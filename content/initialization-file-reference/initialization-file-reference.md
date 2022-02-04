@@ -50,7 +50,7 @@ Following are some simple examples of data source templates.
 Single Batch Historian: 
 
 ```text
-SOURCE[1].msmqpath=localhost\private$\QueueForOSIjshearouse
+SOURCE[1].msmqpath=localhost\private$\MSMQPath
 Source[1].websrvpath=https://localhost:8081/emrWF/WebService/OrdersInterface.asmx
 ```
 
