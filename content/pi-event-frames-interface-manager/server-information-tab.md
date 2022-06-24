@@ -32,11 +32,11 @@ Select the **Enable Batch Interface Element** check box to create a new element 
 
 Interface Health Tags collect batch statistics for the interface, such items as process time for unirecords or the number of unirecords in a batch.
 
-**Note:** The Batch Interface Element naming convention used is (*InterfaceInstanceName*)__(*InterfaceID*)_BatchStatistics
+**Note:** The naming convention used for a Batch Interface Element is *(InterfaceInstanceName)_(InterfaceID)*_BatchStatistics.
+        
+Click **Select Parent Element** to open a dialog box to search for a parent to host the new element. After locating the parent, select OK to return to the Server Information tab.
 
-Click **Select Parent Element** to open a dialog box to search for a parent to host the new element. After locating the parent, click OK to return to the Server Information tab.
-
-**Note:** A Batch Interface Element can be created in a separate Asset Framework database.
+**Note:** A Batch Interface Element can be created in a separate Asset Framework database. 
 
 Under **Enable Auto Check In**, select from the following options:
 
