@@ -77,3 +77,5 @@
 - topicUid: BIF_DiagnosticPointReference # No modifications
 # Glossary
 - topicUid: BIF_Glossary
+# Release Notes
+- topicUid: EMSYNReleaseNotes
