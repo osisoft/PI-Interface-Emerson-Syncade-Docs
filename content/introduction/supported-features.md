@@ -20,6 +20,7 @@ The following table provides a summary of the features supported by this interfa
 | Stores batch data in PI Batch Database and PI Module Database | No |
 | Stores batch data in PI AF | Yes |
 | Supports equipment arbitration events | No |
+| Supports n-way buffering | Yes|
 | ICU Control | No (use PI Event Frame Interface Manager configuration tool) |
 | PI Point Data Types | Int32/ Float32/ String |
 | Sub-second Timestamps | Yes |
@@ -31,7 +32,6 @@ The following table provides a summary of the features supported by this interfa
 | Supports Questionable Bit | No |
 | Supports Multi-character Pointsource | Yes |
 | Maximum Point Count | No maximum |
-| Uses PI SDK | Yes: version 1.3.4.333 or higher required|
 | Uses AF SDK | Yes: version 2.5.x or higher required |
 | PINet String Support | N/A |
 | Source of Timestamps | Emerson Syncade (not system time on interface node) |
