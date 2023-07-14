@@ -34,7 +34,6 @@ This section lists items that were resolved or added in this release of PI Inter
 | 22140     | Unirecord data sources are now included in unirecord imports and exports. |
 | 22156     | Cache start and end times can no longer be permanently altered by arbitration events. |
 | 22159     | PI Event Frames Interface Manager will enable /TS flag option only for Emerson DeltaV and AVEVA Batch Management InBatch.    |
-| 22163     | SQL Native client print message was disabled for Oracle based interfaces. |
 | 22166     | Running the interface second time in recovery mode resets the Event Frame's Attributes value timestamps. The Event frame attributes are processed differently during updates.    |
 | 22172     | When removing an interface from PI Event Frames Interface Manager, it will also remove any associated services. |
 | 22178     | Event frames are now merged properly within the cache time.    |
